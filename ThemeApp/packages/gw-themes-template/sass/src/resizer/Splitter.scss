@@ -1,0 +1,85 @@
+/**
+ * Generic Splitter styles for all Guidewire themes
+ */
+
+.#{$prefix}splitter-vertical, .#{$prefix}splitter {
+  background-color: $gw-splitter-color;
+  z-index: 2;
+}
+
+.#{$prefix}layout-split-left {
+  &:hover,
+  &:focus {
+    background-image: theme-background-image('util/splitter/mini-left-highlight');
+  }
+}
+
+.#{$prefix}layout-split-right {
+  &:hover,
+  &:focus {
+    background-image: theme-background-image('util/splitter/mini-right-highlight');
+  }
+}
+
+.#{$prefix}layout-split-top {
+  &:hover,
+  &:focus {
+    background-image: theme-background-image('util/splitter/mini-top-highlight');
+  }
+}
+
+.#{$prefix}layout-split-bottom {
+  &:hover,
+  &:focus {
+    background-image: theme-background-image('util/splitter/mini-bottom-highlight');
+  }
+}
+
+.#{$prefix}splitter-collapsed {
+  .#{$prefix}layout-split-left {
+    &:hover,
+    &:focus {
+      background-image: theme-background-image('util/splitter/mini-right-highlight');
+    }
+  }
+
+  .#{$prefix}layout-split-right {
+    &:hover,
+    &:focus {
+      background-image: theme-background-image('util/splitter/mini-left-highlight');
+    }
+  }
+
+  @if $include-rtl {
+    .#{$prefix}rtl {
+      &.#{$prefix}layout-split-left {
+        &:hover,
+        &:focus {
+          background-image: theme-background-image('util/splitter/mini-left-highlight');
+        }
+      }
+
+      &.#{$prefix}layout-split-right {
+        &:hover,
+        &:focus {
+          background-image: theme-background-image('util/splitter/mini-right-highlight');
+        }
+      }
+    }
+  }
+
+  .#{$prefix}layout-split-top {
+    &:hover,
+    &:focus {
+      background-image: theme-background-image('util/splitter/mini-bottom-highlight');
+    }
+  }
+
+  .#{$prefix}layout-split-bottom {
+    &:hover,
+    &:focus {
+      background-image: theme-background-image('util/splitter/mini-top-highlight');
+    }
+  }
+}
+

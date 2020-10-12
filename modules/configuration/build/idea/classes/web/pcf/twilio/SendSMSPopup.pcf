@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Popup
+    canEdit="true"
+    canVisit="true"
+    id="SendSMSPopup"
+    startInEditMode="true"
+    title="&quot;Messges to &quot;+claimContact.Contact.DisplayName">
+    <LocationEntryPoint
+      signature="SendSMSPopup(claimContact : ClaimContact)"/>
+    <Variable
+      initialValue="new exv.twilio.common.MessageUtil()"
+      name="util"
+      type="exv.twilio.common.MessageUtil"/>
+    <Variable
+      name="claimContact"
+      type="ClaimContact"/>
+    <Variable
+      initialValue="util.createCoversationMessage(claimContact)"
+      name="sms"
+      type="TwilioSMS"/>
+    <Screen>
+      <DetailViewPanel
+        highlighted="false">
+        <InputColumn
+          width="40%">
+          <InputIterator
+            elementName="message"
+            value="util.getPreviousCoversation(claimContact)"
+            valueType="entity.TwilioSMS[]">
+            <IteratorSort
+              sortBy="util.getSortingDateForPreviousMessage(message)"
+              sortOrder="1"/>
+            <TextInput
+              id="messageText"
+              label="message.Type == MessageType.TC_INCOMING ? message.MessageBody : null"
+              value="message.Type == MessageType.TC_INCOMING ? null : message.MessageBody"/>
+            <InputDivider/>
+          </InputIterator>
+        </InputColumn>
+        <InputColumn
+          width="20%"/>
+        <InputColumn
+          width="20%"/>
+        <InputColumn
+          width="20%"/>
+      </DetailViewPanel>
+      <PanelDivider/>
+      <PanelRef
+        def="SendSMSDV(sms)">
+        <Toolbar
+          id="ConfirmToolBar">
+          <ToolbarButton
+            action="util.onSendOfSMS(sms, CurrentLocation)"
+            id="SendSMS"
+            label="&quot;Send SMS&quot;"/>
+          <ToolbarButton
+            action="CurrentLocation.cancel()"
+            id="Camcel"
+            label="&quot;Cancel&quot;"/>
+        </Toolbar>
+      </PanelRef>
+    </Screen>
+  </Popup>
+</PCF>

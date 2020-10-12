@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <ListDetailPanel
+    id="ExposuresListDetail"
+    selectionName="exposure"
+    selectionType="Exposure">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <PanelRef
+      def="ClaimExposuresLV(claim)"/>
+    <CardViewPanel>
+      <Card
+        id="Exposure"
+        title="&quot;Detail&quot;"/>
+    </CardViewPanel>
+  </ListDetailPanel>
+</PCF>

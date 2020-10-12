@@ -1,0 +1,12 @@
+/**
+* Generic View Bound List styles for Guidewire base themes
+*/
+
+// PLWEB-5487: Usually the item-over (aka focus) color takes precedence over the selected color, making it hard to
+// distinguish when an item with a mouse/keyboard focus is also selected.  This could lead to incorrectly assuming that
+// clicking the shuttle button will do something.  Now, we mix the two colors so that there is a visual indication of
+// both highlighted and selected, thereby removing any chance of confusion
+.#{$prefix}boundlist-selected.#{$prefix}boundlist-item-over {
+  background: mix($boundlist-item-selected-background-color, $boundlist-item-over-background-color);
+  border-color: mix($boundlist-item-selected-border-color, $boundlist-item-over-border-color);
+}

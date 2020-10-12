@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <ListViewPanel
+    id="ClaimExposuresLV">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <ExposeIterator
+      valueType="entity.Exposure"
+      widget="ClaimExposuresLV"/>
+    <RowIterator
+      editable="false"
+      elementName="exposure"
+      hideCheckBoxesIfReadOnly="true"
+      toAdd="claim.addToExposures(exposure)"
+      toRemove="claim.removeFromExposures(exposure)"
+      value="claim.Exposures"
+      valueType="Exposure[]">
+      <Row>
+        <TypeKeyCell
+          id="ExposureType"
+          label="&quot;Exposure Type&quot;"
+          value="exposure.ExposureType"
+          valueType="typekey.ExposureType"/>
+        <TextCell
+          id="Claimant"
+          label="&quot;Claimant&quot;"
+          value="exposure.Claimant"
+          valueType="entity.Contact"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

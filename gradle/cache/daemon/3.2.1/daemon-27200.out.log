@@ -1,0 +1,110 @@
+07:19:00.340 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-Xms1g, -Xmx4g, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+07:19:00.379 [INFO] [org.gradle.launcher.daemon.server.health.gc.GarbageCollectionMonitor] Unable to determine a garbage collection monitoring strategy for JVMStrategy{Private Build version 1.8.0_222}
+07:19:00.439 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=ab4cbd8f-4fe3-46b7-95de-de9d3cf8d786,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=27200,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+07:19:00.444 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573543140444
+07:19:00.451 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+07:19:00.452 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+07:19:00.452 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+07:19:00.454 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:e416:9aff:fe1e:2e58%eth0
+07:19:00.454 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /10.47.0.5
+07:19:00.455 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /139.59.60.164
+07:19:00.455 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+07:19:00.455 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+07:19:00.456 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+07:19:00.456 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+07:19:00.456 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+07:19:00.456 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+07:19:00.459 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]].
+07:19:00.463 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Tue Nov 12 07:19:00 UTC 2019, with address: [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+07:19:00.463 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+07:19:00.464 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=ab4cbd8f-4fe3-46b7-95de-de9d3cf8d786,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=27200,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+07:19:00.465 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]], context: DefaultDaemonContext[uid=ab4cbd8f-4fe3-46b7-95de-de9d3cf8d786,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=27200,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+07:19:00.474 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+07:19:00.475 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+07:19:00.546 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+07:19:00.546 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+07:19:00.548 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+07:19:00.577 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:50944 to /0:0:0:0:0:0:0:1:46023.
+07:19:00.624 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+07:19:00.629 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+07:19:00.645 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+07:19:00.680 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.BuildAndStop
+07:19:00.681 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received non-IO message from client: BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+07:19:00.681 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC}.
+07:19:00.682 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC} with connection: socket connection from /0:0:0:0:0:0:0:1:46023 to /0:0:0:0:0:0:0:1:50944.
+07:19:00.685 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@2a3a1a1e] after 0.0 minutes of idle
+07:19:00.686 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+07:19:00.686 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [463b86ba-559d-4584-9996-1099aef2dec6 port:46023, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+07:19:00.687 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+07:19:00.688 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+07:19:00.690 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+07:19:00.691 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573543140691
+07:19:00.691 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+07:19:00.692 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC}. Dispatching build started information...
+07:19:00.693 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+07:19:00.697 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/opt/tomcat/apache-tomcat-9.0.27/bin:/root/Desktop/Guidewire/apache-ant-1.9.13/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin, LESSCLOSE=/bin/lesspipe %s %s, XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop, JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64, TERM=xterm-256color, GNOME_TERMINAL_SERVICE=:1.40, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus, LANG=C.UTF-8, XDG_SESSION_ID=c3, JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre, ANT_HOME=/root/Desktop/Guidewire/apache-ant-1.9.13, XRDP_SOCKET_PATH=/var/run/xrdp/sockdir, DISPLAY=:10.0, SSH_AGENT_PID=2428, COLORTERM=truecolor, SESSION_MANAGER=local/My-DropLet:@/tmp/.ICE-unix/2437,unix/My-DropLet:/tmp/.ICE-unix/2437, LOGNAME=root, PULSE_SCRIPT=/etc/xrdp/pulse/default.pa, PWD=/root/Desktop/Guidewire/WS_CC, XRDP_SESSION=1, LESSOPEN=| /bin/lesspipe %s, SHELL=/bin/bash, CATALINA_HOME=/opt/tomcat/apache-tomcat-9.0.27, OLDPWD=/root/Desktop/Guidewire/WS_CC, USER=root, VTE_VERSION=5202, QT_ACCESSIBILITY=1, GTK_MODULES=gail:atk-bridge, UID=0, GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/bd3e085c_f137_44b1_acf8_6cf0b542a35f, SSH_AUTH_SOCK=/tmp/ssh-606lNH8PdfZy/agent.2364, _JAVA_OPTIONS=-Xms256m, XDG_RUNTIME_DIR=/run/user/0, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, SHLVL=2, HOME=/root}
+07:19:00.704 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+07:19:00.705 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 27200). The daemon log file: /root/Desktop/Guidewire/WS_CC/gradle/cache/daemon/3.2.1/daemon-27200.out.log
+07:19:00.708 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+07:19:00.708 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stopping after processing
+07:19:00.709 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy: true
+07:19:00.709 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+07:19:00.712 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+07:19:00.713 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=ab4cbd8f-4fe3-46b7-95de-de9d3cf8d786,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=27200,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+client disconnection detected, canceling the build
+Daemon is stopping immediately the build was canceled after a stop was requested
+Unable to execute command BuildAndStop{id=483d8d52-886d-4720-91c9-c0750f9cab62.1, currentDir=/root/Desktop/Guidewire/WS_CC} from socket connection from /0:0:0:0:0:0:0:1:46023 to /0:0:0:0:0:0:0:1:50944. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write message Failure[value=org.gradle.launcher.daemon.server.api.DaemonStoppedException: Gradle build daemon has been stopped: the build was canceled after a stop was requested] to '/0:0:0:0:0:0:0:1:50944'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:111)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.dispatch(SynchronizedDispatchConnection.java:51)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:135)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy.doBuild(StartBuildOrRespondWithBusy.java:59)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:33)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:45)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:160)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:133)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:121)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.esotericsoftware.kryo.KryoException: java.io.IOException: Broken pipe
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:156)
+	at com.esotericsoftware.kryo.io.Output.require(Output.java:134)
+	at com.esotericsoftware.kryo.io.Output.writeBytes(Output.java:219)
+	at org.gradle.internal.serialize.kryo.KryoBackedEncoder.writeBytes(KryoBackedEncoder.java:43)
+	at org.gradle.internal.serialize.AbstractEncoder$EncoderStream.write(AbstractEncoder.java:72)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1877)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1822)
+	at java.io.ObjectOutputStream.flush(ObjectOutputStream.java:719)
+	at org.gradle.internal.serialize.Message.send(Message.java:40)
+	at org.gradle.internal.serialize.BaseSerializerFactory$ThrowableSerializer.write(BaseSerializerFactory.java:151)
+	at org.gradle.internal.serialize.BaseSerializerFactory$ThrowableSerializer.write(BaseSerializerFactory.java:145)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$FailureSerializer.write(DaemonMessageSerializer.java:65)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$FailureSerializer.write(DaemonMessageSerializer.java:56)
+	at org.gradle.internal.serialize.DefaultSerializerRegistry$TaggedTypeSerializer.write(DefaultSerializerRegistry.java:116)
+	at org.gradle.internal.serialize.Serializers$StatefulSerializerAdapter$2.write(Serializers.java:46)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:109)
+	... 22 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:51)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:259)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:247)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.write(SocketConnection.java:233)
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:154)
+	... 37 more
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.

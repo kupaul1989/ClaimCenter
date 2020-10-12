@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<plugin
+  interface="MessageTransport"
+  name="TwilioMessagingTransPort">
+  <plugin-gosu
+    gosuclass="exv.twilio.notification.TwilioMessageTransport"/>
+</plugin>

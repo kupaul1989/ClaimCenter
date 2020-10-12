@@ -1,0 +1,30 @@
+package rules.Preupdate.ServiceRequestPreupdate_dir
+
+uses exv.twilio.common.MessageUtil
+
+@gw.rules.RuleName("ServiceCompletionDate")
+internal class ServiceCompletionDate {
+  static function doCondition(serviceRequest : entity.ServiceRequest) : boolean {
+/*start00rule*/
+    print("Inside Condition")
+    return ((serviceRequest.isFieldChanged("ExpectedServiceCompletionDate")
+        and serviceRequest.getOriginalValue("ExpectedServiceCompletionDate") != null)
+        or serviceRequest.isFieldChanged("ExpectedServiceCompletionDate"))
+/*end00rule*/
+}
+
+  static function doAction(serviceRequest : entity.ServiceRequest, actions : gw.rules.Action) {
+/*start00rule*/
+    print("Inside Action")
+    var msgUtil = new MessageUtil()
+    var claimContact =  serviceRequest.Claim.Contacts.firstWhere(\cContact -> cContact.Roles.hasMatch(\role ->
+        role.Role == ContactRole.TC_INSURED))
+    var sms = msgUtil.createNotificationMessage(claimContact)
+    sms.MessageBody = "Your existing service : "+serviceRequest.ServiceRequestNumber
+        + " against  Claim number " +serviceRequest.Claim.ClaimNumber+
+        " Completion Date has been modified to " + serviceRequest.ExpectedServiceCompletionDate
+    sms.addEvent("SendNotificationSMS")
+    actions.exit()
+/*end00rule*/
+  }
+}

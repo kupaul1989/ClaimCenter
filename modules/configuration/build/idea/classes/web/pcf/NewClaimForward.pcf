@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Forward
+    id="NewClaimForward">
+    <LocationEntryPoint
+      signature="NewClaimForward()"/>
+    <Variable
+      initialValue="gw.api.claim.ClaimUtil.getMostRecentlyVisitedClaim()"
+      name="claim"
+      type="Claim"/>
+    <ForwardCondition
+      action="ClaimSummary.go(claim)"
+      condition="claim != null"/>
+    <ForwardCondition
+      action="NoClaim.go()"/>
+  </Forward>
+</PCF>

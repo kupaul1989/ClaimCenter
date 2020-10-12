@@ -1,0 +1,17 @@
+/**
+ * Generic simple Panel Header styles for all Guidewire themes
+ */
+
+.g-underlined {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.g-double-underlined {
+  border-bottom: 3px double;
+}
+
+.icon {
+  text-align: right;
+  padding-right: 12px;
+}

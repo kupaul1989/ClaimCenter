@@ -1,0 +1,718 @@
+12:14:21.166 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-Xms1g, -Xmx4g, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+12:14:21.212 [INFO] [org.gradle.launcher.daemon.server.health.gc.GarbageCollectionMonitor] Unable to determine a garbage collection monitoring strategy for JVMStrategy{Private Build version 1.8.0_222}
+12:14:21.256 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=a98eaf7b-50fe-44cb-ad19-7814285e68ee,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=8982,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+12:14:21.260 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1572437661260
+12:14:21.266 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+12:14:21.266 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+12:14:21.267 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+12:14:21.268 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:e416:9aff:fe1e:2e58%eth0
+12:14:21.268 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /10.47.0.5
+12:14:21.268 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /139.59.60.164
+12:14:21.268 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+12:14:21.269 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+12:14:21.269 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+12:14:21.269 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+12:14:21.270 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+12:14:21.270 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+12:14:21.273 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]].
+12:14:21.276 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Wed Oct 30 12:14:21 UTC 2019, with address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:14:21.276 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:14:21.277 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=a98eaf7b-50fe-44cb-ad19-7814285e68ee,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=8982,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+12:14:21.278 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]], context: DefaultDaemonContext[uid=a98eaf7b-50fe-44cb-ad19-7814285e68ee,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=8982,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+12:14:21.287 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+12:14:21.289 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+12:14:21.349 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+12:14:21.352 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+12:14:21.354 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+12:14:21.379 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:39726 to /0:0:0:0:0:0:0:1:35599.
+12:14:21.441 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+12:14:21.443 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+12:14:21.444 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+12:14:21.463 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.BuildAndStop
+12:14:21.463 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received non-IO message from client: BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+12:14:21.464 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}.
+12:14:21.464 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC} with connection: socket connection from /0:0:0:0:0:0:0:1:35599 to /0:0:0:0:0:0:0:1:39726.
+12:14:21.467 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@47aedb15] after 0.0 minutes of idle
+12:14:21.467 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:14:21.468 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:14:21.468 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+12:14:21.469 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+12:14:21.470 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+12:14:21.471 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1572437661471
+12:14:21.471 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+12:14:21.472 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}. Dispatching build started information...
+12:14:21.472 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+12:14:21.479 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/root/Desktop/Guidewire/apache-ant-1.9.13/bin:/usr/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/snap/bin:/opt/mssql-tools/bin, LESSCLOSE=/bin/lesspipe %s %s, XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop, JAVA_HOME=/usr, TERM=xterm-256color, GNOME_TERMINAL_SERVICE=:1.44, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus, LANG=C.UTF-8, XDG_SESSION_ID=c2, ANT_HOME=/root/Desktop/Guidewire/apache-ant-1.9.13, XRDP_SOCKET_PATH=/var/run/xrdp/sockdir, DISPLAY=:10.0, SSH_AGENT_PID=2477, COLORTERM=truecolor, SESSION_MANAGER=local/My-DropLet:@/tmp/.ICE-unix/2486,unix/My-DropLet:/tmp/.ICE-unix/2486, LOGNAME=root, PULSE_SCRIPT=/etc/xrdp/pulse/default.pa, PWD=/root/Desktop/Guidewire/WS_CC, XRDP_SESSION=1, LESSOPEN=| /bin/lesspipe %s, SHELL=/bin/bash, CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.47, OLDPWD=/root/Desktop/Guidewire/WS_CC, USER=root, VTE_VERSION=5202, QT_ACCESSIBILITY=1, GTK_MODULES=gail:atk-bridge, UID=0, GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/6e94421d_f511_43fa_b819_3b6f006b1ed4, SSH_AUTH_SOCK=/tmp/ssh-naVWGKy7UEBu/agent.2413, XDG_RUNTIME_DIR=/run/user/0, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, SHLVL=2, HOME=/root}
+12:14:21.485 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+12:14:21.486 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 8982). The daemon log file: /root/Desktop/Guidewire/WS_CC/gradle/cache/daemon/3.2.1/daemon-8982.out.log
+12:14:21.490 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+12:14:21.492 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stopping after processing
+12:14:21.492 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy: true
+12:14:21.492 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+12:14:21.500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+12:14:21.501 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=a98eaf7b-50fe-44cb-ad19-7814285e68ee,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=8982,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+Importing POM com.guidewire.cc:cc-parent:9.0.4
+Importing parent POM com.guidewire.cc:cc-all:9.0.4
+Importing POM com.guidewire.cc:cc-all:9.0.4
+:modules:configuration:genEntityRoleConstraintsSources
+:modules:configuration:genEntitySources
+:modules:configuration:genLocalizationSources
+:modules:configuration:genPcf4TestSources
+:modules:configuration:genPcfSources
+:modules:configuration:genPermissionSources
+:modules:configuration:genXmlSources UP-TO-DATE
+:modules:configuration:compileJava/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ServiceRequestMessageType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ServiceRequestMessageType.tti;ServiceRequestMessageType.tix;ServiceRequestMessageType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/DynamicActionCategory.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "DynamicActionCategory.tti;DynamicActionCategory.tix;DynamicActionCategory.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ClaimReopenedReason.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ClaimReopenedReason.tti;ClaimReopenedReason.tix;ClaimReopenedReason.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/GroupType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "GroupType.tti;GroupType.tix;GroupType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SortByRange.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SortByRange.tti;SortByRange.tix;SortByRange.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/BusinessType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "BusinessType.tti;BusinessType.tix;BusinessType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MajorPerils.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MajorPerils.tti;MajorPerils.tix;MajorPerils.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ETLStrings.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ETLStrings.tti;ETLStrings.tix;ETLStrings.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CovTermPattern.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CovTermPattern.tti;CovTermPattern.tix;CovTermPattern.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RuleImportSide.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RuleImportSide.tti;RuleImportSide.tix;RuleImportSide.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ClaimMetricLimit.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ClaimMetricLimit.tti;ClaimMetricLimit.tix;ClaimMetricLimit.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/LoadFactorType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "LoadFactorType.tti;LoadFactorType.tix;LoadFactorType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ValidationIssueType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ValidationIssueType.tti;ValidationIssueType.tix;ValidationIssueType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/WorkflowHandler.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "WorkflowHandler.tti;WorkflowHandler.tix;WorkflowHandler.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/Weekdays.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "Weekdays.tti;Weekdays.tix;Weekdays.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/FreeTextClaimSearchEntity.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "FreeTextClaimSearchEntity.tti;FreeTextClaimSearchEntity.tix;FreeTextClaimSearchEntity.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/UnderwritingCompanyType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "UnderwritingCompanyType.tti;UnderwritingCompanyType.tix;UnderwritingCompanyType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ResourceContext.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ResourceContext.tti;ResourceContext.tix;ResourceContext.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AutoSync.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AutoSync.tti;AutoSync.tix;AutoSync.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/InboundHistory.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "InboundHistory.tti;InboundHistory.tix;InboundHistory.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/InternalPolicyType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "InternalPolicyType.tti;InternalPolicyType.tix;InternalPolicyType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MetricUnit.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MetricUnit.tti;MetricUnit.tix;MetricUnit.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ContactRelCons.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ContactRelCons.tti;ContactRelCons.tix;ContactRelCons.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AssessmentContentAction.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AssessmentContentAction.tti;AssessmentContentAction.tix;AssessmentContentAction.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ClaimIndicator.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ClaimIndicator.tti;ClaimIndicator.tix;ClaimIndicator.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PrimaryPhoneType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PrimaryPhoneType.tti;PrimaryPhoneType.tix;PrimaryPhoneType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/UpgradeExecutionTimeType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "UpgradeExecutionTimeType.tti;UpgradeExecutionTimeType.tix;UpgradeExecutionTimeType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/OfficialID.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "OfficialID.tti;OfficialID.tix;OfficialID.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AssignmentSelectionType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AssignmentSelectionType.tti;AssignmentSelectionType.tix;AssignmentSelectionType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RecurrenceDay.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RecurrenceDay.tti;RecurrenceDay.tix;RecurrenceDay.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ExposureReopenedReason.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ExposureReopenedReason.tti;ExposureReopenedReason.tix;ExposureReopenedReason.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/State.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "State.tti;State.tix;State.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/StatementSource.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "StatementSource.tti;StatementSource.tix;StatementSource.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RIAgreementCoverageType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RIAgreementCoverageType.tti;RIAgreementCoverageType.tix;RIAgreementCoverageType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ProviderType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ProviderType.tti;ProviderType.tix;ProviderType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/InjuryType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "InjuryType.tti;InjuryType.tix;InjuryType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PhoneCountryCode.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PhoneCountryCode.tti;PhoneCountryCode.tix;PhoneCountryCode.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CatastropheType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CatastropheType.tti;CatastropheType.tix;CatastropheType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/NoteSecurityType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "NoteSecurityType.tti;NoteSecurityType.tix;NoteSecurityType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/LoadCommandType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "LoadCommandType.tti;LoadCommandType.tix;LoadCommandType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/TransactionStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "TransactionStatus.tti;TransactionStatus.tix;TransactionStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/DateRangeChoiceType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "DateRangeChoiceType.tti;DateRangeChoiceType.tix;DateRangeChoiceType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/EmploymentStatusType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "EmploymentStatusType.tti;EmploymentStatusType.tix;EmploymentStatusType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SprinkRetServ.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SprinkRetServ.tti;SprinkRetServ.tix;SprinkRetServ.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ParameterType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ParameterType.tti;ParameterType.tix;ParameterType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PercentageDriven.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PercentageDriven.tti;PercentageDriven.tix;PercentageDriven.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ArchiveState.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ArchiveState.tti;ArchiveState.tix;ArchiveState.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/Incident.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "Incident.tti;Incident.tix;Incident.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CoveredPartyType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CoveredPartyType.tti;CoveredPartyType.tix;CoveredPartyType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ContactRole.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ContactRole.tti;ContactRole.tix;ContactRole.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PrimaryCauseType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PrimaryCauseType.tti;PrimaryCauseType.tix;PrimaryCauseType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MatterCourtType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MatterCourtType.tti;MatterCourtType.tix;MatterCourtType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ReinsuranceTreatyType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ReinsuranceTreatyType.tti;ReinsuranceTreatyType.tix;ReinsuranceTreatyType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CloseReopenInfo.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CloseReopenInfo.tti;CloseReopenInfo.tix;CloseReopenInfo.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/DBUpdateStatsRunnerType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "DBUpdateStatsRunnerType.tti;DBUpdateStatsRunnerType.tix;DBUpdateStatsRunnerType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RIArrangementType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RIArrangementType.tti;RIArrangementType.tix;RIArrangementType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/WCDetailedInjuryType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "WCDetailedInjuryType.tti;WCDetailedInjuryType.tix;WCDetailedInjuryType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ExtWallMat.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ExtWallMat.tti;ExtWallMat.tix;ExtWallMat.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SynchState.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SynchState.tti;SynchState.tix;SynchState.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ExposureTier.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ExposureTier.tti;ExposureTier.tix;ExposureTier.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AccidentType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AccidentType.tti;AccidentType.tix;AccidentType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PolicyStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PolicyStatus.tti;PolicyStatus.tix;PolicyStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RuleOperator.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RuleOperator.tti;RuleOperator.tix;RuleOperator.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/Workflow.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "Workflow.tti;Workflow.tix;Workflow.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RIAgreement.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RIAgreement.tti;RIAgreement.tix;RIAgreement.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SubroGovernmentInvolved.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SubroGovernmentInvolved.tti;SubroGovernmentInvolved.tix;SubroGovernmentInvolved.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AggregateType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AggregateType.tti;AggregateType.tix;AggregateType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MatterCourtDistrict.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MatterCourtDistrict.tti;MatterCourtDistrict.tix;MatterCourtDistrict.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/TransactionSet.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "TransactionSet.tti;TransactionSet.tix;TransactionSet.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/TypeofProperty.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "TypeofProperty.tti;TypeofProperty.tix;TypeofProperty.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/Priority.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "Priority.tti;Priority.tix;Priority.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SQLStatementType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SQLStatementType.tti;SQLStatementType.tix;SQLStatementType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/Jurisdiction.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "Jurisdiction.tti;Jurisdiction.tix;Jurisdiction.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PolicySummaryRiskUnit.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PolicySummaryRiskUnit.tti;PolicySummaryRiskUnit.tix;PolicySummaryRiskUnit.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/PolicyTab.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "PolicyTab.tti;PolicyTab.tix;PolicyTab.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/VehicleLineItemCategory.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "VehicleLineItemCategory.tti;VehicleLineItemCategory.tix;VehicleLineItemCategory.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/WCDetailedBodyPartType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "WCDetailedBodyPartType.tti;WCDetailedBodyPartType.tix;WCDetailedBodyPartType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CustomHistoryType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CustomHistoryType.tti;CustomHistoryType.tix;CustomHistoryType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ContactCreationApprovalStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ContactCreationApprovalStatus.tti;ContactCreationApprovalStatus.tix;ContactCreationApprovalStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ClaimAccessType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ClaimAccessType.tti;ClaimAccessType.tix;ClaimAccessType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AssessmentStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AssessmentStatus.tti;AssessmentStatus.tix;AssessmentStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/WorkflowLogEntry.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "WorkflowLogEntry.tti;WorkflowLogEntry.tix;WorkflowLogEntry.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/CheckType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "CheckType.tti;CheckType.tix;CheckType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ISOStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ISOStatus.tti;ISOStatus.tix;ISOStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/LOBCode.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "LOBCode.tti;LOBCode.tix;LOBCode.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/SideOfBody.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "SideOfBody.tti;SideOfBody.tix;SideOfBody.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/RuleStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "RuleStatus.tti;RuleStatus.tix;RuleStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ResolutionType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ResolutionType.tti;ResolutionType.tix;ResolutionType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/HistoryType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "HistoryType.tti;HistoryType.tix;HistoryType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/DataGenStatusType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "DataGenStatusType.tti;DataGenStatusType.tix;DataGenStatusType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/FreTxtClmSrchNameSrchTyp.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "FreTxtClmSrchNameSrchTyp.tti;FreTxtClmSrchNameSrchTyp.tix;FreTxtClmSrchNameSrchTyp.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/TransactionLifeCycleState.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "TransactionLifeCycleState.tti;TransactionLifeCycleState.tix;TransactionLifeCycleState.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ContactTagType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ContactTagType.tti;ContactTagType.tix;ContactTagType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MetroReportType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MetroReportType.tti;MetroReportType.tix;MetroReportType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/MergeConflictResolution.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "MergeConflictResolution.tti;MergeConflictResolution.tix;MergeConflictResolution.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/AutomatedHandler.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "AutomatedHandler.tti;AutomatedHandler.tix;AutomatedHandler.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/HowReportedType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "HowReportedType.tti;HowReportedType.tix;HowReportedType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/ActivityStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "ActivityStatus.tti;ActivityStatus.tix;ActivityStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/BIValidationAlertType.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "BIValidationAlertType.tti;BIValidationAlertType.tix;BIValidationAlertType.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+/root/Desktop/Guidewire/WS_CC/modules/configuration/generated/typekey/DestructionRequestStatus.java:3: error: cannot find symbol
+@javax.annotation.Generated(value = "com.guidewire.pl.metadata.codegen.Codegen", comments = "DestructionRequestStatus.tti;DestructionRequestStatus.tix;DestructionRequestStatus.ttx")
+                 ^
+  symbol:   class Generated
+  location: package javax.annotation
+100 errors
+ FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':modules:configuration:compileJava'.
+> Compilation failed with exit code 1; see the compiler error output for details.
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':modules:configuration:compileJava'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:84)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:61)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:88)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskArtifactStateTaskExecuter.execute(ResolveTaskArtifactStateTaskExecuter.java:45)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:233)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:215)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:74)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:55)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:32)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:113)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.access$000(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$1.proceed(DefaultBuildExecuter.java:43)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:30)
+	at org.gradle.initialization.DefaultGradleLauncher$4.run(DefaultGradleLauncher.java:197)
+	at org.gradle.internal.Factories$1.create(Factories.java:25)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:91)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:53)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:194)
+	at org.gradle.initialization.DefaultGradleLauncher.access$200(DefaultGradleLauncher.java:36)
+	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:118)
+	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:112)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:91)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:63)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:112)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:98)
+	at org.gradle.launcher.exec.GradleBuildController.run(GradleBuildController.java:66)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:28)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:41)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:75)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:49)
+	at org.gradle.tooling.internal.provider.ServicesSetupBuildActionExecuter.execute(ServicesSetupBuildActionExecuter.java:44)
+	at org.gradle.tooling.internal.provider.ServicesSetupBuildActionExecuter.execute(ServicesSetupBuildActionExecuter.java:29)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:67)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:47)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:26)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:34)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.call(ForwardClientInput.java:74)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.call(ForwardClientInput.java:72)
+	at org.gradle.util.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:72)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:50)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:60)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:72)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:50)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:293)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed with exit code 1; see the compiler error output for details.
+	at org.gradle.api.internal.tasks.compile.CommandLineJavaCompiler.executeCompiler(CommandLineJavaCompiler.java:63)
+	at org.gradle.api.internal.tasks.compile.CommandLineJavaCompiler.execute(CommandLineJavaCompiler.java:45)
+	at org.gradle.api.internal.tasks.compile.CommandLineJavaCompiler.execute(CommandLineJavaCompiler.java:34)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:104)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:53)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompilerSupport.execute(CleaningJavaCompilerSupport.java:35)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompilerSupport.execute(CleaningJavaCompilerSupport.java:25)
+	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:188)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:169)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:112)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:73)
+	at org.gradle.api.internal.project.taskfactory.DefaultTaskClassInfoStore$IncrementalTaskAction.doExecute(DefaultTaskClassInfoStore.java:163)
+	at org.gradle.api.internal.project.taskfactory.DefaultTaskClassInfoStore$StandardTaskAction.execute(DefaultTaskClassInfoStore.java:134)
+	at org.gradle.api.internal.project.taskfactory.DefaultTaskClassInfoStore$StandardTaskAction.execute(DefaultTaskClassInfoStore.java:123)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:95)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:76)
+	... 69 more
+
+
+BUILD FAILED
+
+Total time: 1 mins 0.604 secs
+12:15:20.417 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for task history cache (/root/Desktop/Guidewire/WS_CC/.gradle/3.2.1/taskArtifacts)
+12:15:20.418 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/root/Desktop/Guidewire/WS_CC/.gradle/3.2.1/taskArtifacts/fileHashes.bin)
+12:15:20.419 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (/root/Desktop/Guidewire/WS_CC/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin)
+12:15:20.419 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/root/Desktop/Guidewire/WS_CC/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin)
+12:15:20.420 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/root/Desktop/Guidewire/WS_CC/.gradle/3.2.1/taskArtifacts).
+12:15:20.422 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+12:15:20.422 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 1 (avg: 0.014 secs, total: 0.014 secs)
+12:15:20.422 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.002 secs
+12:15:20.423 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Plugin Resolution Cache (/root/Desktop/Guidewire/WS_CC/gradle/cache/caches/3.2.1/plugin-resolution) was closed 0 times.
+12:15:20.423 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Generated Gradle JARs cache (/root/Desktop/Guidewire/WS_CC/gradle/cache/caches/3.2.1/generated-gradle-jars) was closed 0 times.
+12:15:20.423 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+12:15:20.423 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+12:15:20.423 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (/root/Desktop/Guidewire/WS_CC/gradle/cache/caches/modules-2)
+12:15:20.424 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/root/Desktop/Guidewire/WS_CC/gradle/cache/caches/modules-2).
+12:15:20.424 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+12:15:20.433 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+12:15:20.433 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@47aedb15]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@3e118e72 with state StopRequested
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@47aedb15]
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1572437720434
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to command completed and stop requested. The daemon is running a build: false
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+12:15:20.434 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Failure[value=org.gradle.initialization.ReportedException: org.gradle.internal.exceptions.LocationAwareException: Execution failed for task ':modules:configuration:compileJava'.]
+12:15:20.434 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:15:20.435 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 12: dispatching class org.gradle.launcher.daemon.protocol.Failure
+12:15:20.435 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:15:20.435 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+12:15:20.436 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+12:15:20.436 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+12:15:20.436 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+12:15:20.465 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: BuildAndStop{id=1e8caac8-a534-4339-a721-0593f6df90d2.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+12:15:20.504 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.CloseInput
+12:15:20.504 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@6745a7f7
+12:15:20.507 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.Finished
+12:15:20.507 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@4622dc6f
+12:15:20.507 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@4622dc6f
+12:15:20.508 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 12: stopping connection
+12:15:20.509 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+12:15:20.509 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received null
+12:15:20.509 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received end-of-input from client.
+12:15:20.510 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 12: stopping connection
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+12:15:20.519 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [7d6a14a8-f8be-4c2c-a36b-1c54b157304a port:35599, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+12:15:20.519 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+12:15:20.519 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+12:15:20.520 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.

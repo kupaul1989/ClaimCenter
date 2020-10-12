@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Contains-Sources: true
+Maven-Coordinates: WS_CC.modules:configuration:jar::9.0.4
+

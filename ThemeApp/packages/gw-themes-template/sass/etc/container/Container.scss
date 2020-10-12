@@ -1,0 +1,39 @@
+/**
+ * Generic simple Container styles for all Guidewire themes
+ */
+
+/**
+ *  Detail View columns
+ */
+.g-dv-column {
+  margin: 4px 0 2px 0;
+  padding: 0 7px 0 10px;
+}
+
+/**
+ * Form Fields, Prefix, Suffix, and AltValues
+ */
+.g-form-altVal {
+  font-size: 10px;
+  clear: both;
+}
+
+.g-before-input-cell {
+  //padding-right: 2px;
+}
+
+.g-after-input-cell {
+  padding-left: 2px;
+}
+
+/**
+ *  Drill down styles
+ */
+.drilldownPrev,
+.drilldownNext,
+.drilldownParent,
+.drilldownChild {
+  height: 15px;
+  width: 15px;
+}
+

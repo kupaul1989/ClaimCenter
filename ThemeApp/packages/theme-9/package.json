@@ -1,0 +1,25 @@
+{
+    "name": "theme-9",
+    "type": "theme",
+    "creator": "anonymous",
+    "summary": "Short summary",
+    "detailedDescription": "Long description of package",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "slicer": {
+        "js": [
+            {
+                "path": "${package.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
+    },
+    "output": "${package.dir}/build",
+    "local": true,
+    // The order of packages IS important.  Due to the way the resources are loaded by Sencha cmd during the compilation
+    // phase, the gw-themes-template needs to be before the gw-base-template so the base variables are available to
+    // the underlying themes.
+    "requires": ["gw-themes-template", "gw-base-template", "sencha-charts"],
+    "extend": "ext-theme-neptune"
+}

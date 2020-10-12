@@ -1,0 +1,58 @@
+/**
+ * Generic simple form/field/Base Component styles for all Guidewire themes
+ */
+
+.g-ime-mode-active {
+  ime-mode: active;
+}
+
+.g-ime-mode-inactive {
+  ime-mode: inactive;
+}
+
+.g-input-prefix {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.g-altVal-prefix {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+.g-input-suffix {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 2px;
+}
+
+.g-altVal-suffix {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 2px;
+}
+
+.g-input-main-row {
+  display: table-row;
+}
+
+.g-input-altVal-row {
+  display: table-row;
+}
+
+.g-input-prefix-suffix-body {
+  width: 100%
+}
+
+.g-input-prefix-suffix-field-inherit {
+  display: table-cell;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" name="TwilioDeliveryStatus" desc="">
+  <typecode
+    code="Delivered"
+    desc="For successful message delivery"
+    name="Delivered"/>
+  <typecode
+    code="UnDelivered"
+    desc="For unsuccessful message delivery"
+    name="Not Delivered"/>
+  <typecode
+    code="Sent"
+    desc="Message being sent"
+    name="Sent"/>
+  <typecode
+    code="Queued"
+    desc="Message in Queue"
+    name="Queued"/>
+  <typecode
+    code="Initiated"
+    desc="Message is Initiated for sending"
+    name="Initiated"/>
+  <typecode
+    code="Failed"
+    desc="Failed"
+    name="Failed"/>
+</typelist>

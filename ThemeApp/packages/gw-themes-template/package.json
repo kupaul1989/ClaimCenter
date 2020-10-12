@@ -1,0 +1,21 @@
+{
+    "name": "gw-themes-template",
+    "type": "code",
+    "creator": "anonymous",
+    "summary": "A Guidewire base theme template package for inclusion into the Ferrite themes... This is never intended to be built or released",
+    "detailedDescription": "Because of how ExtJs theming works, and code that needs to be changed for a specific theme that requires this will need to removed from here and copied into each requiring theme and modified independently there",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "slicer": {
+        "js": [
+            {
+                "path": "${package.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
+    },
+    "output": "${package.dir}/build",
+    "local": true,
+    "requires": []
+}

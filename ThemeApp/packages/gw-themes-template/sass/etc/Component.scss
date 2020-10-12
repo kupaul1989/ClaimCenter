@@ -1,0 +1,130 @@
+/**
+ * Generic simple Component styles for all Guidewire themes
+ */
+
+/**
+ *    radio range cells (radio buttons in grid cells)
+ */
+.gw-radio-group-cell {
+  label, input {
+    vertical-align: top;
+  }
+  label {
+    margin: 0 2px;
+  }
+  td {
+    padding: 0 4px;
+  }
+}
+
+/**
+ *  Alert bar styles
+ */
+.g-alert-bar {
+  border: 1px solid #ffefb7 !important;
+  padding: 5px 5px 5px 10px;
+  margin: 5px 5px 5px 7px;
+  border-radius: 3px;
+
+  /* small width for the CLOSE button*/
+  TD + TD{
+    width: 20px;
+  }
+}
+
+.gbarinput-wrap {
+  float: left;
+  margin-top: 5px;
+  margin-right: 2px;
+  width: 40px;
+  height: 10px;
+  border: 1px solid #666666;
+}
+
+.normalBar {
+  background-color: #4050B0;
+}
+
+.highBar {
+  background-color: green;
+}
+
+.mediumBar {
+  background-color: #ffe400;
+}
+
+.lowBar {
+  background-color: red;
+}
+
+/**
+ *  links and button
+ */
+.miniButton,
+.bigButton {
+  white-space: nowrap !important;
+  text-decoration: none !important; /* no need to underline button text */
+  border-radius: 2px;
+  margin-left: 1px;
+}
+
+/**
+ *  disabled button link
+ */
+SPAN.miniButton, SPAN.bigButton {
+  border: 1px solid #aaa !important;
+  color: #fff !important;
+  background-color: #c1c1c1;
+
+}
+
+.bigButton {
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.bigButton + .bigButton {
+  margin-left: 4px;
+}
+
+/**
+ * Right align input column
+ */
+td.gw-right-align-col {
+  width: 100%;
+  text-align: right;
+}
+
+/**
+ *  System Alert Bar Messages
+ */
+.system_alert {
+  * {
+    background-color: #fff3a3;
+    font-size: 12px;
+  }
+  .system_alert_message {
+    vertical-align: middle;
+  }
+  .bigButton {
+    padding: 0 10px 2px;
+    margin: 0 10px;
+    display: inline-block;
+  }
+  .miniButton {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+}
+
+.system_alert.x-panel-default {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.system_alert_panel {
+  margin-top: 19px;
+}
+
+.system_alert_icon {
+  margin: 2px 23px;
+}

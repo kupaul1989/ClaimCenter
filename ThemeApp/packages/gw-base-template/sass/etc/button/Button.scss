@@ -1,0 +1,14 @@
+/**
+ * Generic simple Button styles for all Guidewire base theme
+ */
+
+/**
+ * reduced padding for minibutton links that appear in inline (e.g., reinsurance form)
+ */
+.g-content a.miniButton {
+  padding: 0 10px;
+}
+
+.g-content a.bigButton {
+  padding: 1px 10px 3px;
+}

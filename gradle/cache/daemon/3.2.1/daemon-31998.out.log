@@ -1,0 +1,340 @@
+09:16:07.940 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-Xms1g, -Xmx4g, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+09:16:07.984 [INFO] [org.gradle.launcher.daemon.server.health.gc.GarbageCollectionMonitor] Unable to determine a garbage collection monitoring strategy for JVMStrategy{Private Build version 1.8.0_222}
+09:16:08.054 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=524c8733-abf6-4579-aee5-9d781994cdba,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=31998,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:16:08.058 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573550168058
+09:16:08.066 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+09:16:08.067 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+09:16:08.067 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+09:16:08.068 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:e416:9aff:fe1e:2e58%eth0
+09:16:08.069 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /10.47.0.5
+09:16:08.069 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /139.59.60.164
+09:16:08.069 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+09:16:08.070 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+09:16:08.070 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+09:16:08.070 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+09:16:08.071 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+09:16:08.071 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+09:16:08.074 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]].
+09:16:08.077 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Tue Nov 12 09:16:08 UTC 2019, with address: [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:16:08.077 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:16:08.078 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=524c8733-abf6-4579-aee5-9d781994cdba,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=31998,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:16:08.079 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]], context: DefaultDaemonContext[uid=524c8733-abf6-4579-aee5-9d781994cdba,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=31998,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:16:08.093 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+09:16:08.094 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:16:08.172 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+09:16:08.173 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+09:16:08.175 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+09:16:08.211 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:56490 to /0:0:0:0:0:0:0:1:34609.
+09:16:08.257 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+09:16:08.260 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+09:16:08.263 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+09:16:08.312 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.BuildAndStop
+09:16:08.313 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received non-IO message from client: BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+09:16:08.314 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC}.
+09:16:08.314 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC} with connection: socket connection from /0:0:0:0:0:0:0:1:34609 to /0:0:0:0:0:0:0:1:56490.
+09:16:08.337 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@7aba1aee] after 0.0 minutes of idle
+09:16:08.338 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:16:08.338 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [536e8a67-99bb-4324-b90f-be45be6e5fad port:34609, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:16:08.339 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+09:16:08.340 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:16:08.346 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+09:16:08.347 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573550168347
+09:16:08.347 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+09:16:08.348 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC}. Dispatching build started information...
+09:16:08.350 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+09:16:08.357 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/opt/tomcat/apache-tomcat-9.0.27/bin:/root/Desktop/Guidewire/apache-ant-1.9.13/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin, LESSCLOSE=/bin/lesspipe %s %s, XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop, JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64, TERM=xterm-256color, GNOME_TERMINAL_SERVICE=:1.40, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus, LANG=C.UTF-8, XDG_SESSION_ID=c3, JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre, ANT_HOME=/root/Desktop/Guidewire/apache-ant-1.9.13, XRDP_SOCKET_PATH=/var/run/xrdp/sockdir, DISPLAY=:10.0, SSH_AGENT_PID=2428, COLORTERM=truecolor, SESSION_MANAGER=local/My-DropLet:@/tmp/.ICE-unix/2437,unix/My-DropLet:/tmp/.ICE-unix/2437, LOGNAME=root, PULSE_SCRIPT=/etc/xrdp/pulse/default.pa, PWD=/root/Desktop/Guidewire/WS_CC, XRDP_SESSION=1, LESSOPEN=| /bin/lesspipe %s, SHELL=/bin/bash, CATALINA_HOME=/opt/tomcat/apache-tomcat-9.0.27, OLDPWD=/root/Desktop/Guidewire/WS_CC, USER=root, VTE_VERSION=5202, QT_ACCESSIBILITY=1, GTK_MODULES=gail:atk-bridge, UID=0, GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/bd3e085c_f137_44b1_acf8_6cf0b542a35f, SSH_AUTH_SOCK=/tmp/ssh-606lNH8PdfZy/agent.2364, _JAVA_OPTIONS=-Xms256m, XDG_RUNTIME_DIR=/run/user/0, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, SHLVL=2, HOME=/root}
+09:16:08.367 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+09:16:08.368 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 31998). The daemon log file: /root/Desktop/Guidewire/WS_CC/gradle/cache/daemon/3.2.1/daemon-31998.out.log
+09:16:08.371 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+09:16:08.371 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stopping after processing
+09:16:08.372 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy: true
+09:16:08.373 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+09:16:08.376 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+09:16:08.377 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=524c8733-abf6-4579-aee5-9d781994cdba,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=31998,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+Importing POM com.guidewire.cc:cc-parent:9.0.4
+Importing parent POM com.guidewire.cc:cc-all:9.0.4
+Importing POM com.guidewire.cc:cc-all:9.0.4
+:modules:configuration:generatePomFileForMavenJavaPublication
+:modules:configuration:genEntityRoleConstraintsSources
+:modules:configuration:genEntitySources
+:modules:configuration:genLocalizationSources
+:modules:configuration:genPcf4TestSources
+:modules:configuration:genPcfSources
+:modules:configuration:genPermissionSources
+:modules:configuration:genXmlSources UP-TO-DATE
+:modules:configuration:compileJava UP-TO-DATE
+:modules:configuration:copyGosuResources UP-TO-DATE
+:modules:configuration:compileGosu UP-TO-DATE
+:modules:configuration:processResources UP-TO-DATE
+:modules:configuration:verifyGeneratedClasses
+:modules:configuration:classes
+:modules:configuration:jar UP-TO-DATE
+:modules:configuration:syncWebapp UP-TO-DATE
+:modules:configuration:copyThemes
+:modules:configuration:prepareWebapp
+:compile
+:modules:configuration:runServer
+Using classpath from /root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.txt
+====================================================
+= Running main class: com.guidewire.commons.jetty.GWServerJettyServerMain
+=           JVM args: -DSTOP.KEY=gwdev -DSTOP.PORT=8079 -Dgw.classpath.file=/root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.txt -Dgw.devroot.dir=/root/Desktop/Guidewire/WS_CC -Dgw.internal.resourcelocators.targetModule=configuration -Dgw.port=8080 -Dgw.server.mode=dev -Djava.awt.headless=true -Xmx4g -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -ea -cp /root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.jar
+=       Program args: 
+=
+Picked up _JAVA_OPTIONS: -Xms256m
+Looking for the devroot starting from /root/Desktop/Guidewire/WS_CC
+Detected CONFIG environment, root: /root/Desktop/Guidewire/WS_CC
+2019-11-12 09:17:32,098 INFO jetty-9.0.7.v20131107
+2019-11-12 09:17:32,309 INFO NO JSP Support for /cc, did not find org.apache.jasper.servlet.JspServlet
+ServletProperties#_webappContextRootDir is set to /root/Desktop/Guidewire/WS_CC/webapps/cc
+Module path: [configuration]
+                    2019-11-12 09:17:40,241 INFO Using logging system: com.guidewire.logging.impl.Log4jLoggingSystem
+                    2019-11-12 09:17:40,243 INFO Logging properties found at "/root/Desktop/Guidewire/WS_CC/modules/configuration/config/logging/logging.properties"
+                    2019-11-12 09:17:40,244 INFO Root directory is "/root/Desktop/Guidewire/WS_CC/webapps/cc"
+                    2019-11-12 09:17:40,244 INFO Temp directory is "/tmp/jetty-0.0.0.0-8080-cc-_cc-any-"
+                    2019-11-12 09:17:40,573 INFO Increasing runlevel to 'GUIDEWIRE_STARTUP'
+***** Module versions follow: *****
+9.0.4, cff4c767e87e84eea9c14741038988187da314a7: cc-gunit, cc, cc-pl, cc-pl-bizrules, cc-plugin, cc-pl-heatmap, cc-pl-personaldata, cc-pl-solr, cc-tools
+9.14.5, e09388290ba015ed2e7a00c755e13002c1255f54: pl-appserver-websphere, pl, plugin, util, gosu-process, gosu-servlet, modules, perfdownload-analyzer, perfdownload-collector, solr, pl-appserver-jboss, bizrules, heatmap, personaldata, contact, beangraphutil, pl-gunit, perfdownload-analyzer-test, perfdownload-collector-test, testresult-formatter, bizrules-gunit, pl-tools
+                    2019-11-12 09:17:40,592 INFO Setup platform dependencies ...
+                    2019-11-12 09:17:41,368 INFO Platform dependency setup complete.
+                    2019-11-12 09:17:41,368 INFO Setup application dependencies ...
+                    2019-11-12 09:17:47,704 INFO Reading config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/config.xml
+                    2019-11-12 09:17:48,168 INFO CustomizableSystemClock initialized, current time is now: 1573550268163, Tue Nov 12 09:17:48 UTC 2019
+                    2019-11-12 09:17:48,174 INFO Application dependency setup complete.
+                    2019-11-12 09:17:48,199 WARN No roles were specified for the server. Assigning all roles to the server since it is running in "development" mode.
+                    2019-11-12 09:17:48,201 INFO SERVERID initialized to 'my-droplet', ENV is not specified, server roles are [batch, workqueue, scheduler, messaging, startable, ui]
+my-droplet          2019-11-12 09:17:48,835 INFO Increasing runlevel to 'SHUTDOWN'
+my-droplet          2019-11-12 09:17:48,867 INFO OSGi temporary directory is /tmp/jetty-0.0.0.0-8080-cc-_cc-any-/osgi_cc_fwABAZCIQmzD4I44J6oUUccqFkN8KR6RSIYBsZ58dFoWGcpRAAAAAA__
+my-droplet          2019-11-12 09:17:49,570 INFO Service manager started
+my-droplet          2019-11-12 09:17:49,573 INFO Reading config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/config.xml
+my-droplet          2019-11-12 09:17:49,590 WARN Unknown parameter specified (will be ignored): InputHelpTextOnFocus
+my-droplet          2019-11-12 09:17:49,600 INFO Plugin configuration loaded from /root/Desktop/Guidewire/WS_CC/modules/configuration/config/plugin/plugin-config.xml
+my-droplet          2019-11-12 09:17:49,599 INFO Memory usage: 668.138 MB used (both active and stale objects), 594.360 MB free, 1262.500 MB total, 3641.000 MB max. --  Please read 'Memory usage logging' in the System Administration Guide for information on how to interpret these numbers.
+my-droplet          2019-11-12 09:17:56,645 INFO ***** ClaimCenter 9.0.4.196. (Platform 9.14.5) starting *****
+my-droplet          2019-11-12 09:17:56,859 INFO Increasing runlevel to 'NODAEMONS'
+my-droplet          2019-11-12 09:17:56,861 INFO Reading database config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/database-config.xml
+my-droplet          2019-11-12 09:17:57,114 INFO Starting parse security config...
+my-droplet          2019-11-12 09:17:57,179 INFO SecurityManager finished parsing /root/Desktop/Guidewire/WS_CC/modules/configuration/config/security/security-config.xml
+my-droplet          2019-11-12 09:17:57,206 INFO Finished security config.
+my-droplet          2019-11-12 09:17:57,211 INFO Starting database ClaimCenterDatabase on env null
+my-droplet          2019-11-12 09:17:57,235 INFO Creating DBCP connection pool.
+my-droplet          2019-11-12 09:17:57,357 INFO JDBC Driver: com.microsoft.sqlserver.jdbc.SQLServerDriver, major version: 4, minor version: 1
+my-droplet          2019-11-12 09:17:57,788 INFO Time taken to verify database is up: 112 ms
+my-droplet          2019-11-12 09:17:57,835 INFO Validating main database connections have all required properties
+my-droplet          2019-11-12 09:17:57,836 WARN Unsupported database major or minor version found: (15.00.1900).  Supported version is (12.00.4100) or a later minor version
+my-droplet          2019-11-12 09:17:57,836 WARN Unsupported database version allowed because server is running in development mode
+my-droplet          2019-11-12 09:17:58,115 INFO Unicode columns not being used.
+my-droplet          2019-11-12 09:18:04,181 INFO Calculating file checksums for all modules
+my-droplet          2019-11-12 09:18:06,058 INFO Checking if existing database version is current...
+my-droplet          2019-11-12 09:18:06,071 INFO Datamodel version (6, 28, 11, 50) is up to date.
+my-droplet          2019-11-12 09:18:06,577 INFO Successful database upgrade to version (6, 28, 11, 50)
+my-droplet          2019-11-12 09:18:06,791 INFO Database started
+my-droplet          2019-11-12 09:18:06,793 INFO Loading the platform defined serialization blacklist.
+my-droplet          2019-11-12 09:18:06,795 INFO Loading serialization blacklist from /root/Desktop/Guidewire/WS_CC/modules/configuration/config/security/serialization-blacklist.lst
+my-droplet          2019-11-12 09:18:06,800 INFO Loading the platform defined serialization whitelist.
+my-droplet          2019-11-12 09:18:06,801 INFO Loading serialization whitelist from jar:file:/root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc/9.0.4/cc-9.0.4.jar!/com/guidewire/security/serialization-whitelist.lst
+my-droplet          2019-11-12 09:18:06,807 INFO Loading serialization whitelist from /root/Desktop/Guidewire/WS_CC/modules/configuration/config/security/serialization-whitelist.lst
+my-droplet          2019-11-12 09:18:06,811 INFO Starting single-node cluster channel...
+my-droplet          2019-11-12 09:18:06,822 INFO Members joined the cluster: my-droplet (cfcb575e-8153-4c7e-b4ae-06acb1530d32)
+my-droplet          2019-11-12 09:18:20,109 INFO GlobalRandomSource#INITIAL_SEED = 1573550300109
+my-droplet          2019-11-12 09:18:20,951 INFO Inserted new record for My-DropLet node into cluster table
+my-droplet          2019-11-12 09:18:20,966 INFO Single-node cluster channel started.
+my-droplet          2019-11-12 09:18:23,375 INFO Parsing /root/Desktop/Guidewire/WS_CC/modules/configuration/config/messaging/messaging-config.xml
+my-droplet          2019-11-12 09:18:23,639 INFO Zone config defined for countries [AU, CA, DE, FR, GB, JP, US]
+my-droplet          2019-11-12 09:18:23,646 WARN The following country codes are configured zones but have not been loaded: [AU, CA, DE, FR, GB, JP, US]
+my-droplet          2019-11-12 09:18:23,665 INFO Address config defined for country code US
+my-droplet          2019-11-12 09:18:23,668 INFO Address config defined for country code CA
+my-droplet          2019-11-12 09:18:23,672 INFO Address config defined for country code AU
+my-droplet          2019-11-12 09:18:23,676 INFO Address config defined for country code FR
+my-droplet          2019-11-12 09:18:23,679 INFO Address config defined for country code DE
+my-droplet          2019-11-12 09:18:23,682 INFO Address config defined for country code JP
+my-droplet          2019-11-12 09:18:23,685 INFO Address config defined for country code GB
+my-droplet          2019-11-12 09:18:23,824 INFO BatchProcessManager starting...
+my-droplet          2019-11-12 09:18:23,827 INFO BatchProcessManagerConfig parsing of /root/Desktop/Guidewire/WS_CC/modules/configuration/config/batchprocess/batch-process-config.xml
+my-droplet          2019-11-12 09:18:23,984 INFO BatchProcessManager started
+my-droplet          2019-11-12 09:18:23,984 INFO DistributedWorkerConfig parsing of /root/Desktop/Guidewire/WS_CC/modules/configuration/config/workqueue/work-queue.xml
+my-droplet          2019-11-12 09:18:24,006 WARN Work queue class com.guidewire.pl.domain.archiving.ArchiveWorkQueue is defined but archiving is not enabled.
+my-droplet          2019-11-12 09:18:24,616 INFO Archiving is not enabled
+my-droplet          2019-11-12 09:18:24,623 INFO Parsing /root/Desktop/Guidewire/WS_CC/modules/configuration/config/integration/inbound-integration-config.xml
+my-droplet          2019-11-12 09:18:31,396 INFO Increasing runlevel to 'DAEMONS'
+my-droplet          2019-11-12 09:18:31,400 INFO Starting workflow stats writer with interval 60 minutes.
+my-droplet          2019-11-12 09:18:31,401 INFO Starting DistributedWorkerManager ...
+my-droplet          2019-11-12 09:18:31,694 INFO DistributedWorkerManager thread pool configuration: minPoolSize=0, maxPoolSize=50, keepAliveTimeout=60 (seconds)
+my-droplet          2019-11-12 09:18:31,723 INFO DWM: Starting executor (1 workers at maximum) for work queue: ActivityEsc
+my-droplet          2019-11-12 09:18:31,780 INFO DWM: Starting executor (1 workers at maximum) for work queue: Workflow
+my-droplet          2019-11-12 09:18:31,798 INFO DWM: Starting executor (1 workers at maximum) for work queue: Geocode
+my-droplet          2019-11-12 09:18:31,811 INFO DWM: Starting executor (1 workers at maximum) for work queue: Archive
+my-droplet          2019-11-12 09:18:31,826 INFO DWM: Starting executor (1 workers at maximum) for work queue: ContactAutoSync
+my-droplet          2019-11-12 09:18:31,843 INFO DWM: Starting executor (1 workers at maximum) for work queue: ReviewSync
+my-droplet          2019-11-12 09:18:31,857 INFO DWM: Starting executor (1 workers at maximum) for work queue: RecalculateMetrics
+my-droplet          2019-11-12 09:18:31,889 INFO DWM: Starting executor (1 workers at maximum) for work queue: ClaimException
+my-droplet          2019-11-12 09:18:31,907 INFO DWM: Starting executor (1 workers at maximum) for work queue: IdleClaim
+my-droplet          2019-11-12 09:18:31,926 INFO DWM: Starting executor (1 workers at maximum) for work queue: IdleClosedClaim
+my-droplet          2019-11-12 09:18:31,946 INFO DWM: Starting executor (1 workers at maximum) for work queue: GroupException
+my-droplet          2019-11-12 09:18:31,960 INFO DWM: Starting executor (1 workers at maximum) for work queue: UserException
+my-droplet          2019-11-12 09:18:31,978 INFO DWM: Starting executor (2 workers at maximum) for work queue: BulkInvoiceSubmission
+my-droplet          2019-11-12 09:18:31,995 INFO DWM: Starting executor (2 workers at maximum) for work queue: BulkPurge
+my-droplet          2019-11-12 09:18:32,010 INFO DWM: Starting executor (1 workers at maximum) for work queue: EncryptionUpgrade
+my-droplet          2019-11-12 09:18:32,027 INFO DWM: Starting executor (1 workers at maximum) for work queue: ContactRetire
+my-droplet          2019-11-12 09:18:32,044 INFO DWM: Starting executor (1 workers at maximum) for work queue: AddressDelete
+my-droplet          2019-11-12 09:18:32,059 INFO DWM: Starting executor (2 workers at maximum) for work queue: AggLimitCalc
+my-droplet          2019-11-12 09:18:32,074 INFO DWM: Starting executor (1 workers at maximum) for work queue: UserWorkloadUpdate
+my-droplet          2019-11-12 09:18:32,093 INFO DWM: Starting executor (1 workers at maximum) for work queue: ServiceRequestMetricEscalation
+my-droplet          2019-11-12 09:18:32,108 INFO DWM: Starting executor (1 workers at maximum) for work queue: DBConsistencyCheck
+my-droplet          2019-11-12 09:18:32,126 INFO DWM: Starting executor (1 workers at maximum) for work queue: DBStats
+my-droplet          2019-11-12 09:18:32,141 INFO DWM: Starting executor (16 workers at maximum) for work queue: PhoneNumberNormalizer
+my-droplet          2019-11-12 09:18:32,161 INFO DWM: Starting executor (4 workers at maximum) for work queue: BizRulesValidator
+my-droplet          2019-11-12 09:18:32,177 INFO DWM: Starting executor (1 workers at maximum) for work queue: ArchiveReferenceTrackingSync
+my-droplet          2019-11-12 09:18:32,192 INFO DWM: Starting executor (1 workers at maximum) for work queue: DestroyContactForPersonalData
+my-droplet          2019-11-12 09:18:32,207 INFO DWM: Starting executor (1 workers at maximum) for work queue: RemoveOldContactDestructionRequest
+my-droplet          2019-11-12 09:18:32,230 INFO DWM: Starting executor (1 workers at maximum) for work queue: NotifyExternalSystemForPersonalData
+my-droplet          2019-11-12 09:18:32,245 INFO Finished DistributedWorkerManager.
+my-droplet          2019-11-12 09:18:32,278 INFO Parsing schedule file /root/Desktop/Guidewire/WS_CC/modules/configuration/config/scheduler/scheduler-config.xml
+my-droplet          2019-11-12 09:18:32,300 INFO Starting scheduler ...
+my-droplet          2019-11-12 09:18:32,326 INFO Schedule for Activity Escalation started.
+my-droplet          2019-11-12 09:18:32,327 INFO Schedule for Bulk Invoice Escalation started.
+my-droplet          2019-11-12 09:18:32,327 INFO Schedule for Bulk Invoice Workflow Monitor started.
+my-droplet          2019-11-12 09:18:32,328 INFO Schedule for BulkPurge started.
+my-droplet          2019-11-12 09:18:32,328 INFO Schedule for Catastrophe Claim Finder started.
+my-droplet          2019-11-12 09:18:32,328 INFO Schedule for Claim Exception started.
+my-droplet          2019-11-12 09:18:32,329 INFO Schedule for Contact Retire started.
+my-droplet          2019-11-12 09:18:32,329 INFO Schedule for ContactAutoSync started.
+my-droplet          2019-11-12 09:18:32,330 INFO Schedule for Dashboard Statistics started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Database Consistency Check started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Encryption Upgrade started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Financials Escalation started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Group Exception started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Idle Claim Exception started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for ProcessHistoryPurge started.
+my-droplet          2019-11-12 09:18:32,331 INFO Schedule for Purge Cluster Members started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Purge Failed Work Items started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Purge Message History started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Purge Profiler Data started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Purge Workflow started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Purge Workflow Logs started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Recalculate Claim Metrics started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Retired Policy Graph Disconnector started.
+my-droplet          2019-11-12 09:18:32,332 INFO Schedule for Service Metric Escalation started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for Statistics started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for TAccounts Escalation started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for User Exception started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for Workflow started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for WorkItemSetPurge started.
+my-droplet          2019-11-12 09:18:32,333 INFO Schedule for WorkQueueInstrumentationPurge started.
+my-droplet          2019-11-12 09:18:32,347 INFO Started scheduler
+my-droplet          2019-11-12 09:18:32,353 INFO Configuring integration thread pools
+my-droplet          2019-11-12 09:18:32,359 INFO Configured com.guidewire.execution.ThreadPool-1573550312354-0
+my-droplet          2019-11-12 09:18:32,380 INFO runtime type Unmanaged (4)
+my-droplet          2019-11-12 09:18:32,400 INFO init gw_default forkjoin [1faab0b1-514b-44fa-a4ac-f32acbff6f00] (1)
+my-droplet          2019-11-12 09:18:32,401 INFO Configuring inbound file integrations
+my-droplet          2019-11-12 09:18:32,402 INFO Configuring inbound JMS integrations
+my-droplet          2019-11-12 09:18:32,402 INFO Configuring inbound custom integrations
+my-droplet          2019-11-12 09:18:32,403 INFO There are no inbound integrations configured for the existing environment
+my-droplet          2019-11-12 09:18:32,406 INFO Starting Messaging Request Processing Manager
+my-droplet          2019-11-12 09:18:32,427 INFO Starting event loop
+my-droplet          2019-11-12 09:18:32,476 INFO The ConsoleMessageTransport for destination 0 is initialized.
+my-droplet          2019-11-12 09:18:33,074 INFO DST-starting with maxRetries=5, retryMinutes=1
+my-droplet          2019-11-12 09:18:33,341 INFO Starting Messaging Destination Manager
+my-droplet          2019-11-12 09:18:33,626 INFO Starting event loop
+my-droplet          2019-11-12 09:18:33,780 INFO Starting destination 80 - Contact Auto Sync Failure
+my-droplet          2019-11-12 09:18:33,792 INFO MessageTransport Destination 80 RESUME
+my-droplet          2019-11-12 09:18:33,793 INFO Starting message destination 80: Contact Auto Sync Failure (1 sender threads).
+my-droplet          2019-11-12 09:18:33,796 INFO MW.Worker.run: Started writer thread for destination: 80
+my-droplet          2019-11-12 09:18:33,796 INFO MW-startThreadPool-80 poolSize=1
+my-droplet          2019-11-12 09:18:33,854 INFO Destination: 80 started
+my-droplet          2019-11-12 09:18:33,888 INFO Starting destination 65 - Email
+my-droplet          2019-11-12 09:18:33,896 INFO Starting message destination 65: Email (1 sender threads).
+my-droplet          2019-11-12 09:18:33,897 INFO MW.Worker.run: Started writer thread for destination: 65
+my-droplet          2019-11-12 09:18:33,897 INFO MW-startThreadPool-65 poolSize=1
+my-droplet          2019-11-12 09:18:33,915 INFO Destination: 65 started
+my-droplet          2019-11-12 09:18:33,944 INFO Starting destination 67 - Metro
+my-droplet          2019-11-12 09:18:33,952 INFO Starting message destination 67: Metro (1 sender threads).
+my-droplet          2019-11-12 09:18:33,953 INFO MW.Worker.run: Started writer thread for destination: 67
+my-droplet          2019-11-12 09:18:33,954 INFO MW-startThreadPool-67 poolSize=1
+my-droplet          2019-11-12 09:18:33,972 INFO Destination: 67 started
+my-droplet          2019-11-12 09:18:34,003 INFO Starting destination 99 - Contact Message Transport
+my-droplet          2019-11-12 09:18:34,011 INFO Starting message destination 99: Contact Message Transport (1 sender threads).
+my-droplet          2019-11-12 09:18:34,012 INFO MW.Worker.run: Started writer thread for destination: 99
+my-droplet          2019-11-12 09:18:34,012 INFO MW-startThreadPool-99 poolSize=1
+my-droplet          2019-11-12 09:18:34,035 INFO Destination: 99 started
+my-droplet          2019-11-12 09:18:34,060 INFO Starting destination 324 - Document Store
+my-droplet          2019-11-12 09:18:34,067 INFO Starting message destination 324: Document Store (1 sender threads).
+my-droplet          2019-11-12 09:18:34,068 INFO MW.Worker.run: Started writer thread for destination: 324
+my-droplet          2019-11-12 09:18:34,068 INFO MW-startThreadPool-324 poolSize=1
+my-droplet          2019-11-12 09:18:34,084 INFO Destination: 324 started
+my-droplet          2019-11-12 09:18:34,122 INFO Starting destination 70 - Solr Claim Contact Message Transport
+my-droplet          2019-11-12 09:18:34,145 INFO ***** CCSolrMessageTransportPlugin is initialized. *****
+my-droplet          2019-11-12 09:18:34,145 INFO Starting message destination 70: Solr Claim Contact Message Transport (1 sender threads).
+my-droplet          2019-11-12 09:18:34,146 INFO MW.Worker.run: Started writer thread for destination: 70
+my-droplet          2019-11-12 09:18:34,147 INFO MW-startThreadPool-70 poolSize=1
+my-droplet          2019-11-12 09:18:34,163 INFO Destination: 70 started
+my-droplet          2019-11-12 09:18:34,167 INFO Starting QPlexor...
+my-droplet          2019-11-12 09:18:34,169 INFO QPlexor started
+my-droplet          2019-11-12 09:18:34,247 INFO Increasing runlevel to 'MULTIUSER'
+my-droplet          2019-11-12 09:18:34,359 WARN 
+my-droplet          2019-11-12 09:18:34,359 WARN !!! The server is in "development" mode. This mode should never be used for a production server.
+my-droplet          2019-11-12 09:18:34,359 WARN 
+my-droplet          2019-11-12 09:18:34,378 INFO ***** ClaimCenter ready *****
+my-droplet          2019-11-12 09:18:34,384 INFO com.guidewire.cc.system.integration.messaging.iso.ISOReceive initializing
+my-droplet          2019-11-12 09:18:34,396 INFO Started o.e.j.w.WebAppContext@233795b6{/cc,file:/root/Desktop/Guidewire/WS_CC/webapps/cc/,AVAILABLE}{/cc}
+my-droplet          2019-11-12 09:18:34,420 INFO Started ServerConnector@40d9ca2e{HTTP/1.1}{0.0.0.0:8080}
+                    2019-11-12 09:31:58,198 WARN BadMessage: 400 Illegal character for HttpChannelOverHttp@900cf78{r=0,a=IDLE,uri=-}
+                    2019-11-12 09:32:03,283 WARN BadMessage: 400 Illegal character for HttpChannelOverHttp@4872581a{r=0,a=IDLE,uri=-}
+my-droplet          2019-11-12 09:32:49,591 INFO Memory usage: 1056.837 MB used (both active and stale objects), 688.161 MB free, 1745.000 MB total, 3641.000 MB max. --  Please read 'Memory usage logging' in the System Administration Guide for information on how to interpret these numbers.
+client disconnection detected, canceling the build
+Daemon is stopping immediately the build was canceled after a stop was requested
+Unable to execute command BuildAndStop{id=cdaf1c92-f777-497f-9b7e-f301094c5b1c.1, currentDir=/root/Desktop/Guidewire/WS_CC} from socket connection from /0:0:0:0:0:0:0:1:34609 to /0:0:0:0:0:0:0:1:56490. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write message Failure[value=org.gradle.launcher.daemon.server.api.DaemonStoppedException: Gradle build daemon has been stopped: the build was canceled after a stop was requested] to '/0:0:0:0:0:0:0:1:56490'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:111)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.dispatch(SynchronizedDispatchConnection.java:51)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:135)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy.doBuild(StartBuildOrRespondWithBusy.java:59)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:33)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:45)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:160)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:133)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:121)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.esotericsoftware.kryo.KryoException: java.io.IOException: Broken pipe
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:156)
+	at com.esotericsoftware.kryo.io.Output.require(Output.java:134)
+	at com.esotericsoftware.kryo.io.Output.writeBytes(Output.java:219)
+	at org.gradle.internal.serialize.kryo.KryoBackedEncoder.writeBytes(KryoBackedEncoder.java:43)
+	at org.gradle.internal.serialize.AbstractEncoder$EncoderStream.write(AbstractEncoder.java:72)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1877)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1822)
+	at java.io.ObjectOutputStream.flush(ObjectOutputStream.java:719)
+	at org.gradle.internal.serialize.Message.send(Message.java:40)
+	at org.gradle.internal.serialize.BaseSerializerFactory$ThrowableSerializer.write(BaseSerializerFactory.java:151)
+	at org.gradle.internal.serialize.BaseSerializerFactory$ThrowableSerializer.write(BaseSerializerFactory.java:145)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$FailureSerializer.write(DaemonMessageSerializer.java:65)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$FailureSerializer.write(DaemonMessageSerializer.java:56)
+	at org.gradle.internal.serialize.DefaultSerializerRegistry$TaggedTypeSerializer.write(DefaultSerializerRegistry.java:116)
+	at org.gradle.internal.serialize.Serializers$StatefulSerializerAdapter$2.write(Serializers.java:46)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:109)
+	... 22 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:51)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:259)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:247)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.write(SocketConnection.java:233)
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:154)
+	... 37 more
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.

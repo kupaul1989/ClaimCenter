@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <ExitPoint
+    height="800"
+    id="YahooHomePage"
+    popup="true"
+    url="http://www.yahoo.com/"
+    width="1000">
+    <LocationEntryPoint
+      signature="YahooHomePage()"/>
+  </ExitPoint>
+</PCF>

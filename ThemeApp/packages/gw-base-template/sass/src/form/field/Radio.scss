@@ -1,0 +1,8 @@
+/**
+ * Generic Form Radio styles for Guidewire base themes
+ */
+
+// Clear the border on a default radio button in a grid cell
+.#{$prefix}grid-cell .#{$prefix}form-radio-default {
+  border: 0;
+}

@@ -1,0 +1,25 @@
+package rules.Preupdate.ClaimPreupdate_dir.CPU45000TriggerSMSEventonAdjusterAssignment_dir
+uses exv.twilio.common.MessageUtil
+
+@gw.rules.RuleName("New Assignment")
+internal class NewAssignment {
+  static function doCondition(claim : entity.Claim) : boolean {
+/*start00rule*/
+return (claim.isFieldChanged("AssignedUser")
+    and claim.getOriginalValue("AssignedUser") == null)
+/*end00rule*/
+}
+
+  static function doAction(claim : entity.Claim, actions : gw.rules.Action) {
+/*start00rule*/
+    var msgUtil = new MessageUtil()
+    var claimContact = claim.Contacts.firstWhere(\cContact -> cContact.Roles.hasMatch(\role ->
+        role.Role == ContactRole.TC_INSURED))
+    var sms = msgUtil.createNotificationMessage(claimContact)
+    sms.MessageBody = "New claim:"+claim.ClaimNumber+" "
+        +"has been assigned to"+" "+claim.AssignedUser
+    sms.addEvent("SendNotificationSMS")
+    actions.exit()
+/*end00rule*/
+  }
+}

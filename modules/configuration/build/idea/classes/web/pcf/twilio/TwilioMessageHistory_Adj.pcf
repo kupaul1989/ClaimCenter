@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    id="TwilioMessageHistory_Adj"
+    title="&quot;Messages&quot;">
+    <Variable
+      initialValue="new exv.twilio.common.MessageUtil()"
+      name="util"
+      type="exv.twilio.common.MessageUtil"/>
+    <Variable
+      initialValue="util.getMessagesForUser(User.util.CurrentUser)"
+      name="twilioMessages"
+      type="TwilioSMS[]"/>
+    <ScreenRef
+      def="AdjusterMessageScreen(twilioMessages, util)"/>
+  </Page>
+</PCF>

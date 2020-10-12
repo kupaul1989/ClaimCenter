@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <PanelSet
+    id="ClaimContactMessageSetailsPanelSet">
+    <Require
+      name="twilioMessages"
+      type="TwilioSMS[]"/>
+    <Require
+      name="util"
+      type="exv.twilio.common.MessageUtil"/>
+    <DetailViewPanel>
+      <InputColumn>
+        <Label
+          id="inboxLabel"
+          label="&quot;Inbox&quot;"/>
+      </InputColumn>
+    </DetailViewPanel>
+    <PanelRef
+      def="TwilioMessageLV(twilioMessages.where(\msg -&gt; (msg.Type == MessageType.TC_INCOMING)), util, false, true, false)   "
+      id="Inbox">
+      <Toolbar/>
+    </PanelRef>
+    <DetailViewPanel>
+      <InputColumn>
+        <Label
+          id="sentMessagesLabel"
+          label="&quot;Sent Messages&quot;"/>
+      </InputColumn>
+    </DetailViewPanel>
+    <PanelRef
+      def="TwilioMessageLV(twilioMessages.where(\msg -&gt; (msg.Type == MessageType.TC_OUTGOING) and (msg.Status == TwilioDeliveryStatus.TC_DELIVERED)), util, false, false, true)">
+      <Toolbar/>
+    </PanelRef>
+  </PanelSet>
+</PCF>

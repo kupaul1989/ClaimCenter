@@ -1,0 +1,21 @@
+package rules.EventMessage.EventFired_dir.TwilioSystem_dir.TwilioSMSSystem_dir.ConversationSMS_dir
+
+uses exv.twilio.common.TwilioSystemPayload
+
+@gw.rules.RuleName("Send Coversation SMS")
+internal class SendCoversationSMS {
+  static function doCondition(messageContext : entity.MessageContext) : boolean {
+/*start00rule*/
+return messageContext.EventName == "SendConversationSMS"
+/*end00rule*/
+}
+
+  static function doAction(messageContext : entity.MessageContext, actions : gw.rules.Action) {
+/*start00rule*/
+    var sms = messageContext.Root as TwilioSMS
+    var payload = new TwilioSystemPayload().createdSMSPayload(sms)
+    messageContext.createMessage(payload)
+    sms.Status = TwilioDeliveryStatus.TC_QUEUED
+/*end00rule*/
+  }
+}

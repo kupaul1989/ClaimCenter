@@ -1,0 +1,178 @@
+/**
+ * Generic Component styles for all Guidewire themes
+ */
+
+/*******************************************
+ * Row / Cell style classes
+ *******************************************/
+.lvtitle .#{$prefix}grid-cell {
+  background-color: $gw-grid-row-lvtitle;
+  &.#{$prefix}grid-item-focused {
+    @if not is-null($grid-row-cell-focus-background-color) {
+      // Mix the lvtitle background color with the row cell focus background color at 40% focus color
+      background-color: mix($gw-grid-row-lvtitle, $grid-row-cell-focus-background-color, 40%);
+    }
+  }
+}
+
+.lvsubhead .#{$prefix}grid-cell {
+  background-color: $gw-background-color;
+  color: $gw-color-black;
+  font-weight: $gw-font-weight-bold;
+  // PLWEB-5765 - add the parent selector for grid item over to change the background color for the 'row cell over'
+  .#{$prefix}grid-item-over & {
+    background-color: $grid-row-cell-over-background-color;
+  }
+  &.#{$prefix}grid-item-focused {
+    @if not is-null($grid-row-cell-focus-background-color) {
+      // No need to mix for this one background since it isn't any different than the default
+      background-color: $grid-row-cell-focus-background-color;
+    }
+  }
+}
+
+.rowhighlighted .#{$prefix}grid-cell {
+  background-color: $gw-grid-row-highlight;
+  // PLWEB-5765 - add the parent selector for grid item over to change the background color for the 'row cell over'
+  // to be a mix of the row highlight color and background color
+  .#{$prefix}grid-item-over & {
+    background-color: mix($gw-grid-row-highlight, $grid-row-cell-over-background-color, 60%);
+  }
+  &.#{$prefix}grid-item-focused {
+    @if not is-null($grid-row-cell-focus-background-color) {
+      // Mix the rowhighlighted background color with the row cell focus background color at 40% focus color
+      background-color: mix($gw-grid-row-highlight, $grid-row-cell-focus-background-color, 40%);
+    }
+  }
+}
+// selected cells should be blue or selected color regardless of row style colors
+.rowhighlighted, .lvsubhead, .lvtitle {
+  .#{$prefix}grid-cell-selected {
+    background-color: $grid-cell-selected-background-color;
+  }
+}
+.#{$prefix}grid-row-focused .#{$prefix}grid-cell {
+  background-color: $grid-cell-selected-background-color;
+}
+
+// selected rows should also have the proper color
+.#{$prefix}grid-item-selected {
+  .lvtitle .#{$prefix}grid-cell {
+    // Mix the lvtitle background color with the row cell selected background color at 40% focus color
+    background-color: mix($gw-grid-row-lvtitle, $grid-cell-selected-background-color, 40%);
+  }
+
+  .lvsubhead .#{$prefix}grid-cell {
+    // No need to mix for this one background since it isn't any different than the default
+    background-color: $grid-cell-selected-background-color;
+  }
+
+  .rowhighlighted .#{$prefix}grid-cell {
+    // Mix the rowhighlighted background color with the row cell selected background color at 40% focus color
+    background-color: mix($gw-grid-row-highlight, $grid-cell-selected-background-color, 40%);
+  }
+  .rowhighlighted, .lvsubhead, .lvtitle {
+    .#{$prefix}grid-cell-selected {
+      background-color: $grid-cell-selected-background-color;
+    }
+  }
+}
+
+/*
+ *  resets targeted specifically for grid cells (i.e., radio cell is build using tables which does not need border spaces)
+ *  resets to eliminate extra pixels when place an IMG inside a DIV inside grid cells
+ */
+.#{$prefix}grid-cell-inner {
+  table {
+    border-spacing: 0;
+  }
+  img {
+    vertical-align: top;
+  }
+}
+.#{$prefix}grid-cell div > img {
+  // PLWEB-5835: vertical align middle seems to make images appear bottom aligned, so we are using sub which
+  // nudges it down just right.  We only do this for img tags directly inside a div within a grid cell, since divs
+  // are blocks as opposed to inline elements, so they have no ability to align things vertically except by
+  // padding/margins
+  vertical-align: sub;
+  &.g-cell-menu,
+  &.#{$prefix}grid-checkcolumn,
+  &.#{$prefix}tree-elbow-img {
+    // PLWEB-5835: NOTE: we want our special controls to be top aligned though
+    vertical-align: top;
+  }
+}
+
+#westPanel {
+  .#{$prefix}grid-cell-inner {
+    // for left nav the cell padding is increased
+    padding-top: top($grid-cell-inner-padding) - $grid-row-cell-border-width;
+    padding-bottom: bottom($grid-cell-inner-padding) - $grid-row-cell-border-width;
+  }
+}
+
+.#{$prefix}container-default.g-alert-bar {
+  background-color: #ffefb7;
+  font-size: 12px;
+}
+
+A.g-cell-menu,
+A.miniButton,
+A.bigButton {
+  &:hover {
+    background-color: $button-default-background-color-over !important;
+  }
+  &:focus {
+    background-color: $button-default-background-color-over !important;
+  }
+}
+
+/**
+ *  Negative currency colors
+ */
+.gw-currency-negative,
+.#{$prefix}grid-cell.gw-currency-negative > DIV > .g-actionable,
+.gw-currency-negative * {
+  color: $gw-error-msg-color;
+}
+
+/**
+ *  System Alert Bar Messages
+ */
+.system_alert td.#{$prefix}table-layout-cell  {
+  vertical-align: top;
+  padding-left: 0;
+}
+
+.system_alert_title {
+  color: $gw-text-color;
+  font-weight: bold;
+  border: none;
+  vertical-align: top;
+}
+
+a.system_alert_message  {
+  color: $gw-link-color;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/**
+ * Partially enables html markup in TextCell and TextInput elements if enableAutoCompleteMark attributes
+ * is present and equals true. In that case transforms tags like [x]text[/x] into <span class="gw-autocomplete-markup x">text</span>
+ * These three style selectors define style for [i], [b] and [hl]
+ */
+span.gw-autocomplete-markup {
+  &.i {
+    font-style: italic;
+  }
+
+  &.b {
+    font-weight: bold;
+  }
+
+  &.hl {
+    background-color: #ffefb7;
+  }
+}

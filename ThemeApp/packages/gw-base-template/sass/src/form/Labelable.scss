@@ -1,0 +1,29 @@
+/**
+ * Hide empty label when form is in Table Layout
+ */
+
+.#{$prefix}table-form-item.#{$prefix}form-item-no-label > .#{$prefix}form-item-label {
+  display: none;
+}
+
+// Setting a min-height of 25px for radio group will stretch the cell to be too tall
+.#{$prefix}form-radio-group .#{$prefix}form-item-body-default {
+  min-height: 0;
+}
+
+// To only gray out form field labels, first set entire form field to be opaque
+.#{$prefix}form-item.#{$prefix}item-disabled {
+  @include opacity(1);
+}
+
+// Set the opacity only for form field body, leaving form field label opaque
+.#{$prefix}item-disabled .#{$prefix}form-item-body{
+  @include opacity($form-field-disabled-opacity);
+}
+
+// PLWEB-4757: Firefox requires two clicks to sort
+.#{$prefix}form-error-wrap-under-side-label:before {
+  display: table-cell;
+  content: '';
+  pointer-events: none;
+}

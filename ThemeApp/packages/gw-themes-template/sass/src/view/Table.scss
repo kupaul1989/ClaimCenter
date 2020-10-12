@@ -1,0 +1,23 @@
+// Left Navigation item color definitions
+// Background and text colors for selected, focused, and hover states
+#westPanel {
+
+  .#{$prefix}grid-item-selected {
+    // !important used because highlight color supersedes both focus
+    // or hover
+    color: $gw-left-nav-text-highlight-color !important;
+    background-color: $gw-left-nav-highlight-color !important;
+
+    // this rule is needed since grid-item-focused in a td element that
+    // is a descendant of grid-item-selected
+    .#{$prefix}grid-item-focused {
+      color: $gw-left-nav-text-highlight-color;
+      background-color: $gw-left-nav-highlight-color;
+    }
+  }
+
+  .#{$prefix}grid-item-over, .#{$prefix}grid-item-focused {
+    color: $gw-left-nav-text-hover-color;
+    background-color: $gw-left-nav-hover-color;
+  }
+}

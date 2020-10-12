@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="SendSMSDV">
+    <Require
+      name="sms"
+      type="TwilioSMS"/>
+    <InputColumn>
+      <TextInput
+        id="ToNumner"
+        label="&quot;ToNumber&quot;"
+        value="sms.ToNumber"
+        __disabled="true"/>
+      <TextInput
+        id="FormNumber"
+        label="&quot;FormNumber&quot;"
+        value="sms.FromNumber"
+        __disabled="true"/>
+      <TextAreaInput
+        editable="true"
+        id="MessageBody"
+        label="&quot;New Message&quot;"
+        numRows="5"
+        required="true"
+        value="sms.MessageBody"/>
+      <TextInput
+        id="ClaimNumber"
+        label="&quot;ClaimNumber&quot;"
+        value="sms.ClaimContactID.Claim.ClaimNumber"
+        __disabled="true"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

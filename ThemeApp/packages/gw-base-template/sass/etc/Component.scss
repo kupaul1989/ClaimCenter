@@ -1,0 +1,32 @@
+/**
+ * Generic Component styles for all Guidewire themes
+ */
+/**
+ *  error Messages
+ */
+#Login\:LoginScreen\:0 {
+  border-width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 132px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ed1c24;
+  left: 0;
+  right: 0;
+}
+
+/*
+  Added to support dropzones for multifile uploads
+*/
+.g-dropzone {
+  color: #808080;
+  display: inline-block;
+  font-style: italic !important;
+  font-weight: lighter !important;
+  font-size: xx-large !important;
+  padding: 3em 5em 3em 5em;
+  text-align: center;
+  width: 99%;
+}

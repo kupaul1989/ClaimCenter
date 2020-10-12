@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <InputSet
+    id="CalimMainInputSet">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <TextInput
+      id="claimNumber"
+      label="&quot;ClaimNumber&quot;"
+      value="claim.ClaimNumber"/>
+    <DateInput
+      id="LossDate"
+      label="&quot;Loss Date&quot;"
+      value="claim.LossDate"/>
+  </InputSet>
+</PCF>

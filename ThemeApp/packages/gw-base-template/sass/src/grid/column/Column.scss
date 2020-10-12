@@ -1,0 +1,19 @@
+/**
+ * Generic Grid Column styles for all Guidewire themes
+ */
+
+/*
+* PLWEB-4757: Firefox requires two clicks to sort
+*/
+.#{$prefix}column-header.#{$prefix}column-header-focus {
+  .#{$prefix}column-header-inner:before {
+    content: "";
+    position: absolute;
+    top: $grid-column-header-focus-border-inset;
+    right: $grid-column-header-focus-border-inset;
+    bottom: $grid-column-header-focus-border-inset;
+    left: $grid-column-header-focus-border-inset;
+    border: $grid-column-header-focus-border-width $grid-column-header-focus-border-style $grid-column-header-focus-border-color;
+    pointer-events: none;
+  }
+}

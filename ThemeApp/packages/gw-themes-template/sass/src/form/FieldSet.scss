@@ -1,0 +1,20 @@
+/**
+ * Generic Form FieldSet styles for all Guidewire themes
+ */
+
+.#{$prefix}fieldset {
+  .#{$prefix}toolbar .#{$prefix}form-item-body {
+    padding-bottom: 0;
+  }
+  .#{$prefix}form-item-body {
+    padding-bottom: 10px;
+  }
+  &.#{$prefix}fieldset-collapsed {
+    border-color: $field-set-collapsed-border-color transparent !important;
+  }
+}
+
+.#{$prefix}fieldset-header-checkbox .#{$prefix}form-item-body {
+  padding-bottom: 0;
+  min-height: 0;
+}

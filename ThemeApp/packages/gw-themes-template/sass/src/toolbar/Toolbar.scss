@@ -1,0 +1,71 @@
+@include extjs-toolbar-ui(
+  $ui: 'top-tabs',
+  $background-color: $toolbar-top-tabs-background-color,
+  $vertical-spacing: 0,
+  $border-width: 0
+);
+
+@include extjs-toolbar-ui(
+  $ui: 'top-info',
+  $background-color: $toolbar-top-info-background-color,
+  $background-gradient: $toolbar-top-info-background-gradient,
+  $vertical-spacing: 0,
+  $border-width: 0
+);
+
+.#{$prefix}toolbar-top-info {
+  .infobar_elem.#{$prefix}btn-default-toolbar-small .#{$prefix}btn-inner {
+    color: $toolbar-top-info-btn-inner-color;
+  }
+
+  .infobar_elem.#{$prefix}btn-disabled .#{$prefix}btn-inner {
+    color: $toolbar-top-info-disabled-color;
+  }
+
+  .infobar_elem img{
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .infobar_elem_val{
+    font-weight: bold;
+  }
+
+  .x-btn {
+    padding: 0;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .#{$prefix}btn-default-toolbar-small .#{$prefix}btn-inner{
+    font-size: 14px;
+  }
+  .#{$prefix}toolbar-separator-horizontal{
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+  .#{$prefix}btn-default-toolbar-small-disabled .#{$prefix}btn-inner{
+    color: $toolbar-top-info-btn-inner-color;
+  }
+  // @UpgradedSencha - we need to make the disabled small toolbar button background transparent in the toolbar-top-info
+  .#{$prefix}btn.#{$prefix}btn-disabled.#{$prefix}btn-default-toolbar-small {
+    background-color: transparent;
+  }
+}
+
+.#{$prefix}btn-default-toolbar-small-disabled .#{$prefix}btn-inner .infobar_elem_val{
+  font-weight: bold;
+}
+
+#centerPanel {
+  .#{$prefix}toolbar-default {
+    border-width: 0;
+    background-image: none;
+    background-color: $gw-background-color;
+  }
+}
+
+#centerPanel .#{$prefix}toolbar-default {
+  background-color: $gw-background-color;
+}

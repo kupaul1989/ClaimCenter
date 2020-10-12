@@ -1,0 +1,37 @@
+/**
+ * Generic Grid Panel styles for all Guidewire themes
+ */
+
+/**
+ * invalid cell:
+ */
+.#{$prefix}grid-row,
+.#{$prefix}grid-row-alt {
+  .g-invalid-cell {
+    background-color: $form-field-invalid-background-color;
+    border-bottom-color: $form-field-invalid-border-color;
+  }
+}
+
+.#{$prefix}grid-row,
+.#{$prefix}grid-row-alt {
+  .g-invalid-cell.#{$prefix}grid-cell-selected {
+    background-color: $grid-cell-selected-background-color;
+  }
+}
+
+/**
+ * invalid row:
+ */
+TR.g-invalid-row TD {
+  background-color: $form-field-invalid-background-color;
+  border-bottom-color: $form-field-invalid-border-color;
+}
+
+/**
+ * PLWEB-4763 -  Hidden headers border fix, restore the bottom border to go along with the 1px height of the
+ * control that we fixed in the panel/Table.js override
+ */
+.#{$prefix}grid-header-ct-hidden {
+  border-bottom: $grid-header-border-width $grid-header-border-style $grid-header-border-color !important;
+}

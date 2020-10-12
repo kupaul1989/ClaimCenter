@@ -1,0 +1,59 @@
+/**
+* Generic View Table styles for Guidewire base themes
+*/
+
+// IE does not support outline-offset property, so we have to
+// use pseudo element to show the focused cell border
+.#{$prefix}grid-td {
+  &.#{$prefix}grid-item-focused {
+    // Universal focus border fix, set the border on the focused item rather than using the grid-cell-inner.  We need the
+    // !important flag to override the right-border color that is being set by .x-grid-with-col-lines
+    border: 1px solid $grid-row-cell-focus-border-color !important;
+
+    // Stop using the pseudo-element that Sencha is hooked into for the focused border
+    .#{$prefix}grid-cell-inner:before {
+      border: none;
+
+      /*
+      * PLWEB-4757: Firefox requires two clicks to sort
+      */
+      pointer-events: none;
+    }
+  }
+  &.gw-parent-outline {
+    border: 1px solid $grid-row-cell-focus-border-color;
+    background-color: $gw-color-offwhite;
+  }
+  .gw-child-outline {
+    outline: 1px dotted blue !important;
+  }
+  // Since we are explicitly using the border on the grid to show off the focused state, we want to always have the
+  // real estate for it maintained... so default to a 1 pixel transparent border.  This prevents things from growing
+  // and shrinking when the focus is established
+  border: 1px solid transparent;
+}
+
+// Special styles for the accordion panel's version of the tree/grid
+.g-accordion {
+  // A focused and selected accordion panel element has the same color scheme as a selected one
+  .#{$prefix}grid-item-selected .#{$prefix}grid-item-focused {
+    color: $grid-row-cell-selected-color;
+    background-color: $grid-row-cell-selected-background-color;
+  }
+  // A focused accordion panel element has the same color scheme as one that is moused over
+  .#{$prefix}grid-item-focused {
+    color: $grid-row-cell-over-color;
+    background-color: $grid-row-cell-over-background-color;
+  }
+}
+
+//PLWEB-5707: this removes the top border of the first row (which is a table) in the table
+.#{$prefix}grid-with-row-lines .#{$prefix}grid-item:first-child {
+  border-top-width: 0px;
+}
+
+// PLWEB-5779: summary row cells have extra left and bottom borders
+.#{$prefix}grid-row-summary .#{$prefix}grid-cell{
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}

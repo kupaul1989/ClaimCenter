@@ -1,0 +1,29 @@
+/**
+ * Generic Menu styles for all Guidewire themes
+ */
+
+.#{$prefix}columnmenu {
+  .#{$prefix}table-layout {
+    border-collapse: collapse;
+    .#{$prefix}menu-plain {
+      border: none;
+    }
+  }
+  .#{$prefix}menu {
+    border-width: 0;
+  }
+  .#{$prefix}columnmenu-inner.#{$prefix}menu {
+    @if $menu-border-width != null {
+      border-left-width: $menu-border-width;
+      border-right-width: $menu-border-width;
+    }
+  }
+}
+
+/**
+ * header text in a flattened menu
+ */
+.g-menu-header .#{$prefix}menu-item-text {
+  font: $gw-font-weight-bold $menu-item-font-size $menu-item-font-family;
+  line-height: $menu-item-height - vertical($menu-item-border-width) - abs($menu-item-text-vertical-offset);
+}

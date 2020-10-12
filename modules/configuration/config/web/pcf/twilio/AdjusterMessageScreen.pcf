@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Screen
+    id="AdjusterMessageScreen">
+    <Require
+      name="twilioMessages"
+      type="TwilioSMS[]"/>
+    <Require
+      name="util"
+      type="exv.twilio.common.MessageUtil"/>
+    <DetailViewPanel>
+      <InputColumn>
+        <Label
+          label="&quot;Inbox&quot;"/>
+      </InputColumn>
+    </DetailViewPanel>
+    <PanelRef
+      def="TwilioMessageLV(twilioMessages.where(\msg -&gt; msg.Type == MessageType.TC_INCOMING), util, true, false, true)"
+      id="AdjusterIncomingMessages">
+      <Toolbar/>
+    </PanelRef>
+    <DetailViewPanel>
+      <InputColumn>
+        <Label
+          label="&quot;Sent Messages&quot;"/>
+      </InputColumn>
+    </DetailViewPanel>
+    <PanelRef
+      def="TwilioMessageLV(twilioMessages.where(\msg -&gt; msg.Type == MessageType.TC_OUTGOING), util, false, true, false)"
+      id="AdjusterOutGoingMessage">
+      <Toolbar/>
+    </PanelRef>
+  </Screen>
+</PCF>

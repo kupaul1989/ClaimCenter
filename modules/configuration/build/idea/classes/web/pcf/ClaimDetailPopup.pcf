@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Popup
+    canEdit="true"
+    canVisit="true"
+    id="ClaimDetailPopup"
+    title="&quot;Claim Detail&quot;">
+    <LocationEntryPoint
+      signature="ClaimDetailPopup(claim:Claim)"/>
+    <Variable
+      name="claim"
+      type="Claim"/>
+    <ScreenRef
+      def="ClaimSearchScreen(true)"/>
+  </Popup>
+</PCF>

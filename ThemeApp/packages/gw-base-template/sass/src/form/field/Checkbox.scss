@@ -1,0 +1,31 @@
+/**
+* Generic Form Checkbox styles for Guidewire base themes
+*/
+
+.gw-radio-group-cell .#{$prefix}form-cb-wrap-default {
+  height: auto;
+}
+
+// PLWEB-4771: On IE, the single radio button in a cell was slightly offset to the left, so we nudge it over 1px to make
+// it look proper.  If the radio button is in a radio group or radio group cell, though, we don't want this nudging.
+// PLWEB-5672: If it has focus, then we need to adjust the x position so that the focus highlight image is seen
+body.#{$prefix}ie10,
+body.#{$prefix}ie11 {
+  .g-choice {
+    .#{$prefix}form-radio-default {
+      background-position-x: 0;
+    }
+  }
+  .#{$prefix}form-radio-default {
+    background-position-x: 1px;
+  }
+  .g-radio-group,
+  .gw-radio-group-cell {
+    .#{$prefix}form-radio-default {
+      background-position-x: 0;
+      &.#{$prefix}field-default-form-checkbox-focus {
+        background-position-x: (0 - $form-checkbox-size);
+      }
+    }
+  }
+}

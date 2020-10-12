@@ -1,0 +1,26 @@
+/**
+ * Generic View BoundList styles for all Guidewire themes
+ */
+
+.#{$prefix}boundlist-floating {
+  box-shadow: rgb(136, 136, 136) 0px 0px 6px;
+}
+
+.#{$prefix}list-plain h1 {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.#{$prefix}boundlist-selected {
+  color: $gw-top-nav-background-color;
+}
+
+.#{$prefix}boundlist-item {
+  white-space: nowrap;
+  /* Set explicit min-height so that items with no value or white space - e.g. empty selection - will render nicely. */
+  min-height: $boundlist-item-height;
+}
+
+.#{$prefix}boundlist-item-over {
+  color: $gw-text-color;
+}

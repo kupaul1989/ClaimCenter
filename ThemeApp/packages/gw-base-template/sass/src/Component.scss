@@ -1,0 +1,39 @@
+/**
+ * Generic Component styles for Guidewire base themes
+ */
+/**
+ * Login Page style attributes
+ *
+ */
+.#{$prefix}container-login-page {
+  background-image: theme-background-image('app/guidewire-app-login');
+  background-position: right top;
+  padding-top: 151px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 535px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+// Enable focus outline for selected components
+// all other will have native focus outline
+// Please add any other components as needed
+.#{$prefix}webkit {
+  .#{$prefix}grid-cell .#{$prefix}btn,
+  a,
+  span.miniButton,
+  input.#{$prefix}form-radio {
+    &:focus {
+      outline: 1px dotted;
+    }
+  }
+  // menu items should not have dotted borders when hovered/focussed
+  .#{$prefix}menu-body *,
+  .#{$prefix}btn {
+    &:focus {
+      outline: none;
+    }
+  }
+}

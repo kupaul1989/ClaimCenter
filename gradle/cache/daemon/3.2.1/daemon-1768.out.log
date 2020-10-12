@@ -1,0 +1,204 @@
+09:43:29.478 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-Xms1g, -Xmx4g, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+09:43:29.520 [INFO] [org.gradle.launcher.daemon.server.health.gc.GarbageCollectionMonitor] Unable to determine a garbage collection monitoring strategy for JVMStrategy{Private Build version 1.8.0_222}
+09:43:29.585 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=cabd86fd-2092-4760-888c-f8ec4b94bb46,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=1768,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:43:29.589 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573551809589
+09:43:29.596 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+09:43:29.597 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+09:43:29.597 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+09:43:29.598 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:e416:9aff:fe1e:2e58%eth0
+09:43:29.599 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /10.47.0.5
+09:43:29.599 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /139.59.60.164
+09:43:29.599 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+09:43:29.600 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+09:43:29.600 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+09:43:29.600 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+09:43:29.601 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+09:43:29.601 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+09:43:29.604 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]].
+09:43:29.606 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Tue Nov 12 09:43:29 UTC 2019, with address: [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:43:29.607 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:43:29.607 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=cabd86fd-2092-4760-888c-f8ec4b94bb46,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=1768,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:43:29.609 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]], context: DefaultDaemonContext[uid=cabd86fd-2092-4760-888c-f8ec4b94bb46,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=1768,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+09:43:29.619 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+09:43:29.621 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:43:29.690 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+09:43:29.691 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+09:43:29.693 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+09:43:29.727 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /0:0:0:0:0:0:0:1:46816 to /0:0:0:0:0:0:0:1:40423.
+09:43:29.769 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+09:43:29.772 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+09:43:29.772 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+09:43:29.849 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 13: received class org.gradle.launcher.daemon.protocol.BuildAndStop
+09:43:29.850 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 13: Received non-IO message from client: BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+09:43:29.853 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC}.
+09:43:29.854 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC} with connection: socket connection from /0:0:0:0:0:0:0:1:40423 to /0:0:0:0:0:0:0:1:46816.
+09:43:29.858 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@69b8b551] after 0.0 minutes of idle
+09:43:29.859 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:43:29.859 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [30c2eac5-d026-4450-b73d-4cf81e906006 port:40423, addresses:[/0:0:0:0:0:0:0:1%lo, /127.0.0.1]]
+09:43:29.860 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+09:43:29.860 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:43:29.863 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+09:43:29.863 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1573551809863
+09:43:29.863 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+09:43:29.886 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC}. Dispatching build started information...
+09:43:29.887 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 16: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+09:43:29.891 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/opt/tomcat/apache-tomcat-9.0.27/bin:/root/Desktop/Guidewire/apache-ant-1.9.13/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin, LESSCLOSE=/bin/lesspipe %s %s, XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop, JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64, TERM=xterm-256color, GNOME_TERMINAL_SERVICE=:1.40, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus, LANG=C.UTF-8, XDG_SESSION_ID=c3, JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre, ANT_HOME=/root/Desktop/Guidewire/apache-ant-1.9.13, XRDP_SOCKET_PATH=/var/run/xrdp/sockdir, DISPLAY=:10.0, SSH_AGENT_PID=2428, COLORTERM=truecolor, SESSION_MANAGER=local/My-DropLet:@/tmp/.ICE-unix/2437,unix/My-DropLet:/tmp/.ICE-unix/2437, LOGNAME=root, PULSE_SCRIPT=/etc/xrdp/pulse/default.pa, PWD=/root/Desktop/Guidewire/WS_CC, XRDP_SESSION=1, LESSOPEN=| /bin/lesspipe %s, SHELL=/bin/bash, CATALINA_HOME=/opt/tomcat/apache-tomcat-9.0.27, OLDPWD=/root/Desktop/Guidewire/WS_CC, USER=root, VTE_VERSION=5202, QT_ACCESSIBILITY=1, GTK_MODULES=gail:atk-bridge, UID=0, GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/bd3e085c_f137_44b1_acf8_6cf0b542a35f, SSH_AUTH_SOCK=/tmp/ssh-606lNH8PdfZy/agent.2364, _JAVA_OPTIONS=-Xms256m, XDG_RUNTIME_DIR=/run/user/0, LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, SHLVL=2, HOME=/root}
+09:43:29.899 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+09:43:29.900 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 1768). The daemon log file: /root/Desktop/Guidewire/WS_CC/gradle/cache/daemon/3.2.1/daemon-1768.out.log
+09:43:29.905 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC}
+09:43:29.906 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stopping after processing
+09:43:29.906 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy: true
+09:43:29.907 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+09:43:29.911 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+09:43:29.912 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=cabd86fd-2092-4760-888c-f8ec4b94bb46,javaHome=/usr/lib/jvm/java-8-openjdk-amd64,daemonRegistryDir=/root/Desktop/Guidewire/WS_CC/gradle/cache/daemon,pid=1768,idleTimeout=120000,daemonOpts=-Xms1g,-Xmx4g,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+Importing POM com.guidewire.cc:cc-parent:9.0.4
+Importing parent POM com.guidewire.cc:cc-all:9.0.4
+Importing POM com.guidewire.cc:cc-all:9.0.4
+:modules:configuration:generatePomFileForMavenJavaPublication
+:modules:configuration:genEntityRoleConstraintsSources
+:modules:configuration:genEntitySources
+:modules:configuration:genLocalizationSources
+:modules:configuration:genPcf4TestSources
+:modules:configuration:genPcfSources
+:modules:configuration:genPermissionSources
+:modules:configuration:genXmlSources UP-TO-DATE
+:modules:configuration:compileJava UP-TO-DATE
+:modules:configuration:copyGosuResources UP-TO-DATE
+:modules:configuration:compileGosu UP-TO-DATE
+:modules:configuration:processResources UP-TO-DATE
+:modules:configuration:verifyGeneratedClasses
+:modules:configuration:classes
+:modules:configuration:jar UP-TO-DATE
+:modules:configuration:syncWebapp UP-TO-DATE
+:modules:configuration:copyThemes
+:modules:configuration:prepareWebapp
+:compile
+:modules:configuration:runServer
+Using classpath from /root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.txt
+====================================================
+= Running main class: com.guidewire.commons.jetty.GWServerJettyServerMain
+=           JVM args: -DSTOP.KEY=gwdev -DSTOP.PORT=8079 -Dgw.classpath.file=/root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.txt -Dgw.devroot.dir=/root/Desktop/Guidewire/WS_CC -Dgw.internal.resourcelocators.targetModule=configuration -Dgw.port=8080 -Dgw.server.mode=prod -Djava.awt.headless=true -Xmx4g -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -ea -cp /root/Desktop/Guidewire/WS_CC/modules/configuration/build/run/7120900a78b9d2027b5cd7513de088a01aad59e4.jar
+=       Program args: 
+=
+Picked up _JAVA_OPTIONS: -Xms256m
+Looking for the devroot starting from /root/Desktop/Guidewire/WS_CC
+Detected CONFIG environment, root: /root/Desktop/Guidewire/WS_CC
+2019-11-12 09:44:36,110 INFO jetty-9.0.7.v20131107
+2019-11-12 09:44:36,283 INFO NO JSP Support for /cc, did not find org.apache.jasper.servlet.JspServlet
+ServletProperties#_webappContextRootDir is set to /root/Desktop/Guidewire/WS_CC/webapps/cc
+Module path: [configuration]
+                    2019-11-12 09:44:43,666 INFO Using logging system: com.guidewire.logging.impl.Log4jLoggingSystem
+                    2019-11-12 09:44:43,668 INFO Logging properties found at "/root/Desktop/Guidewire/WS_CC/modules/configuration/config/logging/logging.properties"
+                    2019-11-12 09:44:43,668 INFO Root directory is "/root/Desktop/Guidewire/WS_CC/webapps/cc"
+                    2019-11-12 09:44:43,668 INFO Temp directory is "/tmp/jetty-0.0.0.0-8080-cc-_cc-any-"
+                    2019-11-12 09:44:43,931 INFO Increasing runlevel to 'GUIDEWIRE_STARTUP'
+***** Module versions follow: *****
+9.0.4, cff4c767e87e84eea9c14741038988187da314a7: cc-gunit, cc, cc-pl, cc-pl-bizrules, cc-plugin, cc-pl-heatmap, cc-pl-personaldata, cc-pl-solr, cc-tools
+9.14.5, e09388290ba015ed2e7a00c755e13002c1255f54: pl-appserver-websphere, pl, plugin, util, gosu-process, gosu-servlet, modules, perfdownload-analyzer, perfdownload-collector, solr, pl-appserver-jboss, bizrules, heatmap, personaldata, contact, beangraphutil, pl-gunit, perfdownload-analyzer-test, perfdownload-collector-test, testresult-formatter, bizrules-gunit, pl-tools
+                    2019-11-12 09:44:43,949 INFO Setup platform dependencies ...
+                    2019-11-12 09:44:44,679 INFO Platform dependency setup complete.
+                    2019-11-12 09:44:44,679 INFO Setup application dependencies ...
+                    2019-11-12 09:44:50,644 INFO Reading config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/config.xml
+                    2019-11-12 09:44:51,133 INFO CustomizableSystemClock initialized, current time is now: 1573551891128, Tue Nov 12 09:44:51 UTC 2019
+                    2019-11-12 09:44:51,138 INFO Application dependency setup complete.
+                    2019-11-12 09:44:51,161 INFO SERVERID initialized to 'my-droplet', ENV is not specified, server roles are []
+my-droplet          2019-11-12 09:44:51,796 INFO Increasing runlevel to 'SHUTDOWN'
+my-droplet          2019-11-12 09:44:51,817 INFO OSGi temporary directory is /tmp/jetty-0.0.0.0-8080-cc-_cc-any-/osgi_cc_fwABAYc__3lzae2zwUOI3UULbgaOcxLbg83PNr3Z8crZL_y5AAAAAA__
+my-droplet          2019-11-12 09:44:52,514 INFO Service manager started
+my-droplet          2019-11-12 09:44:52,517 INFO Reading config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/config.xml
+my-droplet          2019-11-12 09:44:52,531 WARN Unknown parameter specified (will be ignored): InputHelpTextOnFocus
+my-droplet          2019-11-12 09:44:52,533 INFO Plugin configuration loaded from /root/Desktop/Guidewire/WS_CC/modules/configuration/config/plugin/plugin-config.xml
+my-droplet          2019-11-12 09:44:52,533 INFO Memory usage: 653.774 MB used (both active and stale objects), 578.724 MB free, 1232.500 MB total, 3641.000 MB max. --  Please read 'Memory usage logging' in the System Administration Guide for information on how to interpret these numbers.
+my-droplet          2019-11-12 09:44:59,010 INFO ***** ClaimCenter 9.0.4.196. (Platform 9.14.5) starting *****
+my-droplet          2019-11-12 09:44:59,215 INFO Increasing runlevel to 'NODAEMONS'
+my-droplet          2019-11-12 09:44:59,216 INFO Reading database config file: /root/Desktop/Guidewire/WS_CC/modules/configuration/config/database-config.xml
+my-droplet          2019-11-12 09:44:59,466 INFO Starting parse security config...
+my-droplet          2019-11-12 09:44:59,503 INFO SecurityManager finished parsing /root/Desktop/Guidewire/WS_CC/modules/configuration/config/security/security-config.xml
+my-droplet          2019-11-12 09:44:59,525 INFO Finished security config.
+my-droplet          2019-11-12 09:44:59,531 INFO Starting database ClaimCenterDatabase on env null
+my-droplet          2019-11-12 09:44:59,558 INFO Creating DBCP connection pool.
+my-droplet          2019-11-12 09:44:59,680 INFO JDBC Driver: com.microsoft.sqlserver.jdbc.SQLServerDriver, major version: 4, minor version: 1
+my-droplet          2019-11-12 09:45:00,119 INFO Time taken to verify database is up: 116 ms
+my-droplet          2019-11-12 09:45:00,161 INFO Validating main database connections have all required properties
+my-droplet          2019-11-12 09:45:00,163 ERROR Unsupported database major or minor version found: (15.00.1900).  Supported version is (12.00.4100) or a later minor version
+my-droplet          2019-11-12 09:45:00,167 ERROR An exception was thrown while starting a component. Setting runlevel to SHUTDOWN [Unable to validate database or JDBC driver version]
+my-droplet          2019-11-12 09:45:00,172 INFO Decreased runlevel to 'SHUTDOWN'
+my-droplet          2019-11-12 09:45:00,174 ERROR ***** ClaimCenter unable to start *****
+gw.pl.exception.GWLifecycleException: Unable to validate database or JDBC driver version
+	at com.guidewire.pl.system.database.StandardDatabase.verifyDatabaseAndConnections(StandardDatabase.java:576)
+	at com.guidewire.pl.system.database.StandardDatabase.start(StandardDatabase.java:416)
+	at com.guidewire.pl.system.server.InitTab.startDependency(InitTab.java:443) - (com.guidewire.pl.system.database.StandardDatabase@861e395)
+	at com.guidewire.pl.system.server.InitTab.enterNoDaemons(InitTab.java:790)
+	at com.guidewire.pl.system.server.InitTab.increaseRunLevelTo(InitTab.java:626)
+	at com.guidewire.pl.system.server.InitTab.setRunLevel(InitTab.java:359)
+	at com.guidewire.pl.system.servlet.GuidewireStartupServlet.init(GuidewireStartupServlet.java:88)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:540)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:349)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:812)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:288)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1322)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:732)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:490)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:69)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:118)
+	at org.eclipse.jetty.server.Server.start(Server.java:342)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:100)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:60)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:290)
+	at com.guidewire.commons.jetty.GWServerJettyServerMain$JettyServer.doStart(GWServerJettyServerMain.java:83)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:69)
+	at org.eclipse.jetty.xml.XmlConfiguration$1.run(XmlConfiguration.java:1250)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:509)
+	at org.eclipse.jetty.start.Main.start(Main.java:651)
+	at org.eclipse.jetty.start.Main.main(Main.java:99)
+	at com.guidewire.commons.jetty.GWServerJettyServerMain.main(GWServerJettyServerMain.java:69)
+my-droplet          2019-11-12 09:45:00,196 INFO Started o.e.j.w.WebAppContext@233795b6{/cc,file:/root/Desktop/Guidewire/WS_CC/webapps/cc/,AVAILABLE}{/cc}
+my-droplet          2019-11-12 09:45:01,106 INFO Started ServerConnector@7b4af503{HTTP/1.1}{0.0.0.0:8080}
+client disconnection detected, canceling the build
+Daemon is stopping immediately the build was canceled after a stop was requested
+Unable to execute command BuildAndStop{id=95ce8777-b4c3-47c4-8de8-9721b2b646a5.1, currentDir=/root/Desktop/Guidewire/WS_CC} from socket connection from /0:0:0:0:0:0:0:1:40423 to /0:0:0:0:0:0:0:1:46816. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write '/0:0:0:0:0:0:0:1:46816'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:121)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.flush(SynchronizedDispatchConnection.java:61)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:136)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:47)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:33)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:120)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:45)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:160)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:133)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:121)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.esotericsoftware.kryo.KryoException: java.io.IOException: Broken pipe
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:156)
+	at org.gradle.internal.serialize.kryo.KryoBackedEncoder.flush(KryoBackedEncoder.java:85)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:118)
+	... 19 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:51)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:259)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:247)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.write(SocketConnection.java:233)
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:154)
+	... 21 more
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.

@@ -1,0 +1,29 @@
+package rules.Preupdate.ClaimPreupdate_dir.CPU45000TriggerSMSEventonAdjusterAssignment_dir
+
+uses exv.twilio.common.MessageUtil
+
+@gw.rules.RuleName("Reassignment")
+internal class Reassignment {
+  static function doCondition(claim : entity.Claim) : boolean {
+/*start00rule*/
+return
+    (claim.isFieldChanged("AssignedGroup") and claim.getOriginalValue("AssignedGroup") != null)
+    or
+    (claim.isFieldChanged("AssignedUser") and (claim.getOriginalValue("AssignedUser") != null
+        or claim.getOriginalValue("AssignedGroup") != null))
+/*end00rule*/
+}
+
+  static function doAction(claim : entity.Claim, actions : gw.rules.Action) {
+/*start00rule*/
+    var msgUtil = new MessageUtil()
+    var claimContact = claim.Contacts.firstWhere(\cContact -> cContact.Roles.hasMatch(\role ->
+        role.Role == ContactRole.TC_INSURED))
+    var sms = msgUtil.createNotificationMessage(claimContact)
+    sms.MessageBody = "Your existing claim:"+claim.ClaimNumber+" "
+        +"has been assigned to"+" "+claim.AssignedUser
+    sms.addEvent("SendNotificationSMS")
+    actions.exit()
+/*end00rule*/
+  }
+}

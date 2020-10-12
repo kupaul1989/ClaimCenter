@@ -1,0 +1,148 @@
+/**
+ * Generic Button styles for all Guidewire themes
+ */
+
+@include extjs-button-small-ui(
+  $ui: 'action',
+
+  $border-radius: $button-action-border-radius,
+  $border-width: $button-small-border-width,
+
+  $border-color: $button-action-border-color,
+  $border-color-over: $button-action-border-color-over,
+  $border-color-focus: $button-action-border-color-focus,
+  $border-color-pressed: $button-action-border-color-pressed,
+  $border-color-disabled: $button-action-border-color-pressed,
+
+  $padding: $button-action-padding,
+  $text-padding: $button-small-text-padding,
+
+  $background-color: $button-action-background-color,
+  $background-color-over: $button-action-background-color-over,
+  $background-color-focus: $button-action-background-color-focus,
+  $background-color-pressed: $button-action-background-color-pressed,
+  $background-color-disabled: $button-action-background-color-disabled,
+
+  $background-gradient: $button-action-background-gradient,
+  $background-gradient-over: $button-action-background-gradient-over,
+  $background-gradient-focus: $button-action-background-gradient-focus,
+  $background-gradient-pressed: $button-action-background-gradient-pressed,
+  $background-gradient-disabled: $button-action-background-gradient-disabled,
+
+  $color: $button-action-color,
+  $color-over: $button-action-color-over,
+  $color-focus: $button-action-color-focus,
+  $color-pressed: $button-action-color-pressed,
+  $color-disabled: $button-action-color-disabled,
+
+  $font-size: $button-action-font-size,
+
+  $include-ui-menu-arrows: false,
+  $include-ui-split-arrows: false
+);
+
+@include extjs-button-toolbar-small-ui(
+  $ui: 'gw-top-menu',
+
+  $border-radius: 0,
+  $border-width: 0,
+
+  $padding: $gw-top-menu-padding,
+  $line-height: $gw-top-menu-line-height,
+
+  $border-color: transparent,
+  $border-color-over: transparent,
+  $border-color-focus: transparent,
+  $border-color-pressed: $button-toolbar-border-color-pressed,
+  $border-color-focus-over: $button-toolbar-border-color-focus-over,
+  $border-color-focus-pressed: $button-toolbar-border-color-focus-pressed,
+  $border-color-disabled: transparent,
+
+  $background-color: transparent,
+  $background-color-over: $button-toolbar-background-color-over,
+  $background-color-focus: transparent,
+  $background-color-pressed: transparent,
+  $background-color-focus-over: $button-toolbar-background-color-focus-over,
+  $background-color-focus-pressed: $button-toolbar-background-color-focus-pressed,
+  $background-color-disabled: transparent,
+
+  $color: $gw-color-black,
+  $color-over: $gw-color-offwhite,
+  $color-focus: $button-toolbar-inner-border-color-focus-over,
+  $color-pressed: $gw-color-black,
+  $color-focus-over: $gw-color-offwhite,
+  $color-focus-pressed: $gw-color-offwhite,
+  $color-disabled: $gw-top-nav-disabled-color,
+
+  $include-ui-menu-arrows: true,
+  $include-ui-split-arrows: true,
+  $include-split-over-arrows: true
+);
+
+
+
+// Remove background and border
+.#{$prefix}toolbar-top-tabs{
+  .#{$prefix}box-menu-after{
+    background: transparent;
+    border: none;
+
+    &.#{$prefix}btn-menu-active , &.#{$prefix}btn-pressed{
+      background: transparent;
+      border: none;
+    }
+  }
+
+  .g-no-menu-icon {
+    &.#{$prefix}btn-menu-active, &.#{$prefix}btn-over{
+      border-color: silver;
+      background-color: transparent;
+      @include opacity (0.7);
+    }
+  }
+
+  .#{$prefix}btn-over.#{$prefix}btn-gw-top-menu-toolbar-small{
+    background-image: none;
+    background-color: $gw-top-nav-dark-color;
+  }
+
+  //Top menu button current selection. GW specific
+  .#{$prefix}btn-gw-top-menu-toolbar-small{
+    &.gw-top-menu-selected{
+
+      .x-btn-inner{
+        color: $gw-color-offwhite;
+      }
+
+      .x-btn-split-right:after{
+        background-image: theme-background-image('button/gw-top-menu-toolbar-small-s-arrow-o');
+      }
+
+      border-color: $gw-top-nav-base-color;
+      background-image: none;
+      background-color: $gw-top-nav-base-color;
+    }
+  }
+}
+
+.x-btn-plain-toolbar-small{
+  &.#{$prefix}btn-over{
+    .g-preferences-icon{
+      border-color: silver;
+      background-color: transparent;
+      @include opacity (0.7);
+    }
+  }
+}
+
+//button grayed out state
+.#{$prefix}btn-disabled .#{$prefix}btn-wrap-gw-top-menu-toolbar-small.#{$prefix}btn-arrow-right:after {
+  background-image: theme-background-image('button/default-toolbar-small-arrow');
+}
+
+// menu buttons with no dividers should have hover color for down arrow
+.#{$prefix}btn-gw-top-menu-toolbar-small.#{$prefix}btn-over{
+  .#{$prefix}btn-arrow-right:after{
+    background-image: theme-background-image('button/gw-top-menu-toolbar-small-s-arrow-o');
+  }
+}

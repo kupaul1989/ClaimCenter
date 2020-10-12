@@ -1,0 +1,9 @@
+/**
+ * Generic Form RadioGroup styles for all Guidewire themes
+ */
+
+.g-radio-group {
+  .#{$prefix}form-cb-wrap {
+    padding-right: 10px;
+  }
+}

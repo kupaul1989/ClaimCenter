@@ -1,0 +1,182 @@
+/**
+ * Generic Button styles for all Guidewire themes
+ */
+
+.#{$prefix}container-inline-details {
+  background-color: $gw-detailview-highlight-color;
+  padding-bottom: 10px;
+  border: $gw-border;
+  .#{$prefix}container-default {
+    background-color: transparent;
+  }
+}
+
+.#{$prefix}container-highlighted {
+  background-color: $gw-detailview-highlight-color;
+  .#{$prefix}container-default {
+    background-color: transparent;
+  }
+}
+
+.#{$prefix}container-top-navigation {
+  background: $container-top-nav-background-color;
+  .product-logo {
+    background: $product-logo-background-color;
+    padding: 0;
+    border-radius: 3px;
+  }
+  .top-navigation-divisor {
+    height: 5px;
+    background: $toolbar-top-info-background-color;
+  }
+}
+
+/*
+ * @UpgradedSencha 5.1 - restore style on accordion panel text
+ */
+.#{$prefix}panel-header-title-tree-navigation {
+  font-weight: bold !important;
+
+  .#{$prefix}title-text {
+    font-size: $gw-header-font-size;
+    color: $gw-grid-header-font-color;
+    line-height: $gw-header-line-height;
+  }
+}
+
+.wizardleftnavmenu .#{$prefix}header-text-container .#{$prefix}panel-header-text {
+  font-size: $gw-header-font-size;
+  color: $gw-text-color;
+}
+
+/***********************
+ *  Detail View Styles *
+ ***********************/
+
+/**
+ *  Required indicator styles (asterisk)
+ */
+.g-required .#{$prefix}form-item-label-inner, label.g-required  {
+  // Moved up 2 pixels to center the image vertically with respect to the outer label container
+  background: theme-background-image('app/required') no-repeat right -2px;
+  padding-right: 12px;
+}
+
+/**
+ *  Error indicator for form fields
+ */
+.g-field-error .#{$prefix}form-field {
+  border: 1px solid #c30;
+  background: none #fef2a6;
+}
+
+/**
+ *  Action Arg Input for Link under Content Input
+ */
+.g-content .#{$prefix}form-field-wrap {
+  display: inline;
+}
+
+/**
+ *  Bullet point links
+ */
+.g-bullet .#{$prefix}form-display-field {
+  background: theme-background-image('app/grey_bullet') no-repeat left 3px;
+  padding-left: 20px;
+}
+
+/* TODO: consolidate and simplify divider for input columns and panel columns */
+.g-divider > table > tbody > tr > .#{$prefix}table-layout-cell ~ .#{$prefix}table-layout-cell /*divider between panel columns */  {
+  border-left: 1px solid #a9bfd3 !important;
+}
+
+
+/**
+ *  Space between sibling table columns
+ */
+.#{$prefix}table-layout-cell + .#{$prefix}table-layout-cell {
+  padding-left: 2px;
+
+  > .g-dv-column {
+    /* divider between dv columns: */
+    border-left: 1px solid #a9bfd3 !important;
+
+    &.g-no-divider {
+      border-left: none !important;
+    }
+  }
+}
+
+.#{$prefix}form-element {
+  .g-content,
+  .g-content * {
+    overflow: auto !important;
+  }
+}
+
+/**
+ *  Right align helper icons
+ */
+.#{$prefix}form-field-wrap .#{$prefix}form-display-field {
+  display: inline;
+}
+
+.inputdivider, .paneldivider {
+  width: 100% !important;
+  height: 14px;
+  background-image: theme-background-image("app/divider2_bgd");
+  background-repeat: repeat-x;
+}
+
+/**
+ *  Disable form fields
+ */
+Input.#{$prefix}item-disabled {
+  background: #ddd none;
+}
+
+.gw-multiselect-invalid .#{$prefix}boundlist {
+  background-color: white;
+  border-color: #d94e37;
+}
+
+.#{$prefix}before-input-cell {
+  //padding-right: 2px;
+}
+
+.#{$prefix}after-input-cell {
+  padding-left: 2px;
+}
+
+/*
+ * Error style for invalid readonly field
+ * NOTE: this icon doesn't even exist in the image directory
+ */
+div.#{$prefix}form-readonly.#{$prefix}form-invalid label {
+  background: url(images/app/arrow1.png) no-repeat 100% 40%;
+}
+
+textarea.#{$prefix}form-textarea[readonly] {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  > .drilldownParent {
+    background-image: theme-background-image("app/parent");
+    cursor: pointer;
+  }
+  > .drilldownChild {
+    background-image: theme-background-image("app/child");
+    cursor: pointer;
+  }
+}
+
+span {
+  > .drilldownParent {
+    background-image: theme-background-image("app/parent_off");
+  }
+  > .drilldownChild {
+    background-image: theme-background-image("app/child_off");
+  }
+}

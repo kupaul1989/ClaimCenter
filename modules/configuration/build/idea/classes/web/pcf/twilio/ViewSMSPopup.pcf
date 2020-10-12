@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Popup
+    canEdit="true"
+    canVisit="true"
+    id="ViewSMSPopup"
+    startInEditMode="true"
+    title="&quot;Send SMS&quot;">
+    <LocationEntryPoint
+      signature="ViewSMSPopup(sms : TwilioSMS)"/>
+    <Variable
+      name="sms"
+      type="TwilioSMS"/>
+    <Screen>
+      <PanelRef
+        def="ViewSMSDV(sms)"></PanelRef>
+    </Screen>
+  </Popup>
+</PCF>

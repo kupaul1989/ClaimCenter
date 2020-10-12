@@ -1,0 +1,31 @@
+/**
+ * Generic Form Text styles for Guidewire base themes
+ */
+
+// remove the border on read-only text areas
+.#{$prefix}form-readonly .#{$prefix}form-textarea-body .#{$prefix}form-trigger-wrap {
+  border: none;
+}
+
+// @UpgradedSencha 5.1 - Make the min-height on the text-area be the same as the line-height (overriding the default of
+// 4 x the line-height that is specified by Sencha
+.#{$prefix}form-text-default.#{$prefix}form-textarea {
+  min-height: $form-textarea-line-height;
+}
+
+.#{$prefix}grid-cell-editor .#{$prefix}form-text-default {
+  padding: $gw-editor-cell-padding;
+  // @UpgradedSencha 5.1 - But restore the Sencha default text area body height when we are inside of a grid editor
+  &.#{$prefix}form-textarea {
+    min-height: $form-textarea-body-height;
+  }
+}
+
+//PLWEB-5702 - Adds a manual 7px to 100% height of textareas inside of table-cells, if webkit is detected.
+@if $include-webkit {
+  textarea.#{$prefix}form-text.#{$prefix}form-textarea {
+    //NOTE: the double negative is a work around for the css compressor removing whitespace
+    //from the calc statement, which is required for - and +.
+    height: calc(100% - -7px);
+  }
+}

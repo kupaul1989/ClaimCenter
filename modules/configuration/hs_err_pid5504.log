@@ -1,0 +1,1004 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 199229440 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2757), pid=5504, tid=0x00007f969cccb700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_222-b10) (build 1.8.0_222-8u222-b10-1ubuntu1~18.04.1-b10)
+# Java VM: OpenJDK 64-Bit Server VM (25.222-b10 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f96c007d800):  VMThread [stack: 0x00007f969cbcc000,0x00007f969cccc000] [id=5516]
+
+Stack: [0x00007f969cbcc000,0x00007f969cccc000],  sp=0x00007f969ccca4a0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xab8992]
+V  [libjvm.so+0x4dbfd7]
+V  [libjvm.so+0x8f33a0]
+V  [libjvm.so+0x8ea46e]
+V  [libjvm.so+0x96e106]
+V  [libjvm.so+0x96f478]
+V  [libjvm.so+0x96ba76]
+V  [libjvm.so+0x96be0c]
+V  [libjvm.so+0x91a5a8]
+V  [libjvm.so+0xaba662]
+V  [libjvm.so+0xabf1d6]
+V  [libjvm.so+0xabd4d5]
+V  [libjvm.so+0xabddad]
+V  [libjvm.so+0xabe1b8]
+V  [libjvm.so+0x8f0732]
+
+VM_Operation (0x00007f96c753aca0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00007f96c000c000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f96c0381000 JavaThread "Timer-0" daemon [_thread_blocked, id=5526, stack(0x00007f964b8cc000,0x00007f964b9cd000)]
+  0x00007f96c00d0000 JavaThread "Service Thread" daemon [_thread_blocked, id=5523, stack(0x00007f969c185000,0x00007f969c286000)]
+  0x00007f96c00c4800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=5522, stack(0x00007f969c287000,0x00007f969c387000)]
+  0x00007f96c00c3000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=5521, stack(0x00007f969c388000,0x00007f969c488000)]
+  0x00007f96c00c0000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5520, stack(0x00007f969c489000,0x00007f969c589000)]
+  0x00007f96c00be800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5519, stack(0x00007f969c589000,0x00007f969c68a000)]
+  0x00007f96c008a000 JavaThread "Finalizer" daemon [_thread_blocked, id=5518, stack(0x00007f969c9c9000,0x00007f969caca000)]
+  0x00007f96c0087800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5517, stack(0x00007f969caca000,0x00007f969cbcb000)]
+  0x00007f96c000c000 JavaThread "main" [_thread_blocked, id=5509, stack(0x00007f96c743e000,0x00007f96c753e000)]
+
+Other Threads:
+=>0x00007f96c007d800 VMThread [stack: 0x00007f969cbcc000,0x00007f969cccc000] [id=5516]
+  0x00007f96c00d2800 WatcherThread [stack: 0x00007f969c085000,0x00007f969c185000] [id=5524]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f96c0008450] Threads_lock - owner thread: 0x00007f96c007d800
+[0x00007f96c0008950] Heap_lock - owner thread: 0x00007f96c000c000
+
+heap address: 0x00000003c0000000, size: 16384 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 1760768K, used 215949K [0x000000066ab00000, 0x00000006e9280000, 0x00000007c0000000)
+  eden space 1487360K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006c5780000)
+  from space 273408K, 78% used [0x00000006c5780000,0x00000006d2a63488,0x00000006d6280000)
+  to   space 234496K, 0% used [0x00000006d6280000,0x00000006d6280000,0x00000006e4780000)
+ ParOldGen       total 1043456K, used 824603K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 79% used [0x00000003c0000000,0x00000003f2546cb8,0x00000003ffb00000)
+ Metaspace       used 51501K, capacity 51865K, committed 52352K, reserved 1095680K
+  class space    used 6054K, capacity 6174K, committed 6272K, reserved 1048576K
+
+Card table byte_map: [0x00007f96ae824000,0x00007f96b0825000] byte_map_base: 0x00007f96aca24000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f96c66d3360
+ Begin Bits: [0x00007f966c000000, 0x00007f967c000000)
+ End Bits:   [0x00007f967c000000, 0x00007f968c000000)
+
+Polling page: 0x00007f96c7554000
+
+CodeCache: size=245760Kb used=39876Kb max_used=40006Kb free=205883Kb
+ bounds [0x00007f96b0be5000, 0x00007f96b33a5000, 0x00007f96bfbe5000]
+ total_blobs=8010 nmethods=7615 adapters=305
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 100.095 Thread 0x00007f96c00c3000 nmethod 12425 0x00007f96b21238d0 code [0x00007f96b2123aa0, 0x00007f96b2124110]
+Event: 100.095 Thread 0x00007f96c00c3000 12427       4       gw.internal.gosu.parser.GosuBaseAttributedFeatureInfo::getDeclaredAnnotations (9 bytes)
+Event: 100.096 Thread 0x00007f96c00c3000 nmethod 12427 0x00007f96b1f6d810 code [0x00007f96b1f6d960, 0x00007f96b1f6d9e8]
+Event: 100.096 Thread 0x00007f96c00c3000 12424       4       gw.internal.gosu.parser.ParsedElement::removeParseIssue (81 bytes)
+Event: 100.110 Thread 0x00007f96c00c3000 nmethod 12424 0x00007f96b3376750 code [0x00007f96b33768e0, 0x00007f96b3376ed8]
+Event: 100.110 Thread 0x00007f96c00c3000 12420       4       gw.internal.gosu.ir.transform.expression.IdentifierTransformer::compile_impl (147 bytes)
+Event: 100.117 Thread 0x00007f96c00c4800 12432 %     3       gw.internal.gosu.parser.MetaTypeTypeInfo::loadMetaTypeMethods @ 75 (131 bytes)
+Event: 100.119 Thread 0x00007f96c00c4800 nmethod 12432% 0x00007f96b30ef350 code [0x00007f96b30ef760, 0x00007f96b30f1828]
+Event: 100.125 Thread 0x00007f96c00c3000 nmethod 12420 0x00007f96b19020d0 code [0x00007f96b1902340, 0x00007f96b1902ea8]
+Event: 100.125 Thread 0x00007f96c00c3000 12428       4       gw.internal.gosu.parser.AsmClassJavaClassInfo::getBackingClass (13 bytes)
+
+GC Heap History (10 events):
+Event: 64.450 GC heap after
+Heap after GC invocations=24 (full 3):
+ PSYoungGen      total 1409024K, used 142962K [0x000000066ab00000, 0x00000006d7980000, 0x00000007c0000000)
+  eden space 1246208K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006b6c00000)
+  from space 162816K, 87% used [0x00000006b6c00000,0x00000006bf79ca88,0x00000006c0b00000)
+  to   space 182272K, 0% used [0x00000006cc780000,0x00000006cc780000,0x00000006d7980000)
+ ParOldGen       total 683008K, used 534605K [0x00000003c0000000, 0x00000003e9b00000, 0x000000066ab00000)
+  object space 683008K, 78% used [0x00000003c0000000,0x00000003e0a13540,0x00000003e9b00000)
+ Metaspace       used 46760K, capacity 47085K, committed 47616K, reserved 1091584K
+  class space    used 5442K, capacity 5564K, committed 5632K, reserved 1048576K
+}
+Event: 71.479 GC heap before
+{Heap before GC invocations=25 (full 3):
+ PSYoungGen      total 1409024K, used 1389170K [0x000000066ab00000, 0x00000006d7980000, 0x00000007c0000000)
+  eden space 1246208K, 100% used [0x000000066ab00000,0x00000006b6c00000,0x00000006b6c00000)
+  from space 162816K, 87% used [0x00000006b6c00000,0x00000006bf79ca88,0x00000006c0b00000)
+  to   space 182272K, 0% used [0x00000006cc780000,0x00000006cc780000,0x00000006d7980000)
+ ParOldGen       total 683008K, used 534605K [0x00000003c0000000, 0x00000003e9b00000, 0x000000066ab00000)
+  object space 683008K, 78% used [0x00000003c0000000,0x00000003e0a13540,0x00000003e9b00000)
+ Metaspace       used 48267K, capacity 48627K, committed 49024K, reserved 1093632K
+  class space    used 5626K, capacity 5757K, committed 5760K, reserved 1048576K
+Event: 71.746 GC heap after
+Heap after GC invocations=25 (full 3):
+ PSYoungGen      total 1548288K, used 182250K [0x000000066ab00000, 0x00000006de700000, 0x00000007c0000000)
+  eden space 1366016K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006be100000)
+  from space 182272K, 99% used [0x00000006cc780000,0x00000006d797a848,0x00000006d7980000)
+  to   space 236032K, 0% used [0x00000006be100000,0x00000006be100000,0x00000006cc780000)
+ ParOldGen       total 683008K, used 599584K [0x00000003c0000000, 0x00000003e9b00000, 0x000000066ab00000)
+  object space 683008K, 87% used [0x00000003c0000000,0x00000003e49883d0,0x00000003e9b00000)
+ Metaspace       used 48267K, capacity 48627K, committed 49024K, reserved 1093632K
+  class space    used 5626K, capacity 5757K, committed 5760K, reserved 1048576K
+}
+Event: 71.746 GC heap before
+{Heap before GC invocations=26 (full 4):
+ PSYoungGen      total 1548288K, used 182250K [0x000000066ab00000, 0x00000006de700000, 0x00000007c0000000)
+  eden space 1366016K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006be100000)
+  from space 182272K, 99% used [0x00000006cc780000,0x00000006d797a848,0x00000006d7980000)
+  to   space 236032K, 0% used [0x00000006be100000,0x00000006be100000,0x00000006cc780000)
+ ParOldGen       total 683008K, used 599584K [0x00000003c0000000, 0x00000003e9b00000, 0x000000066ab00000)
+  object space 683008K, 87% used [0x00000003c0000000,0x00000003e49883d0,0x00000003e9b00000)
+ Metaspace       used 48267K, capacity 48627K, committed 49024K, reserved 1093632K
+  class space    used 5626K, capacity 5757K, committed 5760K, reserved 1048576K
+Event: 74.674 GC heap after
+Heap after GC invocations=26 (full 4):
+ PSYoungGen      total 1548288K, used 24801K [0x000000066ab00000, 0x00000006de700000, 0x00000007c0000000)
+  eden space 1366016K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006be100000)
+  from space 182272K, 13% used [0x00000006cc780000,0x00000006cdfb86b0,0x00000006d7980000)
+  to   space 236032K, 0% used [0x00000006be100000,0x00000006be100000,0x00000006cc780000)
+ ParOldGen       total 1043456K, used 682867K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 65% used [0x00000003c0000000,0x00000003e9adcf30,0x00000003ffb00000)
+ Metaspace       used 48267K, capacity 48627K, committed 49024K, reserved 1093632K
+  class space    used 5626K, capacity 5757K, committed 5760K, reserved 1048576K
+}
+Event: 83.281 GC heap before
+{Heap before GC invocations=27 (full 4):
+ PSYoungGen      total 1548288K, used 1390817K [0x000000066ab00000, 0x00000006de700000, 0x00000007c0000000)
+  eden space 1366016K, 100% used [0x000000066ab00000,0x00000006be100000,0x00000006be100000)
+  from space 182272K, 13% used [0x00000006cc780000,0x00000006cdfb86b0,0x00000006d7980000)
+  to   space 236032K, 0% used [0x00000006be100000,0x00000006be100000,0x00000006cc780000)
+ ParOldGen       total 1043456K, used 682867K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 65% used [0x00000003c0000000,0x00000003e9adcf30,0x00000003ffb00000)
+ Metaspace       used 49624K, capacity 50009K, committed 50560K, reserved 1093632K
+  class space    used 5793K, capacity 5918K, committed 6016K, reserved 1048576K
+Event: 83.495 GC heap after
+Heap after GC invocations=27 (full 4):
+ PSYoungGen      total 1602048K, used 124809K [0x000000066ab00000, 0x00000006e4780000, 0x00000007c0000000)
+  eden space 1366016K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006be100000)
+  from space 236032K, 52% used [0x00000006be100000,0x00000006c5ae26a8,0x00000006cc780000)
+  to   space 234496K, 0% used [0x00000006d6280000,0x00000006d6280000,0x00000006e4780000)
+ ParOldGen       total 1043456K, used 701454K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 67% used [0x00000003c0000000,0x00000003ead03960,0x00000003ffb00000)
+ Metaspace       used 49624K, capacity 50009K, committed 50560K, reserved 1093632K
+  class space    used 5793K, capacity 5918K, committed 6016K, reserved 1048576K
+}
+Event: 91.242 GC heap before
+{Heap before GC invocations=28 (full 4):
+ PSYoungGen      total 1602048K, used 1490825K [0x000000066ab00000, 0x00000006e4780000, 0x00000007c0000000)
+  eden space 1366016K, 100% used [0x000000066ab00000,0x00000006be100000,0x00000006be100000)
+  from space 236032K, 52% used [0x00000006be100000,0x00000006c5ae26a8,0x00000006cc780000)
+  to   space 234496K, 0% used [0x00000006d6280000,0x00000006d6280000,0x00000006e4780000)
+ ParOldGen       total 1043456K, used 701454K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 67% used [0x00000003c0000000,0x00000003ead03960,0x00000003ffb00000)
+ Metaspace       used 50914K, capacity 51257K, committed 51712K, reserved 1095680K
+  class space    used 5954K, capacity 6078K, committed 6144K, reserved 1048576K
+Event: 91.465 GC heap after
+Heap after GC invocations=28 (full 4):
+ PSYoungGen      total 1721856K, used 234489K [0x000000066ab00000, 0x00000006e9280000, 0x00000007c0000000)
+  eden space 1487360K, 0% used [0x000000066ab00000,0x000000066ab00000,0x00000006c5780000)
+  from space 234496K, 99% used [0x00000006d6280000,0x00000006e477e6b0,0x00000006e4780000)
+  to   space 273408K, 0% used [0x00000006c5780000,0x00000006c5780000,0x00000006d6280000)
+ ParOldGen       total 1043456K, used 703418K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 67% used [0x00000003c0000000,0x00000003eaeee928,0x00000003ffb00000)
+ Metaspace       used 50914K, capacity 51257K, committed 51712K, reserved 1095680K
+  class space    used 5954K, capacity 6078K, committed 6144K, reserved 1048576K
+}
+Event: 100.138 GC heap before
+{Heap before GC invocations=29 (full 4):
+ PSYoungGen      total 1721856K, used 1721849K [0x000000066ab00000, 0x00000006e9280000, 0x00000007c0000000)
+  eden space 1487360K, 100% used [0x000000066ab00000,0x00000006c5780000,0x00000006c5780000)
+  from space 234496K, 99% used [0x00000006d6280000,0x00000006e477e6b0,0x00000006e4780000)
+  to   space 273408K, 0% used [0x00000006c5780000,0x00000006c5780000,0x00000006d6280000)
+ ParOldGen       total 1043456K, used 703418K [0x00000003c0000000, 0x00000003ffb00000, 0x000000066ab00000)
+  object space 1043456K, 67% used [0x00000003c0000000,0x00000003eaeee928,0x00000003ffb00000)
+ Metaspace       used 51501K, capacity 51865K, committed 52352K, reserved 1095680K
+  class space    used 6054K, capacity 6174K, committed 6272K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 99.915 Thread 0x00007f96c000c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f96b3003830 method=gw.lang.reflect.TypeSystem.getTypeFromJavaBackedType(Lgw/lang/reflect/IType;)Lgw/lang/reflect/IType; @ 8
+Event: 99.943 Thread 0x00007f96c000c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f96b338371c method=gw.internal.gosu.parser.GosuClassParser.makeFunctionOrConstructorStatement(Lgw/internal/gosu/parser/IGosuClassInternal;Ljava/lang/String;Z)Lgw/internal/gosu/parser/state
+Event: 99.946 Thread 0x00007f96c000c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f96b338371c method=gw.internal.gosu.parser.GosuClassParser.makeFunctionOrConstructorStatement(Lgw/internal/gosu/parser/IGosuClassInternal;Ljava/lang/String;Z)Lgw/internal/gosu/parser/state
+Event: 99.949 Thread 0x00007f96c000c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f96b338371c method=gw.internal.gosu.parser.GosuClassParser.makeFunctionOrConstructorStatement(Lgw/internal/gosu/parser/IGosuClassInternal;Ljava/lang/String;Z)Lgw/internal/gosu/parser/state
+Event: 99.951 Thread 0x00007f96c000c000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f96b31d1a5c method=gw.internal.gosu.parser.AbstractGenericMethodInfo.getGosuAnnotations()Ljava/util/List; @ 4
+Event: 99.951 Thread 0x00007f96c000c000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f96b31d1a5c method=gw.internal.gosu.parser.AbstractGenericMethodInfo.getGosuAnnotations()Ljava/util/List; @ 4
+Event: 99.952 Thread 0x00007f96c000c000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f96b2a2b2c0 method=gw.internal.gosu.parser.AbstractGenericMethodInfo.getGosuAnnotations()Ljava/util/List; @ 4
+Event: 99.959 Thread 0x00007f96c000c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f96b2dab8f8 method=gw.internal.gosu.ir.transform.AbstractElementTransformer.pushType(Lgw/lang/reflect/IType;Z)Lgw/lang/ir/IRExpression; @ 18
+Event: 99.960 Thread 0x00007f96c000c000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f96b2697d88 method=gw.lang.ir.SignatureUtil.visitType(Lgw/internal/ext/org/objectweb/asm/signature/SignatureVisitor;Lgw/lang/reflect/IType;[Z)V @ 79
+Event: 99.961 Thread 0x00007f96c000c000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f96b190e504 method=gw.lang.ir.SignatureUtil.visitType(Lgw/internal/ext/org/objectweb/asm/signature/SignatureVisitor;Lgw/lang/reflect/IType;[Z)V @ 79
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 82.472 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b21f4883 to 0x00007f96b21f4b95
+Event: 83.179 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b21b24f3 to 0x00007f96b21b7305
+Event: 85.050 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b313aec8 to 0x00007f96b3140bb5
+Event: 87.937 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b2bbb95b to 0x00007f96b2bbcdfd
+Event: 93.675 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b1ceb1bd to 0x00007f96b1ceb889
+Event: 95.038 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b2f5c8b7 to 0x00007f96b2f5de29
+Event: 95.038 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b1e823cf to 0x00007f96b1e82555
+Event: 95.038 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b298e123 to 0x00007f96b2990df5
+Event: 95.039 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b3279234 to 0x00007f96b3279f61
+Event: 95.448 Thread 0x00007f96c000c000 Implicit null exception at 0x00007f96b162b9cc to 0x00007f96b162c4f9
+
+Events (10 events):
+Event: 100.019 loading class com/guidewire/_generated/entity/BIValidationAlertInternal done
+Event: 100.019 loading class gw/cc/financials/bulkpay/entity/BIValidationAlert
+Event: 100.019 loading class gw/cc/financials/bulkpay/entity/BIValidationAlert done
+Event: 100.106 loading class entity/ActivityVacationView$_Internal
+Event: 100.106 loading class entity/ActivityVacationView$_Internal done
+Event: 100.107 loading class com/guidewire/_generated/entity/ActivityVacationViewInternal
+Event: 100.107 loading class com/guidewire/_generated/entity/ActivityVacationViewInternal done
+Event: 100.107 loading class gw/cc/activity/entity/ActivityVacationView
+Event: 100.107 loading class gw/cc/activity/entity/ActivityVacationView done
+Event: 100.138 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+3c0000000-3ffb00000 rw-p 00000000 00:00 0 
+3ffb00000-66ab00000 ---p 00000000 00:00 0 
+66ab00000-6e9280000 rw-p 00000000 00:00 0 
+6f5080000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0620000 rw-p 00000000 00:00 0 
+7c0620000-800000000 ---p 00000000 00:00 0 
+5636c1dd1000-5636c1dd2000 r-xp 00000000 fc:01 8519602                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5636c1fd1000-5636c1fd2000 r--p 00000000 fc:01 8519602                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5636c1fd2000-5636c1fd3000 rw-p 00001000 fc:01 8519602                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5636c34c6000-5636c34e7000 rw-p 00000000 00:00 0                          [heap]
+7f9644000000-7f9644021000 rw-p 00000000 00:00 0 
+7f9644021000-7f9648000000 ---p 00000000 00:00 0 
+7f9648983000-7f9648a83000 rw-p 00000000 00:00 0 
+7f9648a83000-7f9648b83000 ---p 00000000 00:00 0 
+7f9648b83000-7f9648d83000 rw-p 00000000 00:00 0 
+7f9648d83000-7f9648f83000 rw-p 00000000 00:00 0 
+7f9648f83000-7f9649183000 rw-p 00000000 00:00 0 
+7f9649183000-7f9649383000 rw-p 00000000 00:00 0 
+7f9649383000-7f9649583000 rw-p 00000000 00:00 0 
+7f9649583000-7f9649783000 rw-p 00000000 00:00 0 
+7f9649783000-7f9649983000 rw-p 00000000 00:00 0 
+7f9649983000-7f9649b83000 rw-p 00000000 00:00 0 
+7f9649b83000-7f9649d83000 rw-p 00000000 00:00 0 
+7f9649d83000-7f9649f83000 rw-p 00000000 00:00 0 
+7f9649f83000-7f964a183000 rw-p 00000000 00:00 0 
+7f964a183000-7f964a383000 rw-p 00000000 00:00 0 
+7f964a383000-7f964a583000 rw-p 00000000 00:00 0 
+7f964a583000-7f964a783000 rw-p 00000000 00:00 0 
+7f964a783000-7f964a983000 rw-p 00000000 00:00 0 
+7f964a983000-7f964ab83000 rw-p 00000000 00:00 0 
+7f964ab83000-7f964ad83000 rw-p 00000000 00:00 0 
+7f964ad83000-7f964ad85000 r--s 00016000 fc:01 8519683                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f964ad85000-7f964af85000 rw-p 00000000 00:00 0 
+7f964af85000-7f964af8a000 r--s 000a3000 fc:01 8519685                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f964af8a000-7f964af9d000 r--s 00346000 fc:01 8519690                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f964af9d000-7f964af9e000 r--s 00000000 fc:01 8519688                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/management-agent.jar
+7f964af9e000-7f964afa3000 r--s 000a3000 fc:01 8519685                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f964afa3000-7f964afa4000 r--s 00000000 fc:01 8519696                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/policy/limited/local_policy.jar
+7f964afa4000-7f964afa5000 r--s 00000000 fc:01 8519695                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/policy/limited/US_export_policy.jar
+7f964afa5000-7f964afa6000 r--s 00000000 fc:01 8519699                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/policy/unlimited/local_policy.jar
+7f964afa6000-7f964afa7000 r--s 00000000 fc:01 8519698                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/policy/unlimited/US_export_policy.jar
+7f964afa7000-7f964afa9000 r--s 00016000 fc:01 8519683                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f964afa9000-7f964afae000 r--s 002f9000 fc:01 8519652                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+7f964afae000-7f964afb1000 r--s 00013000 fc:01 13677058                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-io/9.0.7.v20131107/jetty-io-9.0.7.v20131107.jar
+7f964afb1000-7f964afb3000 r--s 00018000 fc:01 13677053                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-http/9.0.7.v20131107/jetty-http-9.0.7.v20131107.jar
+7f964afb3000-7f964afb9000 r--s 00054000 fc:01 13677048                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-server/9.0.7.v20131107/jetty-server-9.0.7.v20131107.jar
+7f964afb9000-7f964afbc000 r--s 00014000 fc:01 13677043                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-security/9.0.7.v20131107/jetty-security-9.0.7.v20131107.jar
+7f964afbc000-7f964afc2000 r--s 0004e000 fc:01 13677038                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-util/9.0.7.v20131107/jetty-util-9.0.7.v20131107.jar
+7f964afc2000-7f964afca000 r--s 00074000 fc:01 13676860                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-js/1.7/batik-js-1.7.jar
+7f964afca000-7f964afcc000 r--s 00018000 fc:01 13677033                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-servlet/9.0.7.v20131107/jetty-servlet-9.0.7.v20131107.jar
+7f964afcc000-7f964afce000 r--s 00009000 fc:01 13677028                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-xml/9.0.7.v20131107/jetty-xml-9.0.7.v20131107.jar
+7f964afce000-7f964afd3000 r--s 00030000 fc:01 13676856                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-svggen/1.7/batik-svggen-1.7.jar
+7f964afd3000-7f964afd4000 r--s 00007000 fc:01 13676852                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-xml/1.7/batik-xml-1.7.jar
+7f964afd4000-7f964afd6000 r--s 0000d000 fc:01 13676848                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-script/1.7/batik-script-1.7.jar
+7f964afd6000-7f964afdb000 r--s 00010000 fc:01 13677719                   /root/Desktop/Guidewire/WS_CC/repository/xml-apis/xml-apis-ext/1.3.04/xml-apis-ext-1.3.04.jar
+7f964afdb000-7f964afde000 r--s 0001d000 fc:01 13676844                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-util/1.7/batik-util-1.7.jar
+7f964afde000-7f964afe0000 r--s 00010000 fc:01 13676840                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-parser/1.7/batik-parser-1.7.jar
+7f964afe0000-7f964afe4000 r--s 00027000 fc:01 13676836                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-dom/1.7/batik-dom-1.7.jar
+7f964afe4000-7f964afeb000 r--s 00045000 fc:01 13676832                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-css/1.7/batik-css-1.7.jar
+7f964afeb000-7f964afee000 r--s 00015000 fc:01 13676828                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-anim/1.7/batik-anim-1.7.jar
+7f964afee000-7f964aff0000 r--s 00005000 fc:01 13677714                   /root/Desktop/Guidewire/WS_CC/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar
+7f964aff0000-7f964aff2000 r--s 0000e000 fc:01 13677408                   /root/Desktop/Guidewire/WS_CC/repository/javax/activation/activation/1.1/activation-1.1.jar
+7f964aff2000-7f964aff3000 r--s 00009000 fc:01 13677023                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-jndi/9.0.7.v20131107/jetty-jndi-9.0.7.v20131107.jar
+7f964aff3000-7f964aff5000 r--s 0001a000 fc:01 13677018                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-webapp/9.0.7.v20131107/jetty-webapp-9.0.7.v20131107.jar
+7f964aff5000-7f964aff6000 r--s 00002000 fc:01 13676824                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-ext/1.7/batik-ext-1.7.jar
+7f964aff6000-7f964aff8000 r--s 0000f000 fc:01 13676820                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-extension/1.7/batik-extension-1.7.jar
+7f964aff8000-7f964affb000 r--s 0001b000 fc:01 13676816                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-transcoder/1.7/batik-transcoder-1.7.jar
+7f964affb000-7f964afff000 r--s 00038000 fc:01 13676812                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-gvt/1.7/batik-gvt-1.7.jar
+7f964afff000-7f964b007000 r--s 0005b000 fc:01 13676808                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-awt-util/1.7/batik-awt-util-1.7.jar
+7f964b007000-7f964b011000 r--s 0007f000 fc:01 13676804                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-bridge/1.7/batik-bridge-1.7.jar
+7f964b011000-7f964b01e000 r--s 00086000 fc:01 13676800                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/batik-svg-dom/1.7/batik-svg-dom-1.7.jar
+7f964b01e000-7f964b028000 r--s 00089000 fc:01 13676795                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/xmlgraphics-commons/1.5/xmlgraphics-commons-1.5.jar
+7f964b028000-7f964b02a000 r--s 0000d000 fc:01 13677704                   /root/Desktop/Guidewire/WS_CC/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+7f964b02a000-7f964b02c000 r--s 00001000 fc:01 13676963                   /root/Desktop/Guidewire/WS_CC/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar
+7f964b02c000-7f964b06a000 r--s 0025d000 fc:01 13676874                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar
+7f964b06a000-7f964b06b000 r--s 00005000 fc:01 13677153                   /root/Desktop/Guidewire/WS_CC/repository/org/noggit/noggit/0.5/noggit-0.5.jar
+7f964b06b000-7f964b06d000 r--s 00009000 fc:01 13676784                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar
+7f964b06d000-7f964b075000 r--s 00048000 fc:01 13676776                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar
+7f964b075000-7f964b076000 r--s 00004000 fc:01 13677180                   /root/Desktop/Guidewire/WS_CC/repository/org/ow2/asm/asm-analysis/5.2/asm-analysis-5.2.jar
+7f964b076000-7f964b078000 r--s 00001000 fc:01 13426740                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/codegen/codegen-api/0.10/codegen-api-0.10.jar
+7f964b078000-7f964b0a6000 r--s 001da000 fc:01 13426723                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/parser/gw-xml-parser/1.1.0/gw-xml-parser-1.1.0.jar
+7f964b0a6000-7f964b0a7000 r--s 00000000 fc:01 13426717                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/xml-api/0.2/xml-api-0.2.jar
+7f964b0a7000-7f964b0aa000 r--s 0000e000 fc:01 13427112                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/commons/performance/perf-analyzer/1.0.9/perf-analyzer-1.0.9.jar
+7f964b0aa000-7f964b0ac000 r--s 00016000 fc:01 13677148                   /root/Desktop/Guidewire/WS_CC/repository/org/custommonkey/xmlunit/com.springsource.org.custommonkey.xmlunit/1.2.0/com.springsource.org.custommonkey.xmlunit-1.2.0.jar
+7f964b0ac000-7f964b0b0000 r--s 00022000 fc:01 13677134                   /root/Desktop/Guidewire/WS_CC/repository/org/antlr/com.springsource.org.antlr.runtime/3.1.3/com.springsource.org.antlr.runtime-3.1.3.jar
+7f964b0b0000-7f964b0b9000 r--s 00028000 fc:01 13677441                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/osgi/libphonenumber/5.1/libphonenumber-5.1.jar
+7f964b0b9000-7f964b0ba000 r--s 00005000 fc:01 13427227                   /root/Desktop/Guidewire/WS_CC/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar
+7f964b0ba000-7f964b0d7000 r--s 00273000 fc:01 13677498                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/xalan-without-bcel/2.7.1/xalan-without-bcel-2.7.1.jar
+7f964b0d7000-7f964b0da000 r--s 0001f000 fc:01 13677699                   /root/Desktop/Guidewire/WS_CC/repository/commons-validator/commons-validator/1.3.1/commons-validator-1.3.1.jar
+7f964b0da000-7f964b0dd000 r--s 0001e000 fc:01 13676869                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/velocity/velocity-tools/1.3/velocity-tools-1.3.jar
+7f964b0dd000-7f964b0e5000 r--s 00058000 fc:01 13676865                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/velocity/velocity/1.5/velocity-1.5.jar
+7f964b0e5000-7f964b0e7000 r--s 00006000 fc:01 13677690                   /root/Desktop/Guidewire/WS_CC/repository/ch/qos/cal10n/cal10n-api/0.7.4/cal10n-api-0.7.4.jar
+7f964b0e7000-7f964b0e9000 r--s 00009000 fc:01 13676958                   /root/Desktop/Guidewire/WS_CC/repository/org/slf4j/slf4j-ext/1.7.12/slf4j-ext-1.7.12.jar
+7f964b0e9000-7f964b0ec000 r--s 00041000 fc:01 13677683                   /root/Desktop/Guidewire/WS_CC/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar
+7f964b0ec000-7f964b0f6000 r--s 00098000 fc:01 13677125                   /root/Desktop/Guidewire/WS_CC/repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar
+7f964b0f6000-7f964b0fe000 r--s 00078000 fc:01 13677402                   /root/Desktop/Guidewire/WS_CC/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar
+7f964b0fe000-7f964b0ff000 r--s 00001000 fc:01 13426687                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/logging/logging-api/0.1.3/logging-api-0.1.3.jar
+7f964b0ff000-7f964b101000 r--s 00008000 fc:01 13677119                   /root/Desktop/Guidewire/WS_CC/repository/org/joda/joda-convert/1.3/joda-convert-1.3.jar
+7f964b101000-7f964b111000 r--s 00089000 fc:01 13677677                   /root/Desktop/Guidewire/WS_CC/repository/joda-time/joda-time/2.9.1/joda-time-2.9.1.jar
+7f964b111000-7f964b113000 r--s 0000b000 fc:01 13677013                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-plus/9.0.7.v20131107/jetty-plus-9.0.7.v20131107.jar
+7f964b113000-7f964b114000 r--s 0000b000 fc:01 13676998                   /root/Desktop/Guidewire/WS_CC/repository/org/eclipse/jetty/jetty-start/9.0.7.v20131107/jetty-start-9.0.7.v20131107.jar
+7f964b114000-7f964b116000 r--s 0000e000 fc:01 13677672                   /root/Desktop/Guidewire/WS_CC/repository/oro/oro/2.0.8/oro-2.0.8.jar
+7f964b116000-7f964b168000 r--s 00935000 fc:01 13427318                   /root/Desktop/Guidewire/WS_CC/repository/com/ibm/icu/icu4j/51.2/icu4j-51.2.jar
+7f964b168000-7f964b16e000 r--s 00024000 fc:01 13677494                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/batik-gui-util/1.7/batik-gui-util-1.7.jar
+7f964b16e000-7f964b170000 r--s 0000d000 fc:01 13677667                   /root/Desktop/Guidewire/WS_CC/repository/avalon-framework/avalon-framework-impl/4.2.0/avalon-framework-impl-4.2.0.jar
+7f964b170000-7f964b172000 r--s 00007000 fc:01 13677663                   /root/Desktop/Guidewire/WS_CC/repository/avalon-framework/avalon-framework-api/4.2.0/avalon-framework-api-4.2.0.jar
+7f964b172000-7f964b1ab000 r--s 00329000 fc:01 13676790                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/xmlgraphics/fop/1.1/fop-1.1.jar
+7f964b1ab000-7f964b1af000 r--s 0001b000 fc:01 13677490                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/cotta/3.0.0-beta/cotta-3.0.0-beta.jar
+7f964b1af000-7f964b1b2000 r--s 00018000 fc:01 13676639                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/commons/commons-pool2/2.3/commons-pool2-2.3.jar
+7f964b1b2000-7f964b1ba000 r--s 0004b000 fc:01 13677657                   /root/Desktop/Guidewire/WS_CC/repository/commons-math/commons-math/1.2/commons-math-1.2.jar
+7f964b1ba000-7f964b1be000 r--s 0003c000 fc:01 13677651                   /root/Desktop/Guidewire/WS_CC/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar
+7f964b1be000-7f964b1c3000 r--s 0003d000 fc:01 13677645                   /root/Desktop/Guidewire/WS_CC/repository/commons-jxpath/commons-jxpath/1.1/commons-jxpath-1.1.jar
+7f964b1c3000-7f964b1c9000 r--s 00045000 fc:01 13677640                   /root/Desktop/Guidewire/WS_CC/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+7f964b1c9000-7f964b1cb000 r--s 0000f000 fc:01 13677634                   /root/Desktop/Guidewire/WS_CC/repository/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar
+7f964b1cb000-7f964b1ce000 r--s 00011000 fc:01 13677628                   /root/Desktop/Guidewire/WS_CC/repository/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar
+7f964b1ce000-7f964b1d4000 r--s 0002b000 fc:01 13677622                   /root/Desktop/Guidewire/WS_CC/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar
+7f964b1d4000-7f964b1d7000 r--s 00027000 fc:01 13676634                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/commons/commons-dbcp2/2.0.1/commons-dbcp2-2.0.1.jar
+7f964b1d7000-7f964b1e4000 r--s 00083000 fc:01 13677616                   /root/Desktop/Guidewire/WS_CC/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+7f964b1e4000-7f964b1e6000 r--s 00009000 fc:01 13677367                   /root/Desktop/Guidewire/WS_CC/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar
+7f964b1e6000-7f964b1eb000 r--s 00035000 fc:01 13677610                   /root/Desktop/Guidewire/WS_CC/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar
+7f964b1eb000-7f964b1ee000 r--s 00028000 fc:01 13677486                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/bfopdf-stamp/2.13.2/bfopdf-stamp-2.13.2.jar
+7f964b1ee000-7f964b211000 r--s 0024f000 fc:01 13677474                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/bfopdf/2.13.2/bfopdf-2.13.2.jar
+7f964b211000-7f964b220000 r--s 00087000 fc:01 13677470                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/gw-commons-collections/3.2.2/gw-commons-collections-3.2.2.jar
+7f964b220000-7f964b22b000 r--s 000ac000 fc:01 13427400                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-jetty/6.1.26RC0-4/gw-jetty-6.1.26RC0-4.jar
+7f964b22b000-7f964b23c000 r--s 000b2000 fc:01 13426709                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/gw-webservices-client/3.0.2/gw-webservices-client-3.0.2.jar
+7f964b23c000-7f964b263000 r--s 00361000 fc:01 13677458                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/ojdbc7/12.1.0.2.0-prod/ojdbc7-12.1.0.2.0-prod.jar
+7f964b263000-7f964b31c000 r--s 004a9000 fc:01 13676741                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/poi/poi-ooxml-schemas/3.13/poi-ooxml-schemas-3.13.jar
+7f964b31c000-7f964b328000 r--s 000b6000 fc:01 13676746                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
+7f964b328000-7f964b32d000 r--s 00023000 fc:01 13426674                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/perfdownload-collector/9.14.5/perfdownload-collector-9.14.5.jar
+7f964b32d000-7f964b32f000 r--s 00007000 fc:01 13427105                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/xml/simple/simplexml/1.6/simplexml-1.6.jar
+7f964b32f000-7f964b330000 r--s 00002000 fc:01 13426669                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/pli18n/0.4.1/pli18n-0.4.1.jar
+7f964b330000-7f964b333000 r--s 00006000 fc:01 13427139                   /root/Desktop/Guidewire/WS_CC/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar
+7f964b333000-7f964b335000 r--s 00006000 fc:01 13677175                   /root/Desktop/Guidewire/WS_CC/repository/org/ow2/asm/asm-tree/5.2/asm-tree-5.2.jar
+7f964b335000-7f964b336000 r--s 0000a000 fc:01 13677170                   /root/Desktop/Guidewire/WS_CC/repository/org/ow2/asm/asm-util/5.2/asm-util-5.2.jar
+7f964b336000-7f964b338000 r--s 0000c000 fc:01 13677160                   /root/Desktop/Guidewire/WS_CC/repository/org/ow2/asm/asm/5.2/asm-5.2.jar
+7f964b338000-7f964b3a8000 r--s 00641000 fc:01 13676936                   /root/Desktop/Guidewire/WS_CC/repository/org/codehaus/groovy/groovy-all/2.4.7/groovy-all-2.4.7.jar
+7f964b3a8000-7f964b3ad000 r--s 000ad000 fc:01 13677482                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/bfopdf-qrcode/2.13.2/bfopdf-qrcode-2.13.2.jar
+7f964b3ad000-7f964b3af000 r--s 00108000 fc:01 13677478                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/bfopdf-cmap/2.13.2/bfopdf-cmap-2.13.2.jar
+7f964b3af000-7f964b3b1000 r--s 00014000 fc:01 13677605                   /root/Desktop/Guidewire/WS_CC/repository/jline/jline/0.9.94/jline-0.9.94.jar
+7f964b3b1000-7f964b3b3000 r--s 00011000 fc:01 13426713                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/gw-gx/3.0.2/gw-gx-3.0.2.jar
+7f964b3b3000-7f964b3b4000 r--s 00003000 fc:01 13426700                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/modules/9.14.5/modules-9.14.5.jar
+7f964b3b4000-7f964b3b5000 r--s 00001000 fc:01 13426696                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/gosu-servlet/9.14.5/gosu-servlet-9.14.5.jar
+7f964b3b5000-7f964b3b7000 r--s 00005000 fc:01 13426692                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/gosu-process/9.14.5/gosu-process-9.14.5.jar
+7f964b3b7000-7f964b3b8000 r--s 00009000 fc:01 13677466                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/sqlinform-pro/4.8.49/sqlinform-pro-4.8.49.jar
+7f964b3b8000-7f964b3bb000 r--s 00012000 fc:01 13677396                   /root/Desktop/Guidewire/WS_CC/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar
+7f964b3bb000-7f964b3c5000 r--s 00120000 fc:01 13427311                   /root/Desktop/Guidewire/WS_CC/repository/com/h2database/h2/1.2.147/h2-1.2.147.jar
+7f964b3c5000-7f964b3cc000 r--s 00089000 fc:01 13677462                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/sqljdbc/4.1/sqljdbc-4.1.jar
+7f964b3cc000-7f964b3cf000 r--s 00009000 fc:01 13427261                   /root/Desktop/Guidewire/WS_CC/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.jar
+7f964b3cf000-7f964b3e0000 r--s 0010b000 fc:01 13427270                   /root/Desktop/Guidewire/WS_CC/repository/com/fasterxml/jackson/core/jackson-databind/2.6.0/jackson-databind-2.6.0.jar
+7f964b3e0000-7f964b3e4000 r--s 0003c000 fc:01 13427252                   /root/Desktop/Guidewire/WS_CC/repository/com/fasterxml/jackson/core/jackson-core/2.6.0/jackson-core-2.6.0.jar
+7f964b3e4000-7f964b3e6000 r--s 00002000 fc:01 13426679                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/logging/logging-over-log4j/0.1.3/logging-over-log4j-0.1.3.jar
+7f964b3e6000-7f964b3ea000 r--s 00029000 fc:01 13676897                   /root/Desktop/Guidewire/WS_CC/repository/org/codehaus/woodstox/stax2-api/3.1.1/stax2-api-3.1.1.jar
+7f964b3ea000-7f964b414000 r--s 00238000 fc:01 13676736                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/poi/poi/3.13/poi-3.13.jar
+7f964b414000-7f964b41d000 r--s 0006f000 fc:01 13677555                   /root/Desktop/Guidewire/WS_CC/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+7f964b41d000-7f964b41e000 r--s 00007000 fc:01 13676942                   /root/Desktop/Guidewire/WS_CC/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar
+7f964b41e000-7f964b449000 r--s 001fc000 fc:01 9549354                    /root/Desktop/Guidewire/WS_CC/repository/com/google/guava/guava/18.0/guava-18.0.jar
+7f964b449000-7f964b458000 r--s 000d2000 fc:01 13677343                   /root/Desktop/Guidewire/WS_CC/repository/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.jar
+7f964b458000-7f964b45c000 r--s 00038000 fc:01 13676906                   /root/Desktop/Guidewire/WS_CC/repository/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22.jar
+7f964b45c000-7f964b45e000 r--s 00009000 fc:01 13676988                   /root/Desktop/Guidewire/WS_CC/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+7f964b45e000-7f964b46b000 r--s 000aa000 fc:01 13676765                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar
+7f964b46b000-7f964b471000 r--s 00033000 fc:01 13677549                   /root/Desktop/Guidewire/WS_CC/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar
+7f964b471000-7f964b477000 r--s 00048000 fc:01 13676629                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+7f964b477000-7f964b47b000 r--s 0002a000 fc:01 13677377                   /root/Desktop/Guidewire/WS_CC/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+7f964b47b000-7f964b484000 r--s 00068000 fc:01 13676752                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/solr/solr-solrj/4.10.4-gw-2/solr-solrj-4.10.4-gw-2.jar
+7f964b484000-7f964b49c000 r--s 0012b000 fc:01 13426705                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/gw-xml/3.0.2/gw-xml-3.0.2.jar
+7f964b49c000-7f964b49e000 r--s 00008000 fc:01 13677232                   /root/Desktop/Guidewire/WS_CC/repository/org/objenesis/objenesis/1.3/objenesis-1.3.jar
+7f964b49e000-7f964b4b3000 r--s 00132000 fc:01 13676591                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/ant/com.springsource.org.apache.tools.ant/1.7.1/com.springsource.org.apache.tools.ant-1.7.1.jar
+7f964b4b3000-7f964b4b6000 r--s 00015000 fc:01 13676587                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/ant/com.springsource.org.apache.tool.ant.taskdefs.optional.junit/1.7.1/com.springsource.org.apache.tool.ant.taskdefs.optional.junit-1.7.1.jar
+7f964b4b6000-7f964b4b7000 r--s 00000000 fc:01 13426865                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/perfdownload-collector-test/9.14.5/perfdownload-collector-test-9.14.5.jar
+7f964b4b7000-7f964b52e000 r--s 009fa000 fc:01 13427305                   /root/Desktop/Guidewire/WS_CC/repository/com/aspose/aspose-words/15.10.0/aspose-words-15.10.0-jdk16.jar
+7f964b52e000-7f964b56c000 r--s 005df000 fc:01 13427300                   /root/Desktop/Guidewire/WS_CC/repository/com/aspose/aspose-cells/8.6.1/aspose-cells-8.6.1.jar
+7f964b56c000-7f964b56d000 r--s 00000000 fc:01 13426518                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/entity/entity-codegen-annotations/9.10.16/entity-codegen-annotations-9.10.16.jar
+7f964b56d000-7f964b57d000 r--s 000b8000 fc:01 13426664                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/util/9.14.5/util-9.14.5.jar
+7f964b57d000-7f964b57f000 r--s 00009000 fc:01 13427356                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-commons-cli/1.2-1/gw-commons-cli-1.2-1.jar
+7f964b57f000-7f964b580000 r--s 00002000 fc:01 13427439                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-ant-tools/1.13.16/gosu-ant-tools-1.13.16.jar
+7f964b580000-7f964b588000 r--s 0007b000 fc:01 13171428                   /root/Desktop/Guidewire/WS_CC/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar
+7f964b588000-7f964b58a000 r--s 00000000 fc:01 13426659                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/servlet/gw-servlet-filters/1.0.0/gw-servlet-filters-1.0.0.jar
+7f964b58a000-7f964b5a2000 r--s 0010f000 fc:01 13677543                   /root/Desktop/Guidewire/WS_CC/repository/io/netty/netty/3.6.6.Final/netty-3.6.6.Final.jar
+7f964b5a2000-7f964b5a7000 r--s 00070000 fc:01 13676889                   /root/Desktop/Guidewire/WS_CC/repository/org/codehaus/woodstox/woodstox-core-asl/4.1.2/woodstox-core-asl-4.1.2.jar
+7f964b5a7000-7f964b5a9000 r--s 00013000 fc:01 13677537                   /root/Desktop/Guidewire/WS_CC/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar
+7f964b5a9000-7f964b5b7000 r--s 00109000 fc:01 13676731                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar
+7f964b5b7000-7f964b5b9000 r--s 00036000 fc:01 13677454                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/sdoapi/12.1.0.2.0/sdoapi-12.1.0.2.0.jar
+7f964b5b9000-7f964b5bb000 r--s 00008000 fc:01 13427179                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-appsforyourdomain/1.0/gdata-appsforyourdomain-1.0.jar
+7f964b5bb000-7f964b5bc000 r--s 00004000 fc:01 13427294                   /root/Desktop/Guidewire/WS_CC/repository/com/intellij/annotations/12.0/annotations-12.0.jar
+7f964b5bc000-7f964b5be000 r--s 00008000 fc:01 13427288                   /root/Desktop/Guidewire/WS_CC/repository/com/fasterxml/uuid/java-uuid-generator/3.1.3/java-uuid-generator-3.1.3.jar
+7f964b5be000-7f964b5c0000 r--s 00000000 fc:01 13426608                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-inbound-plugin-jms-api/0.2.45/gw-integration-inbound-plugin-jms-api-0.2.45.jar
+7f964b5c0000-7f964b5c2000 r--s 00000000 fc:01 13426603                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-inbound-plugin-db-api/0.2.45/gw-integration-inbound-plugin-db-api-0.2.45.jar
+7f964b5c2000-7f964b5c4000 r--s 00000000 fc:01 13426598                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-inbound-plugin-files-api/0.2.45/gw-integration-inbound-plugin-files-api-0.2.45.jar
+7f964b5c4000-7f964b5c5000 r--s 00001000 fc:01 13426593                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-inbound-api/0.2.45/gw-integration-inbound-api-0.2.45.jar
+7f964b5c5000-7f964b5c6000 r--s 00000000 fc:01 13426588                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-execution-api/0.2.45/gw-integration-execution-api-0.2.45.jar
+7f964b5c6000-7f964b5c7000 r--s 00000000 fc:01 13426583                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-jndi-api/0.2.45/gw-integration-jndi-api-0.2.45.jar
+7f964b5c7000-7f964b5c8000 r--s 00000000 fc:01 13426578                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-cm-api/0.2.45/gw-integration-cm-api-0.2.45.jar
+7f964b5c8000-7f964b5c9000 r--s 00000000 fc:01 13426570                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/integration/gw-integration-runtime-api/0.2.45/gw-integration-runtime-api-0.2.45.jar
+7f964b5c9000-7f964b5cb000 r--s 0000c000 fc:01 13676669                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9.jar
+7f964b5cb000-7f964b5cd000 r--s 00006000 fc:01 13676711                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar
+7f964b5cd000-7f964b5d3000 r--s 00036000 fc:01 13677531                   /root/Desktop/Guidewire/WS_CC/repository/junit/junit/4.11/junit-4.11.jar
+7f964b5d3000-7f964b5d6000 r--s 00010000 fc:01 13427100                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/xml/simple/simplexml-schema/1.3.3/simplexml-schema-1.3.3.jar
+7f964b5d6000-7f964b5d7000 r--s 0000b000 fc:01 13426556                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/web/org.json/1.0.0/org.json-1.0.0.jar
+7f964b5d7000-7f964b5dc000 r--s 0002a000 fc:01 13426551                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/solr/9.14.5/solr-9.14.5.jar
+7f964b5dc000-7f964b5ea000 r--s 001c3000 fc:01 13426547                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/perfdownload-analyzer/9.14.5/perfdownload-analyzer-9.14.5.jar
+7f964b5ea000-7f964b5ff000 r--s 00094000 fc:01 13426514                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/entity/entity-metadata-api/9.10.16/entity-metadata-api-9.10.16.jar
+7f964b5ff000-7f964b613000 r--s 0012b000 fc:01 13677421                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/osgi/equinox/org.eclipse.osgi/3.10.101/org.eclipse.osgi-3.10.101.jar
+7f964b613000-7f964b617000 r--s 00043000 fc:01 13426918                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/personaldata/9.14.5/personaldata-9.14.5.jar
+7f964b617000-7f964b619000 r--s 00008000 fc:01 13426761                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/heatmap/9.14.5/heatmap-9.14.5.jar
+7f964b619000-7f964b61b000 r--s 0000c000 fc:01 13426542                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/plugin/9.14.5/plugin-9.14.5.jar
+7f964b61b000-7f964b62e000 r--s 000ff000 fc:01 13426859                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/bizrules/9.14.5/bizrules-9.14.5.jar
+7f964b62e000-7f964b630000 r--s 00001000 fc:01 13427435                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-classredefiner/1.0.1/gosu-classredefiner-1.0.1.jar
+7f964b630000-7f964b632000 r--s 00008000 fc:01 13426735                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/xml/gw-xml-testframework/3.0.2/gw-xml-testframework-3.0.2.jar
+7f964b632000-7f964b634000 r--s 0000a000 fc:01 13677510                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/strutstest/2.1.3/strutstest-2.1.3.jar
+7f964b634000-7f964b638000 r--s 00028000 fc:01 13427334                   /root/Desktop/Guidewire/WS_CC/repository/com/thoughtworks/qdox/qdox/1.12/qdox-1.12.jar
+7f964b638000-7f964b639000 r--s 00000000 fc:01 13427215                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-spreadsheet-meta/1.0/gdata-spreadsheet-meta-1.0.jar
+7f964b639000-7f964b63b000 r--s 00005000 fc:01 13427211                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-spreadsheet/1.0/gdata-spreadsheet-1.0.jar
+7f964b63b000-7f964b63d000 r--s 00009000 fc:01 13427207                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-media/1.0/gdata-media-1.0.jar
+7f964b63d000-7f964b63e000 r--s 00000000 fc:01 13427203                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-docs-meta/1.0/gdata-docs-meta-1.0.jar
+7f964b63e000-7f964b640000 r--s 00001000 fc:01 13427199                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-docs/1.0/gdata-docs-1.0.jar
+7f964b640000-7f964b647000 r--s 00038000 fc:01 13427175                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-core/1.0/gdata-core-1.0.jar
+7f964b647000-7f964b648000 r--s 00000000 fc:01 13427195                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-client-meta/1.0/gdata-client-meta-1.0.jar
+7f964b648000-7f964b64a000 r--s 0000c000 fc:01 13427191                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-client/1.0/gdata-client-1.0.jar
+7f964b64a000-7f964b64c000 r--s 0000b000 fc:01 13427187                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-base/1.0/gdata-base-1.0.jar
+7f964b64c000-7f964b64d000 r--s 00000000 fc:01 13427183                   /root/Desktop/Guidewire/WS_CC/repository/com/google/gdata/gdata-appsforyourdomain-meta/1.0/gdata-appsforyourdomain-meta-1.0.jar
+7f964b64d000-7f964b64f000 r--s 00004000 fc:01 13677227                   /root/Desktop/Guidewire/WS_CC/repository/org/easytesting/fest-util/1.1.4/fest-util-1.1.4.jar
+7f964b64f000-7f964b652000 r--s 00015000 fc:01 13677218                   /root/Desktop/Guidewire/WS_CC/repository/org/easytesting/fest-assert/1.3/fest-assert-1.3.jar
+7f964b652000-7f964b655000 r--s 00019000 fc:01 13677209                   /root/Desktop/Guidewire/WS_CC/repository/org/easymock/easymock/3.1/easymock-3.1.jar
+7f964b655000-7f964b658000 r--s 00008000 fc:01 13677204                   /root/Desktop/Guidewire/WS_CC/repository/org/aspectj/aspectjrt/1.2.1/aspectjrt-1.2.1.jar
+7f964b658000-7f964b65d000 r--s 0003b000 fc:01 13676879                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/cactus/cactus/1.7.1/cactus-1.7.1.jar
+7f964b65d000-7f964b65f000 r--s 00002000 fc:01 13676583                   /root/Desktop/Guidewire/WS_CC/repository/org/apache/ant/com.springsource.org.apache.tools.ant.launch/1.7.1/com.springsource.org.apache.tools.ant.launch-1.7.1.jar
+7f964b65f000-7f964b663000 r--s 0001d000 fc:01 13427454                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-core-api-precompiled/1.13.16/gosu-core-api-precompiled-1.13.16.jar
+7f964b663000-7f964b7ca000 r--s 01213000 fc:01 13426507                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/pl/9.14.5/pl-9.14.5.jar
+7f964b7ca000-7f964b7cf000 r--s 0002d000 fc:01 13426502                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/beangraphutil/9.14.5/beangraphutil-9.14.5.jar
+7f964b7cf000-7f964b7d7000 r--s 00045000 fc:01 13426497                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/contact/9.14.5/contact-9.14.5.jar
+7f964b7d7000-7f964b7ec000 r--s 00100000 fc:01 13426843                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/pl-gunit/9.14.5/pl-gunit-9.14.5.jar
+7f964b7ec000-7f964b8cc000 r--s 00c39000 fc:01 11106547                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc/9.0.4/cc-9.0.4.jar
+7f964b8cc000-7f964b8cf000 ---p 00000000 00:00 0 
+7f964b8cf000-7f964b9cd000 rw-p 00000000 00:00 0 
+7f964b9cd000-7f964b9d6000 r-xp 00000000 fc:01 8519638                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f964b9d6000-7f964bbd5000 ---p 00009000 fc:01 8519638                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f964bbd5000-7f964bbd6000 r--p 00008000 fc:01 8519638                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f964bbd6000-7f964bbd7000 rw-p 00009000 fc:01 8519638                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f964bbd7000-7f964bbed000 r-xp 00000000 fc:01 8519640                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f964bbed000-7f964bdec000 ---p 00016000 fc:01 8519640                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f964bdec000-7f964bded000 r--p 00015000 fc:01 8519640                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f964bded000-7f964bdee000 rw-p 00016000 fc:01 8519640                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f964bdee000-7f964bdff000 r-xp 00000000 fc:01 8519641                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f964bdff000-7f964bffe000 ---p 00011000 fc:01 8519641                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f964bffe000-7f964bfff000 r--p 00010000 fc:01 8519641                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f964bfff000-7f964c000000 rw-p 00011000 fc:01 8519641                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f964c000000-7f964c021000 rw-p 00000000 00:00 0 
+7f964c021000-7f9650000000 ---p 00000000 00:00 0 
+7f9650000000-7f9650021000 rw-p 00000000 00:00 0 
+7f9650021000-7f9654000000 ---p 00000000 00:00 0 
+7f9654000000-7f9656a3b000 rw-p 00000000 00:00 0 
+7f9656a3b000-7f9658000000 ---p 00000000 00:00 0 
+7f9658000000-7f96590f4000 rw-p 00000000 00:00 0 
+7f96590f4000-7f965c000000 ---p 00000000 00:00 0 
+7f965c000000-7f965c021000 rw-p 00000000 00:00 0 
+7f965c021000-7f9660000000 ---p 00000000 00:00 0 
+7f9660000000-7f966281c000 rw-p 00000000 00:00 0 
+7f966281c000-7f9664000000 ---p 00000000 00:00 0 
+7f9664000000-7f9664021000 rw-p 00000000 00:00 0 
+7f9664021000-7f9668000000 ---p 00000000 00:00 0 
+7f9668000000-7f9668021000 rw-p 00000000 00:00 0 
+7f9668021000-7f966c000000 ---p 00000000 00:00 0 
+7f966c000000-7f968c000000 rw-p 00000000 00:00 0 
+7f968c000000-7f968c021000 rw-p 00000000 00:00 0 
+7f968c021000-7f9690000000 ---p 00000000 00:00 0 
+7f9690000000-7f969006b000 rw-p 00000000 00:00 0 
+7f969006b000-7f9694000000 ---p 00000000 00:00 0 
+7f9694000000-7f9694108000 rw-p 00000000 00:00 0 
+7f9694108000-7f9698000000 ---p 00000000 00:00 0 
+7f9698000000-7f9698021000 rw-p 00000000 00:00 0 
+7f9698021000-7f969c000000 ---p 00000000 00:00 0 
+7f969c000000-7f969c001000 r--s 00004000 fc:01 13426855                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/testresult-formatter/9.14.5/testresult-formatter-9.14.5.jar
+7f969c001000-7f969c003000 r--s 00012000 fc:01 13427459                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-test-api/1.13.16/gosu-test-api-1.13.16.jar
+7f969c003000-7f969c017000 r--s 000da000 fc:01 12911750                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-gunit/9.0.4/cc-gunit-9.0.4.jar
+7f969c017000-7f969c02f000 r--s 001c9000 fc:01 13427444                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-core/1.13.16/gosu-core-1.13.16.jar
+7f969c02f000-7f969c04e000 r--s 00120000 fc:01 13427427                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-core-api/1.13.16/gosu-core-api-1.13.16.jar
+7f969c04e000-7f969c069000 r--s 001d6000 fc:01 8519667                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f969c069000-7f969c084000 r--s 00394000 fc:01 8519662                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f969c084000-7f969c085000 ---p 00000000 00:00 0 
+7f969c085000-7f969c185000 rw-p 00000000 00:00 0 
+7f969c185000-7f969c188000 ---p 00000000 00:00 0 
+7f969c188000-7f969c286000 rw-p 00000000 00:00 0 
+7f969c286000-7f969c287000 ---p 00000000 00:00 0 
+7f969c287000-7f969c28a000 ---p 00000000 00:00 0 
+7f969c28a000-7f969c387000 rw-p 00000000 00:00 0 
+7f969c387000-7f969c388000 ---p 00000000 00:00 0 
+7f969c388000-7f969c38b000 ---p 00000000 00:00 0 
+7f969c38b000-7f969c488000 rw-p 00000000 00:00 0 
+7f969c488000-7f969c489000 ---p 00000000 00:00 0 
+7f969c489000-7f969c48c000 ---p 00000000 00:00 0 
+7f969c48c000-7f969c589000 rw-p 00000000 00:00 0 
+7f969c589000-7f969c58c000 ---p 00000000 00:00 0 
+7f969c58c000-7f969c68a000 rw-p 00000000 00:00 0 
+7f969c68a000-7f969c6bb000 r--p 00000000 fc:01 7801                       /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f969c6bb000-7f969c82e000 r--p 00000000 fc:01 7800                       /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f969c82e000-7f969c9c9000 r--p 00000000 fc:01 7795                       /usr/lib/locale/locale-archive
+7f969c9c9000-7f969c9cc000 ---p 00000000 00:00 0 
+7f969c9cc000-7f969caca000 rw-p 00000000 00:00 0 
+7f969caca000-7f969cacd000 ---p 00000000 00:00 0 
+7f969cacd000-7f969cbcb000 rw-p 00000000 00:00 0 
+7f969cbcb000-7f969cbcc000 ---p 00000000 00:00 0 
+7f969cbcc000-7f96a0000000 rw-p 00000000 00:00 0 
+7f96a0000000-7f96a0021000 rw-p 00000000 00:00 0 
+7f96a0021000-7f96a4000000 ---p 00000000 00:00 0 
+7f96a4000000-7f96a4021000 rw-p 00000000 00:00 0 
+7f96a4021000-7f96a8000000 ---p 00000000 00:00 0 
+7f96a8000000-7f96a8021000 rw-p 00000000 00:00 0 
+7f96a8021000-7f96ac000000 ---p 00000000 00:00 0 
+7f96ac000000-7f96ac002000 r--s 00008000 fc:01 13426851                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/perfdownload-analyzer-test/9.14.5/perfdownload-analyzer-test-9.14.5.jar
+7f96ac002000-7f96ac003000 r--s 00000000 fc:01 13427013                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-pl-solr/9.0.4/cc-pl-solr-9.0.4.jar
+7f96ac003000-7f96ac004000 r--s 00000000 fc:01 13427005                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-pl-personaldata/9.0.4/cc-pl-personaldata-9.0.4.jar
+7f96ac004000-7f96ac005000 r--s 00000000 fc:01 13427001                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-pl-heatmap/9.0.4/cc-pl-heatmap-9.0.4.jar
+7f96ac005000-7f96ac006000 r--s 00000000 fc:01 13427021                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-plugin/9.0.4/cc-plugin-9.0.4.jar
+7f96ac006000-7f96ac007000 r--s 00000000 fc:01 13426985                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-pl-bizrules/9.0.4/cc-pl-bizrules-9.0.4.jar
+7f96ac007000-7f96ac008000 r--s 00000000 fc:01 13426981                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/cc/cc-pl/9.0.4/cc-pl-9.0.4.jar
+7f96ac008000-7f96ac009000 r--s 00001000 fc:01 13426493                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/pl-appserver-jboss/9.14.5/pl-appserver-jboss-9.14.5.jar
+7f96ac009000-7f96ac00a000 r--s 00000000 fc:01 13426489                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/pl-appserver-websphere/9.14.5/pl-appserver-websphere-9.14.5.jar
+7f96ac00a000-7f96ac00e000 r--s 00026000 fc:01 13677502                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/automaton/1.11/automaton-1.11.jar
+7f96ac00e000-7f96ac010000 r--s 00006000 fc:01 13426847                   /root/Desktop/Guidewire/WS_CC/repository/com/guidewire/pl/bizrules-gunit/9.14.5/bizrules-gunit-9.14.5.jar
+7f96ac010000-7f96ac012000 r--s 0000f000 fc:01 13427413                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-jcommander/1.48/gw-jcommander-1.48.jar
+7f96ac012000-7f96ac2b9000 rw-p 00000000 00:00 0 
+7f96ac2b9000-7f96ac489000 r--s 03c5c000 fc:01 8519691                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f96ac489000-7f96acdc9000 rw-p 00000000 00:00 0 
+7f96acdc9000-7f96acdca000 ---p 00000000 00:00 0 
+7f96acdca000-7f96aceca000 rw-p 00000000 00:00 0 
+7f96aceca000-7f96acecb000 ---p 00000000 00:00 0 
+7f96acecb000-7f96acfcb000 rw-p 00000000 00:00 0 
+7f96acfcb000-7f96acfcc000 ---p 00000000 00:00 0 
+7f96acfcc000-7f96ad0cc000 rw-p 00000000 00:00 0 
+7f96ad0cc000-7f96ad0cd000 ---p 00000000 00:00 0 
+7f96ad0cd000-7f96ad1cd000 rw-p 00000000 00:00 0 
+7f96ad1cd000-7f96ad1ce000 ---p 00000000 00:00 0 
+7f96ad1ce000-7f96ad4cc000 rw-p 00000000 00:00 0 
+7f96ad4cc000-7f96ae824000 ---p 00000000 00:00 0 
+7f96ae824000-7f96aea22000 rw-p 00000000 00:00 0 
+7f96aea22000-7f96afd79000 ---p 00000000 00:00 0 
+7f96afd79000-7f96b016e000 rw-p 00000000 00:00 0 
+7f96b016e000-7f96b0824000 ---p 00000000 00:00 0 
+7f96b0824000-7f96b08c4000 rw-p 00000000 00:00 0 
+7f96b08c4000-7f96b0be5000 ---p 00000000 00:00 0 
+7f96b0be5000-7f96b33a5000 rwxp 00000000 00:00 0 
+7f96b33a5000-7f96bfbe5000 ---p 00000000 00:00 0 
+7f96bfbe5000-7f96bfbed000 r-xp 00000000 fc:01 8519648                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f96bfbed000-7f96bfdec000 ---p 00008000 fc:01 8519648                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f96bfdec000-7f96bfded000 r--p 00007000 fc:01 8519648                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f96bfded000-7f96bfdee000 rw-p 00008000 fc:01 8519648                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f96bfdee000-7f96bfdf9000 r-xp 00000000 fc:01 2093                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f96bfdf9000-7f96bfff8000 ---p 0000b000 fc:01 2093                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f96bfff8000-7f96bfff9000 r--p 0000a000 fc:01 2093                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f96bfff9000-7f96bfffa000 rw-p 0000b000 fc:01 2093                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f96bfffa000-7f96c0000000 rw-p 00000000 00:00 0 
+7f96c0000000-7f96c21f7000 rw-p 00000000 00:00 0 
+7f96c21f7000-7f96c4000000 ---p 00000000 00:00 0 
+7f96c4000000-7f96c4001000 r--s 00000000 fc:01 13677506                   /root/Desktop/Guidewire/WS_CC/repository/gw/managed/xeger/1.0/xeger-1.0.jar
+7f96c4001000-7f96c4007000 r--s 0003a000 fc:01 13427408                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-asm-all/5.0.4/gw-asm-all-5.0.4.jar
+7f96c4007000-7f96c400a000 r--s 00018000 fc:01 13427449                   /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-doc/1.13.16/gosu-doc-1.13.16.jar
+7f96c400a000-7f96c4014000 r--s 00116000 fc:01 8519666                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f96c4014000-7f96c4017000 r--s 00039000 fc:01 8519670                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f96c4017000-7f96c40ae000 rw-p 00000000 00:00 0 
+7f96c40ae000-7f96c40af000 ---p 00000000 00:00 0 
+7f96c40af000-7f96c41af000 rw-p 00000000 00:00 0 
+7f96c41af000-7f96c41c6000 r-xp 00000000 fc:01 2090                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f96c41c6000-7f96c43c5000 ---p 00017000 fc:01 2090                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f96c43c5000-7f96c43c6000 r--p 00016000 fc:01 2090                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f96c43c6000-7f96c43c7000 rw-p 00017000 fc:01 2090                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f96c43c7000-7f96c43c9000 rw-p 00000000 00:00 0 
+7f96c43c9000-7f96c43d4000 r-xp 00000000 fc:01 2095                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f96c43d4000-7f96c45d3000 ---p 0000b000 fc:01 2095                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f96c45d3000-7f96c45d4000 r--p 0000a000 fc:01 2095                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f96c45d4000-7f96c45d5000 rw-p 0000b000 fc:01 2095                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f96c45d5000-7f96c45dd000 r-xp 00000000 fc:01 2091                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f96c45dd000-7f96c47dd000 ---p 00008000 fc:01 2091                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f96c47dd000-7f96c47de000 r--p 00008000 fc:01 2091                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f96c47de000-7f96c47df000 rw-p 00009000 fc:01 2091                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f96c47df000-7f96c4809000 r-xp 00000000 fc:01 8519629                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f96c4809000-7f96c4a08000 ---p 0002a000 fc:01 8519629                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f96c4a08000-7f96c4a09000 r--p 00029000 fc:01 8519629                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f96c4a09000-7f96c4a0b000 rw-p 0002a000 fc:01 8519629                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f96c4a0b000-7f96c4a1b000 r-xp 00000000 fc:01 8519647                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f96c4a1b000-7f96c4c1a000 ---p 00010000 fc:01 8519647                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f96c4c1a000-7f96c4c1c000 r--p 0000f000 fc:01 8519647                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f96c4c1c000-7f96c4c1d000 rw-p 00011000 fc:01 8519647                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f96c4c1d000-7f96c4c24000 r-xp 00000000 fc:01 2180                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f96c4c24000-7f96c4e23000 ---p 00007000 fc:01 2180                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f96c4e23000-7f96c4e24000 r--p 00006000 fc:01 2180                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f96c4e24000-7f96c4e25000 rw-p 00007000 fc:01 2180                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f96c4e25000-7f96c4e3c000 r-xp 00000000 fc:01 2096                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f96c4e3c000-7f96c503b000 ---p 00017000 fc:01 2096                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f96c503b000-7f96c503c000 r--p 00016000 fc:01 2096                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f96c503c000-7f96c503d000 rw-p 00017000 fc:01 2096                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f96c503d000-7f96c51da000 r-xp 00000000 fc:01 2087                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f96c51da000-7f96c53d9000 ---p 0019d000 fc:01 2087                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f96c53d9000-7f96c53da000 r--p 0019c000 fc:01 2087                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f96c53da000-7f96c53db000 rw-p 0019d000 fc:01 2087                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f96c53db000-7f96c5554000 r-xp 00000000 fc:01 5016                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f96c5554000-7f96c5754000 ---p 00179000 fc:01 5016                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f96c5754000-7f96c575e000 r--p 00179000 fc:01 5016                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f96c575e000-7f96c5760000 rw-p 00183000 fc:01 5016                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f96c5760000-7f96c5764000 rw-p 00000000 00:00 0 
+7f96c5764000-7f96c6403000 r-xp 00000000 fc:01 8519651                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f96c6403000-7f96c6603000 ---p 00c9f000 fc:01 8519651                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f96c6603000-7f96c6697000 r--p 00c9f000 fc:01 8519651                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f96c6697000-7f96c66c0000 rw-p 00d33000 fc:01 8519651                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f96c66c0000-7f96c66f0000 rw-p 00000000 00:00 0 
+7f96c66f0000-7f96c670a000 r-xp 00000000 fc:01 2178                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f96c670a000-7f96c6909000 ---p 0001a000 fc:01 2178                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f96c6909000-7f96c690a000 r--p 00019000 fc:01 2178                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f96c690a000-7f96c690b000 rw-p 0001a000 fc:01 2178                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f96c690b000-7f96c690f000 rw-p 00000000 00:00 0 
+7f96c690f000-7f96c6912000 r-xp 00000000 fc:01 2086                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f96c6912000-7f96c6b11000 ---p 00003000 fc:01 2086                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f96c6b11000-7f96c6b12000 r--p 00002000 fc:01 2086                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f96c6b12000-7f96c6b13000 rw-p 00003000 fc:01 2086                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f96c6b13000-7f96c6b2f000 r-xp 00000000 fc:01 2183                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f96c6b2f000-7f96c6d2e000 ---p 0001c000 fc:01 2183                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f96c6d2e000-7f96c6d2f000 r--p 0001b000 fc:01 2183                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f96c6d2f000-7f96c6d30000 rw-p 0001c000 fc:01 2183                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f96c6d30000-7f96c6f17000 r-xp 00000000 fc:01 2083                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f96c6f17000-7f96c7117000 ---p 001e7000 fc:01 2083                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f96c7117000-7f96c711b000 r--p 001e7000 fc:01 2083                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f96c711b000-7f96c711d000 rw-p 001eb000 fc:01 2083                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f96c711d000-7f96c7121000 rw-p 00000000 00:00 0 
+7f96c7121000-7f96c712f000 r-xp 00000000 fc:01 8519615                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f96c712f000-7f96c732e000 ---p 0000e000 fc:01 8519615                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f96c732e000-7f96c732f000 r--p 0000d000 fc:01 8519615                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f96c732f000-7f96c7330000 rw-p 0000e000 fc:01 8519615                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f96c7330000-7f96c7357000 r-xp 00000000 fc:01 2079                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f96c7357000-7f96c7358000 r--s 00010000 fc:01 8519671                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f96c7358000-7f96c7359000 r--s 0000a000 fc:01 8519665                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f96c7359000-7f96c735b000 r--s 00007000 fc:01 77498                      /usr/share/java/java-atk-wrapper.jar
+7f96c735b000-7f96c7360000 r--s 0003c000 fc:01 8519669                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f96c7360000-7f96c7361000 r--s 0000d000 fc:01 8519668                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f96c7361000-7f96c7363000 r--s 00001000 fc:01 8519663                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f96c7363000-7f96c7366000 r--s 0000f000 fc:01 8519664                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f96c7366000-7f96c7367000 r--p 00000000 fc:01 7806                       /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f96c7367000-7f96c7368000 r--p 00000000 fc:01 7809                       /usr/lib/locale/C.UTF-8/LC_TIME
+7f96c7368000-7f96c7369000 r--p 00000000 fc:01 7804                       /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f96c7369000-7f96c736a000 r--p 00000000 fc:01 7798                       /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f96c736a000-7f96c736b000 r--p 00000000 fc:01 7807                       /usr/lib/locale/C.UTF-8/LC_PAPER
+7f96c736b000-7f96c736c000 r--p 00000000 fc:01 7805                       /usr/lib/locale/C.UTF-8/LC_NAME
+7f96c736c000-7f96c743d000 rw-p 00000000 00:00 0 
+7f96c743d000-7f96c743e000 ---p 00000000 00:00 0 
+7f96c743e000-7f96c7441000 ---p 00000000 00:00 0 
+7f96c7441000-7f96c7540000 rw-p 00000000 00:00 0 
+7f96c7540000-7f96c7541000 r--p 00000000 fc:01 7799                       /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f96c7541000-7f96c7542000 r--p 00000000 fc:01 7808                       /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f96c7542000-7f96c7543000 r--p 00000000 fc:01 7803                       /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f96c7543000-7f96c754a000 r--s 00000000 fc:01 5009                       /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f96c754a000-7f96c754b000 r--p 00000000 fc:01 7802                       /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f96c754b000-7f96c7553000 rw-s 00000000 fc:01 525679                     /tmp/hsperfdata_root/5504
+7f96c7553000-7f96c7554000 rw-p 00000000 00:00 0 
+7f96c7554000-7f96c7555000 ---p 00000000 00:00 0 
+7f96c7555000-7f96c7557000 rw-p 00000000 00:00 0 
+7f96c7557000-7f96c7558000 r--p 00027000 fc:01 2079                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f96c7558000-7f96c7559000 rw-p 00028000 fc:01 2079                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f96c7559000-7f96c755a000 rw-p 00000000 00:00 0 
+7ffe7d9cc000-7ffe7d9ed000 rw-p 00000000 00:00 0                          [stack]
+7ffe7d9fb000-7ffe7d9fe000 r--p 00000000 00:00 0                          [vvar]
+7ffe7d9fe000-7ffe7da00000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dcompiler.type=gw -Xms2g -Xmx16g -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -Xms256m 
+java_command: gw.lang.gosuc.cli.CommandLineCompiler @/tmp/org.gosulang.gradle.tasks.compile.CommandLineGosuCompiler6223022609086787363arguments
+java_class_path (initial): /root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-doc/1.13.16/gosu-doc-1.13.16.jar:/root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-core-api/1.13.16/gosu-core-api-1.13.16.jar:/root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/gosu-core/1.13.16/gosu-core-1.13.16.jar:/root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-asm-all/5.0.4/gw-asm-all-5.0.4.jar:/root/Desktop/Guidewire/WS_CC/repository/org/gosu-lang/gosu/managed/gw-jcommander/1.48/gw-jcommander-1.48.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+_JAVA_OPTIONS=-Xms256m
+PATH=/opt/tomcat/apache-tomcat-9.0.27/bin:/root/Desktop/Guidewire/apache-ant-1.9.13/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/sbin:/bin:/usr/bin:/usr/local/bin:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin
+SHELL=/bin/bash
+DISPLAY=:10.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xab92f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xab92f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8ee560], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8ee560], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8ee560], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8ee560], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8ee410], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8eea80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8eea80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8eea80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8eea80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.3 LTS"
+
+uname:Linux 4.15.0-66-generic #75-Ubuntu SMP Tue Oct 1 05:24:09 UTC 2019 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 64043, NOFILE 4096, AS infinity
+load average:3.73 1.82 0.98
+
+/proc/meminfo:
+MemTotal:       16425180 kB
+MemFree:          180840 kB
+MemAvailable:      75784 kB
+Buffers:            1388 kB
+Cached:           216556 kB
+SwapCached:            0 kB
+Active:         15719104 kB
+Inactive:         202904 kB
+Active(anon):   15705504 kB
+Inactive(anon):   155724 kB
+Active(file):      13600 kB
+Inactive(file):    47180 kB
+Unevictable:          64 kB
+Mlocked:              64 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              1832 kB
+Writeback:             0 kB
+AnonPages:      15704848 kB
+Mapped:           198056 kB
+Shmem:            156508 kB
+Slab:             170204 kB
+SReclaimable:      63508 kB
+SUnreclaim:       106696 kB
+KernelStack:       17728 kB
+PageTables:        76152 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     8212588 kB
+Committed_AS:   21317816 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      337900 kB
+DirectMap2M:    15390720 kB
+DirectMap1G:     1048576 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-5
+cpu_memory_nodes: 0
+active_processor_count: 6
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 15158153216
+memory_max_usage_in_bytes: 15241166848
+
+
+CPU:total 6 (initial active 6) (1 cores per cpu, 1 threads per core) family 6 model 85 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 1
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 2
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 3
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 4
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz
+stepping	: 4
+microcode	: 0x1
+cpu MHz		: 2294.608
+cache size	: 25344 KB
+physical id	: 5
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves pku ospke md_clear
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips	: 4589.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 16425180k(180840k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.222-b10) for linux-amd64 JRE (1.8.0_222-8u222-b10-1ubuntu1~18.04.1-b10), built on Jul 18 2019 18:52:48 by "buildd" with gcc 7.4.0
+
+time: Tue Nov 12 11:16:25 2019
+timezone: UTC
+elapsed time: 101 seconds (0d 0h 1m 41s)
+

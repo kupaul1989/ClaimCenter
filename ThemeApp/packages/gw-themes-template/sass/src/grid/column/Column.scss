@@ -1,0 +1,45 @@
+/**
+ * Generic Grid Column styles for all Guidewire themes
+ */
+
+.#{$prefix}column-header-last {
+  border-right: $gw-border;
+}
+
+.#{$prefix}column-header-sort-ASC,
+.#{$prefix}column-header-sort-DESC {
+  .#{$prefix}column-header-text {
+    font-weight: bold;
+    color: $base-color;
+  }
+}
+
+.g-header-sort {
+  color: $gw-link-color;
+  cursor: pointer;
+}
+
+/*
+ * Enable the ellipsis in column headers
+ */
+
+// PLWEB-5976 Increase line height by 1 pixels to avoid header text cut-off
+// Note the text only cuts off when use Open Sans font and when overflow:hidden
+// is applied to the header text
+.#{$prefix}column-header {
+  font: $grid-column-header-font-weight #{$grid-column-header-font-size}/#{$grid-column-header-line-height + 1} $grid-column-header-font-family;
+}
+
+.#{$prefix}column-header-text-container {
+  display: block;
+}
+
+.#{$prefix}column-header-text-wrapper {
+  display: block;
+}
+
+.#{$prefix}column-header-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,37 @@
+/**
+ * Generic Form Field Text styles for all Guidewire themes
+ */
+
+.#{$prefix}form-textarea {
+  margin-left: 0;
+  // Remove the left padding for readonly textareas so that things line up properly with any sibling fields
+  &[readonly] {
+    padding-left: 0;
+  }
+}
+
+.ux-timefield {
+  //reduce padding and center date label
+  input.#{$prefix}form-text {
+    padding: 2px 2px 1px 2px;
+    text-align: center;
+  }
+  td.#{$prefix}trigger-cell {
+    width: 20px;
+  }
+  .#{$prefix}form-spinner-up,
+  .#{$prefix}form-spinner-down {
+    width: 18px !important;
+  }
+}
+
+.#{$prefix}form-text {
+  vertical-align: middle;
+}
+
+/**
+ *  targeted reset for margin, Chrome adds 2 pixels to the left and right of inputs
+ */
+input.#{$prefix}form-text {
+  margin: 0;
+}

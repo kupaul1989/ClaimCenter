@@ -1,0 +1,1744 @@
+3.1.7 (Brainy Betty)
+2280905eafe30027f661dde6d1b8b5f3fd4e984f
+o:Sass::Tree::RootNode
+:@children[o:Sass::Tree::CommentNode:@silent0:@valueI"ª/*
+ * Creates a visual theme for a Menu.
+ *
+ * @param {string} $ui
+ * The name of the UI being created. Can not included spaces or special punctuation
+ * (used in CSS class names).
+ *
+ * @param {color} [$ui-background-color=$menu-background-color]
+ * The background-color of the Menu
+ *
+ * @param {color} [$ui-border-color=$menu-border-color]
+ * The border-color of the Menu
+ *
+ * @param {string} [$ui-border-style=$menu-border-style]
+ * The border-style of the Menu
+ *
+ * @param {number} [$ui-border-width=$menu-border-width]
+ * The border-width of the Menu
+ *
+ * @param {number/list} [$ui-padding=$menu-padding]
+ * The padding to apply to the Menu body element
+ *
+ * @param {color} [$ui-text-color=$menu-text-color]
+ * The color of Menu Item text
+ *
+ * @param {string} [$ui-item-font-family=$menu-item-font-family]
+ * The font-family of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-font-size=$menu-item-font-size]
+ * The font-size of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {string} [$ui-item-font-weight=$menu-item-font-weight]
+ * The font-weight of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-height=$menu-item-height]
+ * The height of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-border-width=$menu-item-border-width]
+ * The border-width of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {string} [$ui-item-cursor=$menu-item-cursor]
+ * The style of cursor to display when the cursor is over a {@link Ext.menu.Item Menu Item}
+ *
+ * @param {color} [$ui-item-active-background-color=$menu-item-active-background-color]
+ * The background-color of the active {@link Ext.menu.Item Menu Item}
+ *
+ * @param {color} [$ui-item-active-border-color=$menu-item-active-border-color]
+ * The border-color of the active {@link Ext.menu.Item Menu Item}
+ *
+ * @param {string/list} [$ui-item-background-gradient=$menu-item-background-gradient]
+ * The background-gradient for {@link Ext.menu.Item Menu Items}. Can be either the name
+ * of a predefined gradient or a list of color stops. Used as the `$type` parameter for
+ * {@link Global_CSS#background-gradient}.
+ *
+ * @param {number} [$ui-item-active-border-radius=$menu-item-active-border-radius]
+ * The border-radius of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-icon-size=$menu-item-icon-size]
+ * The size of {@link Ext.menu.Item Menu Item} icons
+ *
+ * @param {color} [$ui-glyph-color=$menu-glyph-color]
+ * The color to use for menu icons configured using {@link Ext.menu.Item#glyph glyph}
+ *
+ * @param {number} [$ui-glyph-opacity=$menu-glyph-opacity]
+ * The opacity to use for menu icons configured using {@link Ext.menu.Item#glyph glyph}
+ *
+ * @param {number} [$ui-item-checkbox-size=$menu-item-checkbox-size]
+ * The size of {@link Ext.menu.Item Menu Item} checkboxes
+ *
+ * @param {list} [$ui-item-icon-background-position=$menu-item-icon-background-position]
+ * The background-position of {@link Ext.menu.Item Menu Item} icons
+ *
+ * @param {number} [$ui-item-icon-vertical-offset=$menu-item-icon-vertical-offset]
+ * vertical offset for menu item icons/checkboxes.  By default the icons are roughly
+ * vertically centered, but it may be necessary in some cases to make minor adjustments
+ * to the vertical position.
+ *
+ * @param {number} [$ui-item-text-vertical-offset=$menu-item-text-vertical-offset]
+ * vertical offset for menu item text.  By default the text is given a line-height
+ * equal to the menu item's content-height, however, depending on the font this may not
+ * result in perfect vertical centering.  Offset can be used to make small adjustments
+ * to the text's vertical position.
+ *
+ * @param {number/list} [$ui-item-text-horizontal-spacing=$menu-item-text-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} text. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-text-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number} [$ui-item-icon-horizontal-spacing=$menu-item-icon-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} icons. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-icon-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number} [$ui-item-arrow-horizontal-spacing=$menu-item-arrow-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} arrows. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-arrow-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number/list} [$ui-item-separator-margin=$menu-item-separator-margin]
+ * The margin of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-item-arrow-height=$menu-item-arrow-height]
+ * The height of {@link Ext.menu.Item Menu Item} arrows
+ *
+ * @param {number} [$ui-item-arrow-width=$menu-item-arrow-width]
+ * The width of {@link Ext.menu.Item Menu Item} arrows
+ *
+ * @param {number} [$ui-item-disabled-opacity=$menu-item-disabled-opacity]
+ * The opacity of disabled {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number/list} [$ui-component-margin=$menu-component-margin]
+ * The margin non-MenuItems placed in a Menu
+ *
+ * @param {color} [$ui-separator-border-color=$menu-separator-border-color]
+ * The border-color of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {color} [$ui-separator-background-color=$menu-separator-background-color]
+ * The background-color of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-separator-size=$menu-separator-size]
+ * The size of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-scroller-width=$menu-scroller-width]
+ * The width of Menu scrollers
+ *
+ * @param {number} [$ui-scroller-height=$menu-scroller-height]
+ * The height of Menu scrollers
+ *
+ * @param {color} [$ui-scroller-border-color=$menu-scroller-border-color]
+ * The border-color of Menu scroller buttons
+ *
+ * @param {number} [$ui-scroller-border-width=$menu-scroller-border-width]
+ * The border-width of Menu scroller buttons
+ *
+ * @param {number/list} [$ui-scroller-top-margin=$menu-scroller-top-margin]
+ * The margin of "top" Menu scroller buttons
+ *
+ * @param {number/list} [$ui-scroller-bottom-margin=$menu-scroller-bottom-margin]
+ * The margin of "bottom" Menu scroller buttons
+ *
+ * @param {string} [$ui-scroller-cursor=$menu-scroller-cursor]
+ * The cursor of Menu scroller buttons
+ *
+ * @param {string} [$ui-scroller-cursor-disabled=$menu-scroller-cursor-disabled]
+ * The cursor of disabled Menu scroller buttons
+ *
+ * @param {number} [$ui-scroller-opacity=$menu-scroller-opacity]
+ * The opacity of Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-over=$menu-scroller-opacity-over]
+ * The opacity of hovered Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-pressed=$menu-scroller-opacity-pressed]
+ * The opacity of pressed Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-disabled=$menu-scroller-opacity-disabled]
+ * The opacity of disabled Menu scroller buttons.
+ *
+ * @param {boolean} [$ui-classic-scrollers=$menu-classic-scrollers]
+ * `true` to use classic-style scroller buttons.  When `true` scroller buttons are given their
+ * hover state by changing their background-position,  When `false` scroller buttons are
+ * given their hover state by applying opacity.
+ *
+ * @member Ext.menu.Menu
+ */:ET:@lines[ ;[ :
+@loud0:
+@linei:@options{ o:Sass::Tree::MixinDefNode;[o:Sass::Tree::VariableNode:
+@expro:Sass::Script::Funcall
+:@keywords{ :
+@nameI"
+round;
+T;iß:
+@args[o:Sass::Script::Operation
+:@operator:div:@operand2o:Sass::Script::Number:@numerator_units[ ;	i:@denominator_units[ ;iß:@originalI"2;
+F;@;iß:@operand1o;
+;:
+minus;o:Sass::Script::Variable	;I"ui-item-arrow-height;
+T;iß:@underscored_nameI"ui_item_arrow_height;
+T;@;iß;o;
+;;;o;
+;{ ;I"vertical;
+T;iß;[o; 	;I"ui-item-border-width;
+T;iß;!I"ui_item_border_width;
+T;@;@;iß;o; 	;I"ui-item-height;
+T;iß;!I"ui_item_height;
+T;@;@;@;@;@;I"ui-item-arrow-top;
+T:@guardedI"!default;
+T;[ ;iß;@o;;o;
+;:	plus;o;
+;{ ;I"
+after;
+T;ià;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;ià;!I"$ui_item_icon_horizontal_spacing;
+T;@;@;ià;o;
+;;#;o; 	;I"ui-item-icon-size;
+T;ià;!I"ui_item_icon_size;
+T;@;ià;o;
+;{ ;I"before;
+T;ià;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;ià;!I"$ui_item_icon_horizontal_spacing;
+T;@;@;@;@;I"ui-icon-separator-indent;
+T;"0;[ ;ià;@o;;o;
+;;#;o;
+;{ ;I"before;
+T;iá;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;iá;!I"$ui_item_text_horizontal_spacing;
+T;@;@;iá;o;
+;;#;o; 	;I"ui-separator-size;
+T;iá;!I"ui_separator_size;
+T;@;iá;o; 	;I"ui-icon-separator-indent;
+T;iá;!I"ui_icon_separator_indent;
+T;@;@;@;I"ui-item-indent;
+T;"0;[ ;iá;@o;;o;
+;;#;o;
+;{ ;I"max;
+T;iâ;[o;
+;{ ;I"
+after;
+T;iâ;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;iâ;!I"$ui_item_icon_horizontal_spacing;
+T;@;@o;
+;{ ;I"before;
+T;iâ;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;iâ;!I"$ui_item_text_horizontal_spacing;
+T;@;@;@;iâ;o;
+;;#;o; 	;I"ui-item-icon-size;
+T;iâ;!I"ui_item_icon_size;
+T;@;iâ;o;
+;{ ;I"before;
+T;iâ;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;iâ;!I"$ui_item_icon_horizontal_spacing;
+T;@;@;@;@;I" ui-item-indent-no-separator;
+T;"0;[ ;iâ;@o;;o;
+;;#;o;
+;{ ;I"before;
+T;iã;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;iã;!I"$ui_item_text_horizontal_spacing;
+T;@;@;iã;o; 	;I"ui-icon-separator-indent;
+T;iã;!I"ui_icon_separator_indent;
+T;@;@;I"ui-item-indent-right-icon;
+T;"0;[ ;iã;@o;;o;
+;;#;o;
+;{ ;I"
+after;
+T;iä;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;iä;!I"$ui_item_text_horizontal_spacing;
+T;@;@;iä;o;
+;;#;o;
+;{ ;I"
+after;
+T;iä;[o; 	;I"%ui-item-arrow-horizontal-spacing;
+T;iä;!I"%ui_item_arrow_horizontal_spacing;
+T;@;@;iä;o;
+;;#;o;
+;{ ;I"before;
+T;iä;[o; 	;I"%ui-item-arrow-horizontal-spacing;
+T;iä;!I"%ui_item_arrow_horizontal_spacing;
+T;@;@;iä;o; 	;I"ui-item-arrow-width;
+T;iä;!I"ui_item_arrow_width;
+T;@;@;@;@;I"ui-item-indent-right-arrow;
+T;"0;[ ;iä;@o;;o;
+;;#;o; 	;I"!ui-item-icon-vertical-offset;
+T;iå;!I"!ui_item_icon_vertical_offset;
+T;@;iå;o;
+;{ ;I"
+round;
+T;iå;[o;
+;;;o;;[ ;	i;@;iå;I"2;
+F;@;iå;o;
+;;;o; 	;I"ui-item-icon-size;
+T;iå;!I"ui_item_icon_size;
+T;@;iå;o;
+;;;o;
+;{ ;I"vertical;
+T;iå;[o; 	;I"ui-item-border-width;
+T;iå;!I"ui_item_border_width;
+T;@;@;iå;o; 	;I"ui-item-height;
+T;iå;!I"ui_item_height;
+T;@;@;@;@;@;@;I"ui-item-icon-top;
+T;"I"!default;
+T;[ ;iå;@u:Sass::Tree::IfNode)[o:Sass::Script::Operation
+:@operator:and:@operand2o; 
+;:neq;o:Sass::Script::Number:@numerator_units[ :@valuei :@denominator_units[ :
+@lineiç:@originalI"0:EF:@options{ ;iç:@operand1o:Sass::Script::Variable	:
+@nameI"ui-border-width;T;iç:@underscored_nameI"ui_border_width;T;@;@;iç;o:!Sass::Script::UnaryOperation	;:not:@operando:Sass::Script::Funcall
+:@keywords{ ;I"is-null;T;iç:
+@args[o;	;I"ui-border-width;T;iç;I"ui_border_width;T;@;@;iç;@;@0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[	I".;Fo;	;I"prefix;T;iè;I"prefix;T;@I"
+menu-;To;	;I"ui;T;iè;I"ui;T;@:@children[o:Sass::Tree::PropNode;[I"border-style;T;i ;o;	;I"ui-border-style;T;ié;I"ui_border_style;T;@; [ :@prop_syntax:new;ié;@o;!;[I"border-width;T;i ;o;	;I"ui-border-width;T;iê;I"ui_border_width;T;@; [ ;";#;iê;@o;!;[I"border-color;T;i ;o;	;I"ui-border-color;T;ië;I"ui_border_color;T;@; [ ;";#;ië;@;iè;@o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[	I".;
+Fo; 	;I"prefix;
+T;iî;!I"prefix;
+T;@I"menu-body-;
+To; 	;I"ui;
+T;iî;!I"ui;
+T;@;[o:Sass::Tree::PropNode;[I"background;
+T;&i ;	o; 	;I"ui-background-color;
+T;iï;!I"ui_background_color;
+T;@;[ :@prop_syntax:new;iï;@o;);[I"padding;
+T;&i ;	o; 	;I"ui-padding;
+T;ið;!I"ui_padding;
+T;@;[ ;*;+;ið;@;iî;@o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;ió;!I"prefix;
+T;@I"menu-icon-separator-;
+To; 	;I"ui;
+T;ió;!I"ui;
+T;@;[
+o;);[I"	left;
+T;&i ;	o; 	;I"ui-icon-separator-indent;
+T;iô;!I"ui_icon_separator_indent;
+T;@;[ ;*;+;iô;@o;);[I"border-left;
+T;&i ;	o:Sass::Script::List	:@separator:
+space;	[o:Sass::Script::String	;	I"
+solid;
+T;iõ:
+@type:identifier;@o;;[I"px;
+T;	i;[ ;iõ;I"1px;
+F;@o; 	;I"ui-separator-border-color;
+T;iõ;!I"ui_separator_border_color;
+T;@;iõ;@;[ ;*;+;iõ;@o;);[I"background-color;
+T;&i ;	o; 	;I""ui-separator-background-color;
+T;iö;!I""ui_separator_background_color;
+T;@;[ ;*;+;iö;@o;);[I"
+width;
+T;&i ;	o; 	;I"ui-separator-size;
+T;i÷;!I"ui_separator_size;
+T;@;[ ;*;+;i÷;@u;$[o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@lineiù:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I"&.;Fo; 	;I"prefix;T;iú;	I"prefix;T;
+@	I"rtl;T:@children[o:Sass::Tree::PropNode;[I"	left;T;i :@valueo:Sass::Script::String;I"	auto;T:
+@type:identifier;
+@	;[ :@prop_syntax:new;iû;
+@	o;;[I"
+right;T;i ;o; 	;I"ui-icon-separator-indent;T;iü;	I"ui_icon_separator_indent;T;
+@	;[ ;;;iü;
+@	;iú;
+@	;ió;@o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;i;!I"prefix;
+T;@I"menu-item-;
+To; 	;I"ui;
+T;i;!I"ui;
+T;@;[o;);[I"border-width;
+T;&i ;	o; 	;I"ui-item-border-width;
+T;i;!I"ui_item_border_width;
+T;@;[ ;*;+;i;@o;);[I"cursor;
+T;&i ;	o; 	;I"ui-item-cursor;
+T;i;!I"ui_item_cursor;
+T;@;[ ;*;+;i;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i;!I"prefix;
+T;@I"menu-item-active;
+T;[
+o:Sass::Tree::MixinNode;{ ;I"background-gradient;
+T;[ ;i;[o; 	;I"$ui-item-active-background-color;
+T;i;!I"$ui_item_active_background_color;
+T;@o; 	;I" ui-item-background-gradient;
+T;i;!I" ui_item_background_gradient;
+T;@;@u;$[o:Sass::Script::Operation
+:@operator:neq:@operand2o:Sass::Script::Number:@numerator_units[ :@valuei :@denominator_units[ :
+@linei:@originalI"0:EF:@options{ ;i:@operand1o:Sass::Script::Variable	:
+@nameI"!ui-item-active-border-radius;T;i:@underscored_nameI"!ui_item_active_border_radius;T;@;@0[o:Sass::Tree::MixinNode:@keywords{ ;I"border-radius;T:@children[ ;i:
+@args[o;	;I"!ui-item-active-border-radius;T;i;I"!ui_item_active_border_radius;T;@;@u;$÷[o:Sass::Script::Operation
+:@operator:neq:@operand2o:Sass::Script::Number:@numerator_units[ :@valuei :@denominator_units[ :
+@linei:@originalI"0:EF:@options{ ;i:@operand1o:Sass::Script::Variable	:
+@nameI"ui-item-border-width;T;i:@underscored_nameI"ui_item_border_width;T;@;@0[o:Sass::Tree::PropNode;[I"border-color;T:
+@tabsi ;o;	;I" ui-item-active-border-color;T;i;I" ui_item_active_border_color;T;@:@children[ :@prop_syntax:new;i;@o;;i ;	I"%/* Background linear gradient */;
+T;[ ;[ ;0;i;@u;$·[o:Sass::Script::Variable	:
+@nameI"include-slicer-gradient:ET:
+@linei:@underscored_nameI"include_slicer_gradient;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I".;Fo; 	;I"prefix;T;i;	I"prefix;T;
+@	I"
+nlg &;T:@children[o:Sass::Tree::PropNode;[I"background;T;i :@valueo:Sass::Script::List	:@separator:
+space;[	o; 	;I"$ui-item-active-background-color;T;i;	I"$ui_item_active_background_color;T;
+@	o:Sass::Script::String	;I"repeat-x;T;i:
+@type:identifier;
+@	o;	;I"	left;T;i;;;
+@	o;	;I"top;T;i;;;
+@	;i;
+@	;[ :@prop_syntax:new;i;
+@	o;;[I"background-image;T;i ;o:Sass::Script::Funcall
+:@keywords{ ;I"slicer-background-image;T;i:
+@args[o: Sass::Script::Interpolation:@aftero;	;I"-active;T;i;;;
+@	:@whitespace_after0:@originally_textF:@beforeo;	;I"menu-item-;T;i;;;
+@	:	@mido; 	;I"ui;T;i;	I"ui;T;
+@	:@whitespace_before0;i;
+@	o:&Sass::Script::StringInterpolation
+;o;	;I"-active-bg;T;i;:string;
+@	;i;!o;	;I"menu/menu-item-;T;i;;%;
+@	;"o; 	;I"ui;T;i;	I"ui;T;
+@	;
+@	;
+@	;[ ;;;i;
+@	;i;
+@	;i;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i;!I"prefix;
+T;@I"menu-item-separator;
+T;[
+o;);[I"height;
+T;&i ;	o; 	;I"ui-separator-size;
+T;i;!I"ui_separator_size;
+T;@;[ ;*;+;i;@o;);[I"border-top;
+T;&i ;	o;,	;-;.;	[o;/	;	I"
+solid;
+T;i;0;1;@o;;[I"px;
+T;	i;[ ;i;I"1px;
+F;@o; 	;I"ui-separator-border-color;
+T;i;!I"ui_separator_border_color;
+T;@;i;@;[ ;*;+;i;@o;);[I"background-color;
+T;&i ;	o; 	;I""ui-separator-background-color;
+T;i;!I""ui_separator_background_color;
+T;@;[ ;*;+;i;@o;);[I"margin;
+T;&i ;	o; 	;I"ui-item-separator-margin;
+T;i;!I"ui_item_separator_margin;
+T;@;[ ;*;+;i;@o;);[I"padding;
+T;&i ;	o;/;	I"0;
+T;0;1;@;[ ;*;+;i;@;i;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i ;!I"prefix;
+T;@I"menu-item-disabled;
+T;[o;2;{ ;I"opacity;
+T;[ ;i!;[o; 	;I"ui-item-disabled-opacity;
+T;i!;!I"ui_item_disabled_opacity;
+T;@;@u;$Î[o:Sass::Script::Variable	:
+@nameI"include-ie:ET:
+@linei#:@underscored_nameI"include_ie;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I".;Fo; 	;I"prefix;T;i$;	I"prefix;T;
+@	I"ie9m &;T:@children[o;;i ;T;[	I".;Fo; 	;I"prefix;T;i%;	I"prefix;T;
+@	I"menu-item-icon-;To:Sass::Script::String	:@valueI"ui;T;i%:
+@type:identifier;
+@	;[o:Sass::Tree::MixinNode:@keywords{ ;I"opacity;T;[ ;i&:
+@args[o; 	;I"ui-item-disabled-opacity;T;i&;	I"ui_item_disabled_opacity;T;
+@	;
+@	;i%;
+@	o;;i ;T;[	I".;Fo; 	;I"prefix;T;i);	I"prefix;T;
+@	I"menu-item-text-;To; 	;I"ui;T;i);	I"ui;T;
+@	;[o:Sass::Tree::CommentNode:@silenti ;I"./* IE opacity/cleartype bug workaround */;T:@lines[ ;[ :
+@loud0;i*;
+@	o:Sass::Tree::PropNode;[I"background-color;T;i ;o;;I"transparent;T;;;
+@	;[ :@prop_syntax:new;i+;
+@	;i);
+@	;i$;
+@	;i ;@u;$§[o:Sass::Script::Variable	:
+@nameI"include-ext-form-labelable:ET:
+@linei1:@underscored_nameI"include_ext_form_labelable;T:@options{ 0[o:Sass::Tree::CommentNode:@silenti :@valueI",/* When Fields are added to Menus... */;T:@lines[ :@children[ :
+@loud0;i2;
+@	o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I".;Fo; 	;I"prefix;T;i3;	I"prefix;T;
+@	I"form-item-label;T;[o:Sass::Tree::PropNode;[I"font-size;T;i ;o; 	;I"ui-item-font-size;T;i4;	I"ui_item_font_size;T;
+@	;[ :@prop_syntax:new;i4;
+@	o;;[I"
+color;T;i ;o; 	;I"ui-text-color;T;i5;	I"ui_text_color;T;
+@	;[ ;;;i5;
+@	;i3;
+@	;i;@o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;i:;!I"prefix;
+T;@I"menu-item-text-;
+To; 	;I"ui;
+T;i:;!I"ui;
+T;@I",
+    .;
+Fo; 	;I"prefix;
+T;i;;!I"prefix;
+T;@I"menu-item-cmp-;
+To; 	;I"ui;
+T;i;;!I"ui;
+T;@;[o;);[I"margin;
+T;&i ;	o;,	;-;.;	[	o;;[ ;	i ;@;i<;I"0;
+F;@o;
+;{ ;I"
+after;
+T;i<;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;i<;!I"$ui_item_text_horizontal_spacing;
+T;@;@o;;[ ;	i ;@;i<;I"0;
+F;@o;
+;{ ;I"before;
+T;i<;[o; 	;I"$ui-item-text-horizontal-spacing;
+T;i<;!I"$ui_item_text_horizontal_spacing;
+T;@;@;i<;@;[ ;*;+;i<;@;i;;@o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;i?;!I"prefix;
+T;@I"menu-item-text-;
+To; 	;I"ui;
+T;i?;!I"ui;
+T;@;[o;);[I"	font;
+T;&i ;	o;,	;-;.;	[o; 	;I"ui-item-font-weight;
+T;i@;!I"ui_item_font_weight;
+T;@o; 	;I"ui-item-font-size;
+T;i@;!I"ui_item_font_size;
+T;@o; 	;I"ui-item-font-family;
+T;i@;!I"ui_item_font_family;
+T;@;i@;@;[ ;*;+;i@;@o;);[I"line-height;
+T;&i ;	o;
+;;;o;
+;{ ;I"abs;
+T;iA;[o; 	;I"!ui-item-text-vertical-offset;
+T;iA;!I"!ui_item_text_vertical_offset;
+T;@;@;iA;o;
+;;;o;
+;{ ;I"vertical;
+T;iA;[o; 	;I"ui-item-border-width;
+T;iA;!I"ui_item_border_width;
+T;@;@;iA;o; 	;I"ui-item-height;
+T;iA;!I"ui_item_height;
+T;@;@;@;[ ;*;+;iA;@u;$([o:Sass::Script::Operation
+:@operator:gt:@operand2o:Sass::Script::Number:@numerator_units[ :@valuei :@denominator_units[ :
+@lineiB:@originalI"0:EF:@options{ ;iB:@operand1o:Sass::Script::Variable	:
+@nameI"!ui-item-text-vertical-offset;T;iB:@underscored_nameI"!ui_item_text_vertical_offset;T;@;@u:Sass::Tree::IfNode
+[o:Sass::Script::Operation
+:@operator:lt:@operand2o:Sass::Script::Number:@numerator_units[ :@valuei :@denominator_units[ :
+@lineiD:@originalI"0:EF:@options{ ;iD:@operand1o:Sass::Script::Variable	:
+@nameI"!ui-item-text-vertical-offset;T;iD:@underscored_nameI"!ui_item_text_vertical_offset;T;@;@0[o:Sass::Tree::PropNode;[I"padding-bottom;T:
+@tabsi ;o;	;I"!ui-item-text-vertical-offset;T;iE;I"!ui_item_text_vertical_offset;T;@:@children[ :@prop_syntax:new;iE;@[o:Sass::Tree::PropNode;[I"padding-top;T:
+@tabsi ;o;	;I"!ui-item-text-vertical-offset;T;iC;I"!ui_item_text_vertical_offset;T;@:@children[ :@prop_syntax:new;iC;@o;);[I"
+color;
+T;&i ;	o; 	;I"ui-text-color;
+T;iG;!I"ui_text_color;
+T;@;[ ;*;+;iG;@o;);[I"cursor;
+T;&i ;	o; 	;I"ui-item-cursor;
+T;iH;!I"ui_item_cursor;
+T;@;[ ;*;+;iH;@o;;i ;	I"B/* needed to override cursor:default set by x-unselectable */;
+T;[ ;[ ;0;iH;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;iJ;!I"prefix;
+T;@I"menu-item-indent;
+T;[o;);[I"margin-left;
+T;&i ;	o; 	;I"ui-item-indent;
+T;iK;!I"ui_item_indent;
+T;@;[ ;*;+;iK;@;iJ;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;iN;!I"prefix;
+T;@I""menu-item-indent-no-separator;
+T;[o;);[I"margin-left;
+T;&i ;	o; 	;I" ui-item-indent-no-separator;
+T;iO;!I" ui_item_indent_no_separator;
+T;@;[ ;*;+;iO;@;iN;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;iR;!I"prefix;
+T;@I" menu-item-indent-right-icon;
+T;[o;);[I"margin-right;
+T;&i ;	o; 	;I"ui-item-indent-right-icon;
+T;iS;!I"ui_item_indent_right_icon;
+T;@;[ ;*;+;iS;@;iR;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;iV;!I"prefix;
+T;@I"!menu-item-indent-right-arrow;
+T;[o;);[I"margin-right;
+T;&i ;	o; 	;I"ui-item-indent-right-arrow;
+T;iW;!I"ui_item_indent_right_arrow;
+T;@;[ ;*;+;iW;@;iV;@;i?;@u;$ [o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@linei[:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I".;Fo; 	;I"prefix;T;i\;	I"prefix;T;
+@	I"rtl;T:@children[o;;i ;T;[I"&.;Fo; 	;I"prefix;T;i];	I"prefix;T;
+@	I"menu-item-text-;To; 	;I"ui;T;i];	I"ui;T;
+@	I",
+            &.;Fo; 	;I"prefix;T;i^;	I"prefix;T;
+@	I"menu-item-cmp-;To; 	;I"ui;T;i^;	I"ui;T;
+@	;[o:Sass::Tree::PropNode;[I"margin;T;i :@valueo:Sass::Script::List	:@separator:
+space;[	o:Sass::Script::Number:@numerator_units[ ;i :@denominator_units[ ;i_:@originalI"0;F;
+@	o:Sass::Script::Funcall
+:@keywords{ ;I"before;T;i_:
+@args[o; 	;I"$ui-item-text-horizontal-spacing;T;i_;	I"$ui_item_text_horizontal_spacing;T;
+@	;
+@	o;;[ ;i ;@-;i_;I"0;F;
+@	o;
+;{ ;I"
+after;T;i_;[o; 	;I"$ui-item-text-horizontal-spacing;T;i_;	I"$ui_item_text_horizontal_spacing;T;
+@	;
+@	;i_;
+@	;[ :@prop_syntax:new;i_;
+@	;i^;
+@	o;;i ;T;[	I"&.;Fo; 	;I"prefix;T;ib;	I"prefix;T;
+@	I"menu-item-text-;To; 	;I"ui;T;ib;	I"ui;T;
+@	;[	o;;i ;T;[I"&.;Fo; 	;I"prefix;T;ic;	I"prefix;T;
+@	I"menu-item-indent;T;[o;;[I"margin-right;T;i ;o; 	;I"ui-item-indent;T;id;	I"ui_item_indent;T;
+@	;[ ;;;id;
+@	;ic;
+@	o;;i ;T;[I"&.;Fo; 	;I"prefix;T;ig;	I"prefix;T;
+@	I""menu-item-indent-no-separator;T;[o;;[I"margin-right;T;i ;o; 	;I" ui-item-indent-no-separator;T;ih;	I" ui_item_indent_no_separator;T;
+@	;[ ;;;ih;
+@	;ig;
+@	o;;i ;T;[I"&.;Fo; 	;I"prefix;T;ik;	I"prefix;T;
+@	I" menu-item-indent-right-icon;T;[o;;[I"margin-left;T;i ;o; 	;I"ui-item-indent-right-icon;T;il;	I"ui_item_indent_right_icon;T;
+@	;[ ;;;il;
+@	;ik;
+@	o;;i ;T;[I"&.;Fo; 	;I"prefix;T;io;	I"prefix;T;
+@	I"!menu-item-indent-right-arrow;T;[o;;[I"margin-left;T;i ;o; 	;I"ui-item-indent-right-arrow;T;ip;	I"ui_item_indent_right_arrow;T;
+@	;[ ;;;ip;
+@	;io;
+@	;ib;
+@	;i\;
+@	o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;iv;!I"prefix;
+T;@I"menu-item-indent-;
+To; 	;I"ui;
+T;iv;!I"ui;
+T;@;[o;);[I"margin-left;
+T;&i ;	o; 	;I"ui-item-indent;
+T;iw;!I"ui_item_indent;
+T;@;[ ;*;+;iw;@u;$
+[o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@lineix:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I"&.;Fo; 	;I"prefix;T;iy;	I"prefix;T;
+@	I"rtl;T:@children[o:Sass::Tree::PropNode;[I"margin-left;T;i :@valueo:Sass::Script::String;I"0;T:
+@type:identifier;
+@	;[ :@prop_syntax:new;iz;
+@	o;;[I"margin-right;T;i ;o; 	;I"ui-item-indent;T;i{;	I"ui_item_indent;T;
+@	;[ ;;;i{;
+@	;iy;
+@	;iv;@o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;i€;!I"prefix;
+T;@I"menu-item-icon-;
+To; 	;I"ui;
+T;i€;!I"ui;
+T;@;[o;);[I"
+width;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i;!I"ui_item_icon_size;
+T;@;[ ;*;+;i;@o;);[I"height;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i‚;!I"ui_item_icon_size;
+T;@;[ ;*;+;i‚;@o;);[I"top;
+T;&i ;	o; 	;I"ui-item-icon-top;
+T;iƒ;!I"ui_item_icon_top;
+T;@;[ ;*;+;iƒ;@o;);[I"	left;
+T;&i ;	o;
+;{ ;I"before;
+T;i„;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;i„;!I"$ui_item_icon_horizontal_spacing;
+T;@;@;[ ;*;+;i„;@o;);[I"background-position;
+T;&i ;	o; 	;I"%ui-item-icon-background-position;
+T;i…;!I"%ui_item_icon_background_position;
+T;@;[ ;*;+;i…;@u;$:[o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@linei‡:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I"&.;Fo; 	;I"prefix;T;iˆ;	I"prefix;T;
+@	I"rtl;T:@children[o:Sass::Tree::PropNode;[I"	left;T;i :@valueo:Sass::Script::String;I"	auto;T:
+@type:identifier;
+@	;[ :@prop_syntax:new;i‰;
+@	o;;[I"
+right;T;i ;o:Sass::Script::Funcall
+:@keywords{ ;I"before;T;iŠ:
+@args[o; 	;I"$ui-item-icon-horizontal-spacing;T;iŠ;	I"$ui_item_icon_horizontal_spacing;T;
+@	;
+@	;[ ;;;iŠ;
+@	o;;i ;T;[I".;Fo; 	;I"prefix;T;iŒ;	I"prefix;T;
+@	I"menu-item-active &;T;[o;;[I"
+right;T;i ;o:Sass::Script::Operation
+:@operator:
+minus:@operand2o;
+;{ ;I"	left;T;i;[o; 	;I"ui-item-border-width;T;i;	I"ui_item_border_width;T;
+@	;
+@	;i:@operand1o;
+;{ ;I"before;T;i;[o; 	;I"$ui-item-icon-horizontal-spacing;T;i;	I"$ui_item_icon_horizontal_spacing;T;
+@	;
+@	;
+@	;[ ;;;i;
+@	;iŒ;
+@	;iˆ;
+@	o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i’;!I"prefix;
+T;@I"menu-item-glyph;
+T;[
+o;);[I"font-size;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i“;!I"ui_item_icon_size;
+T;@;[ ;*;+;i“;@o;);[I"line-height;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i”;!I"ui_item_icon_size;
+T;@;[ ;*;+;i”;@o;);[I"
+color;
+T;&i ;	o; 	;I"ui-glyph-color;
+T;i•;!I"ui_glyph_color;
+T;@;[ ;*;+;i•;@u;$ú[o:Sass::Script::Operation
+:@operator:neq:@operand2o:Sass::Script::Number:@numerator_units[ :@valuei:@denominator_units[ :
+@linei—:@originalI"1:EF:@options{ ;i—:@operand1o:Sass::Script::Variable	:
+@nameI"ui-glyph-opacity;T;i—:@underscored_nameI"ui_glyph_opacity;T;@;@0[o:Sass::Tree::CommentNode:@silenti ;I"Ö/* do not use the opacity mixin because we do not want IE's filter version of
+ * opacity to be included.  We emulate the opacity setting in IE8m by mixing
+ * the icon color into the background color. (see below) */;T:@lines[ :@children[ :
+@loud0;i˜;@o:Sass::Tree::PropNode;[I"opacity;T:
+@tabsi ;o;	;I"ui-glyph-opacity;T;i›;I"ui_glyph_opacity;T;@;[ :@prop_syntax:new;i›;@u;$ê[o:Sass::Script::Variable	:
+@nameI"include-ie:ET:
+@linei:@underscored_nameI"include_ie;T:@options{ 0[o:Sass::Tree::CommentNode:@silenti :@valueI"…/* In IE8 and below when a glyph contains partially transparent pixels, we
+ * can't apply an opacity filter to the glyph element, because IE8m will render
+ * the partially transparent pixels of the glyph as black. To work around this,
+ * we emulate the approximate color that the glyph would have if it had opacity
+ * applied by mixing the glyph color with the menus's background-color. */;T:@lines[ :@children[ :
+@loud0;iž;
+@	o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I".;Fo; 	;I"prefix;T;i£;	I"prefix;T;
+@	I"
+ie8 &;T;[o:Sass::Tree::PropNode;[I"
+color;T;i ;o:Sass::Script::Funcall
+:@keywords{ ;I"mix;T;i¤:
+@args[o; 	;I"ui-glyph-color;T;i¤;	I"ui_glyph_color;T;
+@	o; 	;I"ui-background-color;T;i¤;	I"ui_background_color;T;
+@	o:Sass::Script::Operation
+:@operator:
+times:@operand2o:Sass::Script::Number:@numerator_units[ ;ii:@denominator_units[ ;i¤:@originalI"100;F;
+@	;i¤:@operand1o; 	;I"ui-glyph-opacity;T;i¤;	I"ui_glyph_opacity;T;
+@	;
+@	;
+@	;[ :@prop_syntax:new;i¤;
+@	;i£;
+@	;i’;@o;;i ;	I"Ñ/* For when an icon needs to be used in the right position where a submenu arrow usually goes.
+ * eg: When a CheckItem needs an icon. The left icon position is a checkbox, so the icon is moved to the right. */;
+T;[ ;[ ;0;i©;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i«;!I"prefix;
+T;@I"menu-item-icon-right;
+T;[o;);[I"
+width;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i¬;!I"ui_item_icon_size;
+T;@;[ ;*;+;i¬;@o;);[I"height;
+T;&i ;	o; 	;I"ui-item-icon-size;
+T;i­;!I"ui_item_icon_size;
+T;@;[ ;*;+;i­;@o;);[I"top;
+T;&i ;	o; 	;I"ui-item-icon-top;
+T;i®;!I"ui_item_icon_top;
+T;@;[ ;*;+;i®;@o;);[I"
+right;
+T;&i ;	o;
+;{ ;I"
+after;
+T;i¯;[o; 	;I"$ui-item-icon-horizontal-spacing;
+T;i¯;!I"$ui_item_icon_horizontal_spacing;
+T;@;@;[ ;*;+;i¯;@o;);[I"	left;
+T;&i ;	o;/;	I"	auto;
+T;0;1;@;[ ;*;+;i°;@o;);[I"background-position;
+T;&i ;	o; 	;I"%ui-item-icon-background-position;
+T;i±;!I"%ui_item_icon_background_position;
+T;@;[ ;*;+;i±;@u;$8[o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@linei³:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I"&.;Fo; 	;I"prefix;T;i´;	I"prefix;T;
+@	I"rtl;T:@children[o:Sass::Tree::PropNode;[I"
+right;T;i :@valueo:Sass::Script::String;I"	auto;T:
+@type:identifier;
+@	;[ :@prop_syntax:new;iµ;
+@	o;;[I"	left;T;i ;o:Sass::Script::Funcall
+:@keywords{ ;I"
+after;T;i¶:
+@args[o; 	;I"$ui-item-icon-horizontal-spacing;T;i¶;	I"$ui_item_icon_horizontal_spacing;T;
+@	;
+@	;[ ;;;i¶;
+@	o;;i ;T;[I".;Fo; 	;I"prefix;T;i¸;	I"prefix;T;
+@	I"menu-item-active &;T;[o;;[I"	left;T;i ;o:Sass::Script::Operation
+:@operator:
+minus:@operand2o;
+;{ ;I"
+right;T;i¹;[o; 	;I"ui-item-border-width;T;i¹;	I"ui_item_border_width;T;
+@	;
+@	;i¹:@operand1o;
+;{ ;I"
+after;T;i¹;[o; 	;I"$ui-item-icon-horizontal-spacing;T;i¹;	I"$ui_item_icon_horizontal_spacing;T;
+@	;
+@	;
+@	;[ ;;;i¹;
+@	;i¸;
+@	;i´;
+@	;i«;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;i¿;!I"prefix;
+T;@I"menu-item-checkbox;
+T;[u;$<[o:Sass::Script::Operation
+:@operator:neq:@operand2o:Sass::Script::Variable	:
+@nameI"ui-item-icon-size:ET:
+@lineiÀ:@underscored_nameI"ui_item_icon_size;T:@options{ ;iÀ:@operand1o;		;
+I"ui-item-checkbox-size;T;iÀ;I"ui_item_checkbox_size;T;@
+;@
+0[o:Sass::Tree::PropNode;
+[I"height;T:
+@tabsi :@valueo;		;
+I"ui-item-checkbox-size;T;iÁ;I"ui_item_checkbox_size;T;@
+:@children[ :@prop_syntax:new;iÁ;@
+o;;
+[I"
+width;T;i ;o;		;
+I"ui-item-checkbox-size;T;iÂ;I"ui_item_checkbox_size;T;@
+;[ ;;;iÂ;@
+o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;iÄ;!I"prefix;
+T;@I"menu-item-checked &;
+T;[o;);[I"background-image;
+T;&i ;	o;
+;{ ;I"theme-background-image;
+T;iÅ;[o:&Sass::Script::StringInterpolation
+:@aftero;/	;	I"-checked;
+T;iÅ;0:string;@;iÅ:@beforeo;/	;	I"
+menu/;
+T;iÅ;0;5;@:	@mido; 	;I"ui;
+T;iÅ;!I"ui;
+T;@;@;@;[ ;*;+;iÅ;@;iÄ;@o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;iÈ;!I"prefix;
+T;@I"menu-item-unchecked &;
+T;[o;);[I"background-image;
+T;&i ;	o;
+;{ ;I"theme-background-image;
+T;iÉ;[o;3
+;4o;/	;	I"-unchecked;
+T;iÉ;0;5;@;iÉ;6o;/	;	I"
+menu/;
+T;iÉ;0;5;@;7o; 	;I"ui;
+T;iÉ;!I"ui;
+T;@;@;@;[ ;*;+;iÉ;@;iÈ;@;i¿;@o;%;&i ;'T;([I"&.;
+Fo; 	;I"prefix;
+T;iÍ;!I"prefix;
+T;@I"menu-group-icon;
+T;[o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;iÎ;!I"prefix;
+T;@I"menu-item-checked &;
+T;[o;);[I"background-image;
+T;&i ;	o;
+;{ ;I"theme-background-image;
+T;iÏ;[o;3
+;4o;/	;	I"-group-checked;
+T;iÏ;0;5;@;iÏ;6o;/	;	I"
+menu/;
+T;iÏ;0;5;@;7o; 	;I"ui;
+T;iÏ;!I"ui;
+T;@;@;@;[ ;*;+;iÏ;@;iÎ;@o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;iÒ;!I"prefix;
+T;@I"menu-item-unchecked &;
+T;[o;);[I"background-image;
+T;&i ;	o;/;	I"	none;
+T;0;1;@;[ ;*;+;iÓ;@;iÒ;@;iÍ;@;i€;@o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;iØ;!I"prefix;
+T;@I"menu-item-arrow-;
+To; 	;I"ui;
+T;iØ;!I"ui;
+T;@;[o;);[I"
+width;
+T;&i ;	o; 	;I"ui-item-arrow-width;
+T;iÙ;!I"ui_item_arrow_width;
+T;@;[ ;*;+;iÙ;@o;);[I"height;
+T;&i ;	o; 	;I"ui-item-arrow-height;
+T;iÚ;!I"ui_item_arrow_height;
+T;@;[ ;*;+;iÚ;@o;);[I"top;
+T;&i ;	o; 	;I"ui-item-arrow-top;
+T;iÛ;!I"ui_item_arrow_top;
+T;@;[ ;*;+;iÛ;@o;);[I"
+right;
+T;&i ;	o;
+;{ ;I"
+after;
+T;iÜ;[o; 	;I"%ui-item-arrow-horizontal-spacing;
+T;iÜ;!I"%ui_item_arrow_horizontal_spacing;
+T;@;@;[ ;*;+;iÜ;@o;);[I"background-image;
+T;&i ;	o;
+;{ ;I"theme-background-image;
+T;iÝ;[o;3
+;4o;/	;	I"-menu-parent;
+T;iÝ;0;5;@;iÝ;6o;/	;	I"
+menu/;
+T;iÝ;0;5;@;7o; 	;I"ui;
+T;iÝ;!I"ui;
+T;@;@;@;[ ;*;+;iÝ;@o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;iß;!I"prefix;
+T;@I"menu-item-active &;
+T;[o;);[I"top;
+T;&i ;	o;
+;;;o;
+;{ ;I"top;
+T;ià;[o; 	;I"ui-item-border-width;
+T;ià;!I"ui_item_border_width;
+T;@;@;ià;o; 	;I"ui-item-arrow-top;
+T;ià;!I"ui_item_arrow_top;
+T;@;@;[ ;*;+;ià;@o;);[I"
+right;
+T;&i ;	o;
+;;;o;
+;{ ;I"
+right;
+T;iá;[o; 	;I"ui-item-border-width;
+T;iá;!I"ui_item_border_width;
+T;@;@;iá;o;
+;{ ;I"
+after;
+T;iá;[o; 	;I"%ui-item-arrow-horizontal-spacing;
+T;iá;!I"%ui_item_arrow_horizontal_spacing;
+T;@;@;@;[ ;*;+;iá;@;iß;@u;$d[o:Sass::Script::Variable	:
+@nameI"include-rtl:ET:
+@lineiä:@underscored_nameI"include_rtl;T:@options{ 0[o:Sass::Tree::RuleNode:
+@tabsi :@has_childrenT:
+@rule[I"&.;Fo; 	;I"prefix;T;iå;	I"prefix;T;
+@	I"rtl;T:@children[	o:Sass::Tree::PropNode;[I"	left;T;i :@valueo:Sass::Script::Funcall
+:@keywords{ ;I"
+after;T;iæ:
+@args[o; 	;I"%ui-item-arrow-horizontal-spacing;T;iæ;	I"%ui_item_arrow_horizontal_spacing;T;
+@	;
+@	;[ :@prop_syntax:new;iæ;
+@	o;;[I"
+right;T;i ;o:Sass::Script::String;I"	auto;T:
+@type:identifier;
+@	;[ ;;;iç;
+@	o;;[I"background-image;T;i ;o;
+;{ ;I"theme-background-image;T;iè;[o:&Sass::Script::StringInterpolation
+:@aftero;	;I"-menu-parent-left;T;iè;:string;
+@	;iè:@beforeo;	;I"
+menu/;T;iè;;;
+@	:	@mido; 	;I"ui;T;iè;	I"ui;T;
+@	;
+@	;
+@	;[ ;;;iè;
+@	o;;i ;T;[I".;Fo; 	;I"prefix;T;iê;	I"prefix;T;
+@	I"menu-item-active &;T;[o;;[I"	left;T;i ;o:Sass::Script::Operation
+:@operator:
+minus:@operand2o;
+;{ ;I"
+right;T;ië;[o; 	;I"ui-item-border-width;T;ië;	I"ui_item_border_width;T;
+@	;
+@	;ië:@operand1o;
+;{ ;I"
+after;T;ië;[o; 	;I"%ui-item-arrow-horizontal-spacing;T;ië;	I"%ui_item_arrow_horizontal_spacing;T;
+@	;
+@	;
+@	;[ ;;;ië;
+@	;iê;
+@	;iå;
+@	;iØ;@u;$S[o:Sass::Script::Variable	:
+@nameI"6include-ext-layout-container-boxoverflow-scroller:ET:
+@lineiñ:@underscored_nameI"6include_ext_layout_container_boxoverflow_scroller;T:@options{ 0[o:Sass::Tree::MixinNode:@keywords{I"ui;To; 	;I"ui;T;ió;	I"ui;T;
+@	I"	type;To:Sass::Script::String	:@valueI"	menu;T;iô:
+@type:string;
+@	I"vertical_width;To; 	;I"ui-scroller-width;T;iõ;	I"ui_scroller_width;T;
+@	I"vertical_height;To; 	;I"ui-scroller-height;T;iö;	I"ui_scroller_height;T;
+@	I"top_margin;To; 	;I"ui-scroller-top-margin;T;i÷;	I"ui_scroller_top_margin;T;
+@	I"bottom_margin;To; 	;I"ui-scroller-bottom-margin;T;iø;	I"ui_scroller_bottom_margin;T;
+@	I"vertical_border_color;To; 	;I"ui-scroller-border-color;T;iù;	I"ui_scroller_border_color;T;
+@	I"vertical_border_width;To; 	;I"ui-scroller-border-width;T;iú;	I"ui_scroller_border_width;T;
+@	I"container_padding;To; 	;I"ui-padding;T;iû;	I"ui_padding;T;
+@	I"cursor;To; 	;I"ui-scroller-cursor;T;iü;	I"ui_scroller_cursor;T;
+@	I"cursor_disabled;To; 	;I" ui-scroller-cursor-disabled;T;iý;	I" ui_scroller_cursor_disabled;T;
+@	I"
+align;To;	;I"middle;T;iþ;:identifier;
+@	I"opacity;To; 	;I"ui-scroller-opacity;T;iÿ;	I"ui_scroller_opacity;T;
+@	I"opacity_over;To; 	;I"ui-scroller-opacity-over;T;i ;	I"ui_scroller_opacity_over;T;
+@	I"opacity_pressed;To; 	;I" ui-scroller-opacity-pressed;T;i;	I" ui_scroller_opacity_pressed;T;
+@	I"opacity_disabled;To; 	;I"!ui-scroller-opacity-disabled;T;i;	I"!ui_scroller_opacity_disabled;T;
+@	I"classic;To; 	;I"ui-classic-scrollers;T;i;	I"ui_classic_scrollers;T;
+@	I"include_horizontal;To:Sass::Script::Bool;i;F;
+@	;I"extjs-box-scroller-ui;T:@children[ ;i:
+@args[ ;
+@	o;;i ;	I"Ý/* EXTJSIV-8846: partially transparent png images do not display correctly
+ * in winXP/IE8 when the image element has a transparent background.
+ * to fix this, we give the element the same background-color as the menu. */;
+T;[ ;[ ;0;i;@o;%;&i ;'T;([I".;
+Fo; 	;I"prefix;
+T;i;!I"prefix;
+T;@I"ie8;
+T;[o;%;&i ;'T;([	I".;
+Fo; 	;I"prefix;
+T;i;!I"prefix;
+T;@I"box-scroller-menu-;
+To; 	;I"ui;
+T;i;!I"ui;
+T;@;[o;);[I"background-color;
+T;&i ;	o; 	;I"ui-background-color;
+T;i;!I"ui_background_color;
+T;@;[ ;*;+;i;@;i;@;i;@u;$ª[o:!Sass::Script::UnaryOperation	:@operator:not:@operando:Sass::Script::Funcall
+:@keywords{ :
+@nameI"is-null:ET:
+@linei:
+@args[o:Sass::Script::Variable	;I" ui-item-background-gradient;T;i:@underscored_nameI" ui_item_background_gradient;T:@options{ ;@;i;@0[o:Sass::Tree::VariableNode:
+@expro;	
+;
+{ ;I"slicer-background-stretch;T;i;[o: Sass::Script::Interpolation:@aftero:Sass::Script::String	:@valueI"-active;T;i:
+@type:identifier;@:@whitespace_after0:@originally_textF:@beforeo;	;I"menu-item-;T;i;;;@:	@mido;	;I"ui;T;i;I"ui;T;@:@whitespace_before0;i;@o;	;I"bottom;T;i;;;@;@;I"stretch;T:@guarded0:@children[ ;i;@o:Sass::Tree::MixinNode;
+{ ;I"x-slicer;T; [ ;i;[o;;o;	;I"-active;T;i;;;@;0;F;o;	;I"menu-item-;T;i;;;@;o;	;I"ui;T;i;I"ui;T;@;0;i;@;@;I"extjs-menu-ui;
+T;iÝ;'T;[5[o; ;I"ui;
+T;!I"ui;
+T;{ 0[o; ;I"ui-background-color;
+T;!I"ui_background_color;
+T;@¼o; 	;I"menu-background-color;
+T;i®;!I"menu_background_color;
+T;@¼[o; ;I"ui-border-color;
+T;!I"ui_border_color;
+T;@¼o; 	;I"menu-border-color;
+T;i¯;!I"menu_border_color;
+T;@¼[o; ;I"ui-border-style;
+T;!I"ui_border_style;
+T;@¼o; 	;I"menu-border-style;
+T;i°;!I"menu_border_style;
+T;@¼[o; ;I"ui-border-width;
+T;!I"ui_border_width;
+T;@¼o; 	;I"menu-border-width;
+T;i±;!I"menu_border_width;
+T;@¼[o; ;I"ui-padding;
+T;!I"ui_padding;
+T;@¼o; 	;I"menu-padding;
+T;i²;!I"menu_padding;
+T;@¼[o; ;I"ui-text-color;
+T;!I"ui_text_color;
+T;@¼o; 	;I"menu-text-color;
+T;i³;!I"menu_text_color;
+T;@¼[o; ;I"ui-item-font-family;
+T;!I"ui_item_font_family;
+T;@¼o; 	;I"menu-item-font-family;
+T;i´;!I"menu_item_font_family;
+T;@¼[o; ;I"ui-item-font-size;
+T;!I"ui_item_font_size;
+T;@¼o; 	;I"menu-item-font-size;
+T;iµ;!I"menu_item_font_size;
+T;@¼[o; ;I"ui-item-font-weight;
+T;!I"ui_item_font_weight;
+T;@¼o; 	;I"menu-item-font-weight;
+T;i¶;!I"menu_item_font_weight;
+T;@¼[o; ;I"ui-item-height;
+T;!I"ui_item_height;
+T;@¼o; 	;I"menu-item-height;
+T;i·;!I"menu_item_height;
+T;@¼[o; ;I"ui-item-border-width;
+T;!I"ui_item_border_width;
+T;@¼o; 	;I"menu-item-border-width;
+T;i¸;!I"menu_item_border_width;
+T;@¼[o; ;I"ui-item-cursor;
+T;!I"ui_item_cursor;
+T;@¼o; 	;I"menu-item-cursor;
+T;i¹;!I"menu_item_cursor;
+T;@¼[o; ;I"$ui-item-active-background-color;
+T;!I"$ui_item_active_background_color;
+T;@¼o; 	;I"&menu-item-active-background-color;
+T;iº;!I"&menu_item_active_background_color;
+T;@¼[o; ;I" ui-item-active-border-color;
+T;!I" ui_item_active_border_color;
+T;@¼o; 	;I""menu-item-active-border-color;
+T;i»;!I""menu_item_active_border_color;
+T;@¼[o; ;I" ui-item-background-gradient;
+T;!I" ui_item_background_gradient;
+T;@¼o; 	;I""menu-item-background-gradient;
+T;i¼;!I""menu_item_background_gradient;
+T;@¼[o; ;I"!ui-item-active-border-radius;
+T;!I"!ui_item_active_border_radius;
+T;@¼o; 	;I"#menu-item-active-border-radius;
+T;i½;!I"#menu_item_active_border_radius;
+T;@¼[o; ;I"ui-item-icon-size;
+T;!I"ui_item_icon_size;
+T;@¼o; 	;I"menu-item-icon-size;
+T;i¾;!I"menu_item_icon_size;
+T;@¼[o; ;I"ui-glyph-color;
+T;!I"ui_glyph_color;
+T;@¼o; 	;I"menu-glyph-color;
+T;i¿;!I"menu_glyph_color;
+T;@¼[o; ;I"ui-glyph-opacity;
+T;!I"ui_glyph_opacity;
+T;@¼o; 	;I"menu-glyph-opacity;
+T;iÀ;!I"menu_glyph_opacity;
+T;@¼[o; ;I"ui-item-checkbox-size;
+T;!I"ui_item_checkbox_size;
+T;@¼o; 	;I"menu-item-checkbox-size;
+T;iÁ;!I"menu_item_checkbox_size;
+T;@¼[o; ;I"%ui-item-icon-background-position;
+T;!I"%ui_item_icon_background_position;
+T;@¼o; 	;I"'menu-item-icon-background-position;
+T;iÂ;!I"'menu_item_icon_background_position;
+T;@¼[o; ;I"!ui-item-icon-vertical-offset;
+T;!I"!ui_item_icon_vertical_offset;
+T;@¼o; 	;I"#menu-item-icon-vertical-offset;
+T;iÃ;!I"#menu_item_icon_vertical_offset;
+T;@¼[o; ;I"!ui-item-text-vertical-offset;
+T;!I"!ui_item_text_vertical_offset;
+T;@¼o; 	;I"#menu-item-text-vertical-offset;
+T;iÄ;!I"#menu_item_text_vertical_offset;
+T;@¼[o; ;I"$ui-item-text-horizontal-spacing;
+T;!I"$ui_item_text_horizontal_spacing;
+T;@¼o; 	;I"&menu-item-text-horizontal-spacing;
+T;iÅ;!I"&menu_item_text_horizontal_spacing;
+T;@¼[o; ;I"$ui-item-icon-horizontal-spacing;
+T;!I"$ui_item_icon_horizontal_spacing;
+T;@¼o; 	;I"&menu-item-icon-horizontal-spacing;
+T;iÆ;!I"&menu_item_icon_horizontal_spacing;
+T;@¼[o; ;I"%ui-item-arrow-horizontal-spacing;
+T;!I"%ui_item_arrow_horizontal_spacing;
+T;@¼o; 	;I"'menu-item-arrow-horizontal-spacing;
+T;iÇ;!I"'menu_item_arrow_horizontal_spacing;
+T;@¼[o; ;I"ui-item-separator-margin;
+T;!I"ui_item_separator_margin;
+T;@¼o; 	;I"menu-item-separator-margin;
+T;iÈ;!I"menu_item_separator_margin;
+T;@¼[o; ;I"ui-item-arrow-height;
+T;!I"ui_item_arrow_height;
+T;@¼o; 	;I"menu-item-arrow-height;
+T;iÉ;!I"menu_item_arrow_height;
+T;@¼[o; ;I"ui-item-arrow-width;
+T;!I"ui_item_arrow_width;
+T;@¼o; 	;I"menu-item-arrow-width;
+T;iÊ;!I"menu_item_arrow_width;
+T;@¼[o; ;I"ui-item-disabled-opacity;
+T;!I"ui_item_disabled_opacity;
+T;@¼o; 	;I"menu-item-disabled-opacity;
+T;iË;!I"menu_item_disabled_opacity;
+T;@¼[o; ;I"ui-component-margin;
+T;!I"ui_component_margin;
+T;@¼o; 	;I"menu-component-margin;
+T;iÌ;!I"menu_component_margin;
+T;@¼[o; ;I"ui-separator-border-color;
+T;!I"ui_separator_border_color;
+T;@¼o; 	;I" menu-separator-border-color;
+T;iÍ;!I" menu_separator_border_color;
+T;@¼[o; ;I""ui-separator-background-color;
+T;!I""ui_separator_background_color;
+T;@¼o; 	;I"$menu-separator-background-color;
+T;iÎ;!I"$menu_separator_background_color;
+T;@¼[o; ;I"ui-separator-size;
+T;!I"ui_separator_size;
+T;@¼o; 	;I"menu-separator-size;
+T;iÏ;!I"menu_separator_size;
+T;@¼[o; ;I"ui-scroller-width;
+T;!I"ui_scroller_width;
+T;@¼o; 	;I"menu-scroller-width;
+T;iÐ;!I"menu_scroller_width;
+T;@¼[o; ;I"ui-scroller-height;
+T;!I"ui_scroller_height;
+T;@¼o; 	;I"menu-scroller-height;
+T;iÑ;!I"menu_scroller_height;
+T;@¼[o; ;I"ui-scroller-border-color;
+T;!I"ui_scroller_border_color;
+T;@¼o; 	;I"menu-scroller-border-color;
+T;iÒ;!I"menu_scroller_border_color;
+T;@¼[o; ;I"ui-scroller-border-width;
+T;!I"ui_scroller_border_width;
+T;@¼o; 	;I"menu-scroller-border-width;
+T;iÓ;!I"menu_scroller_border_width;
+T;@¼[o; ;I"ui-scroller-top-margin;
+T;!I"ui_scroller_top_margin;
+T;@¼o; 	;I"menu-scroller-top-margin;
+T;iÔ;!I"menu_scroller_top_margin;
+T;@¼[o; ;I"ui-scroller-bottom-margin;
+T;!I"ui_scroller_bottom_margin;
+T;@¼o; 	;I" menu-scroller-bottom-margin;
+T;iÕ;!I" menu_scroller_bottom_margin;
+T;@¼[o; ;I"ui-scroller-cursor;
+T;!I"ui_scroller_cursor;
+T;@¼o; 	;I"menu-scroller-cursor;
+T;iÖ;!I"menu_scroller_cursor;
+T;@¼[o; ;I" ui-scroller-cursor-disabled;
+T;!I" ui_scroller_cursor_disabled;
+T;@¼o; 	;I""menu-scroller-cursor-disabled;
+T;i×;!I""menu_scroller_cursor_disabled;
+T;@¼[o; ;I"ui-scroller-opacity;
+T;!I"ui_scroller_opacity;
+T;@¼o; 	;I"menu-scroller-opacity;
+T;iØ;!I"menu_scroller_opacity;
+T;@¼[o; ;I"ui-scroller-opacity-over;
+T;!I"ui_scroller_opacity_over;
+T;@¼o; 	;I"menu-scroller-opacity-over;
+T;iÙ;!I"menu_scroller_opacity_over;
+T;@¼[o; ;I" ui-scroller-opacity-pressed;
+T;!I" ui_scroller_opacity_pressed;
+T;@¼o; 	;I""menu-scroller-opacity-pressed;
+T;iÚ;!I""menu_scroller_opacity_pressed;
+T;@¼[o; ;I"!ui-scroller-opacity-disabled;
+T;!I"!ui_scroller_opacity_disabled;
+T;@¼o; 	;I"#menu-scroller-opacity-disabled;
+T;iÛ;!I"#menu_scroller_opacity_disabled;
+T;@¼[o; ;I"ui-classic-scrollers;
+T;!I"ui_classic_scrollers;
+T;@¼o; 	;I"menu-classic-scrollers;
+T;iÜ;!I"menu_classic_scrollers;
+T;@¼;@u;$;[o:Sass::Script::Variable	:
+@nameI"include-menu-default-ui:ET:
+@linei:@underscored_nameI"include_menu_default_ui;T:@options{ 0[o:Sass::Tree::MixinNode:@keywords{I"ui;To:Sass::Script::String	:@valueI"default;T;i:
+@type:string;
+@	;I"extjs-menu-ui;T:@children[ ;i:
+@args[ ;
+@	:@templateI"yX/*
+ * Creates a visual theme for a Menu.
+ *
+ * @param {string} $ui
+ * The name of the UI being created. Can not included spaces or special punctuation
+ * (used in CSS class names).
+ *
+ * @param {color} [$ui-background-color=$menu-background-color]
+ * The background-color of the Menu
+ *
+ * @param {color} [$ui-border-color=$menu-border-color]
+ * The border-color of the Menu
+ *
+ * @param {string} [$ui-border-style=$menu-border-style]
+ * The border-style of the Menu
+ *
+ * @param {number} [$ui-border-width=$menu-border-width]
+ * The border-width of the Menu
+ *
+ * @param {number/list} [$ui-padding=$menu-padding]
+ * The padding to apply to the Menu body element
+ *
+ * @param {color} [$ui-text-color=$menu-text-color]
+ * The color of Menu Item text
+ *
+ * @param {string} [$ui-item-font-family=$menu-item-font-family]
+ * The font-family of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-font-size=$menu-item-font-size]
+ * The font-size of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {string} [$ui-item-font-weight=$menu-item-font-weight]
+ * The font-weight of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-height=$menu-item-height]
+ * The height of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-border-width=$menu-item-border-width]
+ * The border-width of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {string} [$ui-item-cursor=$menu-item-cursor]
+ * The style of cursor to display when the cursor is over a {@link Ext.menu.Item Menu Item}
+ *
+ * @param {color} [$ui-item-active-background-color=$menu-item-active-background-color]
+ * The background-color of the active {@link Ext.menu.Item Menu Item}
+ *
+ * @param {color} [$ui-item-active-border-color=$menu-item-active-border-color]
+ * The border-color of the active {@link Ext.menu.Item Menu Item}
+ *
+ * @param {string/list} [$ui-item-background-gradient=$menu-item-background-gradient]
+ * The background-gradient for {@link Ext.menu.Item Menu Items}. Can be either the name
+ * of a predefined gradient or a list of color stops. Used as the `$type` parameter for
+ * {@link Global_CSS#background-gradient}.
+ *
+ * @param {number} [$ui-item-active-border-radius=$menu-item-active-border-radius]
+ * The border-radius of {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number} [$ui-item-icon-size=$menu-item-icon-size]
+ * The size of {@link Ext.menu.Item Menu Item} icons
+ *
+ * @param {color} [$ui-glyph-color=$menu-glyph-color]
+ * The color to use for menu icons configured using {@link Ext.menu.Item#glyph glyph}
+ *
+ * @param {number} [$ui-glyph-opacity=$menu-glyph-opacity]
+ * The opacity to use for menu icons configured using {@link Ext.menu.Item#glyph glyph}
+ *
+ * @param {number} [$ui-item-checkbox-size=$menu-item-checkbox-size]
+ * The size of {@link Ext.menu.Item Menu Item} checkboxes
+ *
+ * @param {list} [$ui-item-icon-background-position=$menu-item-icon-background-position]
+ * The background-position of {@link Ext.menu.Item Menu Item} icons
+ *
+ * @param {number} [$ui-item-icon-vertical-offset=$menu-item-icon-vertical-offset]
+ * vertical offset for menu item icons/checkboxes.  By default the icons are roughly
+ * vertically centered, but it may be necessary in some cases to make minor adjustments
+ * to the vertical position.
+ *
+ * @param {number} [$ui-item-text-vertical-offset=$menu-item-text-vertical-offset]
+ * vertical offset for menu item text.  By default the text is given a line-height
+ * equal to the menu item's content-height, however, depending on the font this may not
+ * result in perfect vertical centering.  Offset can be used to make small adjustments
+ * to the text's vertical position.
+ *
+ * @param {number/list} [$ui-item-text-horizontal-spacing=$menu-item-text-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} text. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-text-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number} [$ui-item-icon-horizontal-spacing=$menu-item-icon-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} icons. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-icon-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number} [$ui-item-arrow-horizontal-spacing=$menu-item-arrow-horizontal-spacing]
+ * The space to the left and right of {@link Ext.menu.Item Menu Item} arrows. Can be specified
+ * as a number (e.g. 5px) or as a list with 2 items for different left/right values. e.g.
+ *
+ *     $menu-item-arrow-horizontal-spacing: 4px 8px !default; // 4px of space to the left, and 8px to the right
+ *
+ * @param {number/list} [$ui-item-separator-margin=$menu-item-separator-margin]
+ * The margin of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-item-arrow-height=$menu-item-arrow-height]
+ * The height of {@link Ext.menu.Item Menu Item} arrows
+ *
+ * @param {number} [$ui-item-arrow-width=$menu-item-arrow-width]
+ * The width of {@link Ext.menu.Item Menu Item} arrows
+ *
+ * @param {number} [$ui-item-disabled-opacity=$menu-item-disabled-opacity]
+ * The opacity of disabled {@link Ext.menu.Item Menu Items}
+ *
+ * @param {number/list} [$ui-component-margin=$menu-component-margin]
+ * The margin non-MenuItems placed in a Menu
+ *
+ * @param {color} [$ui-separator-border-color=$menu-separator-border-color]
+ * The border-color of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {color} [$ui-separator-background-color=$menu-separator-background-color]
+ * The background-color of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-separator-size=$menu-separator-size]
+ * The size of {@link Ext.menu.Separator Menu Separators}
+ *
+ * @param {number} [$ui-scroller-width=$menu-scroller-width]
+ * The width of Menu scrollers
+ *
+ * @param {number} [$ui-scroller-height=$menu-scroller-height]
+ * The height of Menu scrollers
+ *
+ * @param {color} [$ui-scroller-border-color=$menu-scroller-border-color]
+ * The border-color of Menu scroller buttons
+ *
+ * @param {number} [$ui-scroller-border-width=$menu-scroller-border-width]
+ * The border-width of Menu scroller buttons
+ *
+ * @param {number/list} [$ui-scroller-top-margin=$menu-scroller-top-margin]
+ * The margin of "top" Menu scroller buttons
+ *
+ * @param {number/list} [$ui-scroller-bottom-margin=$menu-scroller-bottom-margin]
+ * The margin of "bottom" Menu scroller buttons
+ *
+ * @param {string} [$ui-scroller-cursor=$menu-scroller-cursor]
+ * The cursor of Menu scroller buttons
+ *
+ * @param {string} [$ui-scroller-cursor-disabled=$menu-scroller-cursor-disabled]
+ * The cursor of disabled Menu scroller buttons
+ *
+ * @param {number} [$ui-scroller-opacity=$menu-scroller-opacity]
+ * The opacity of Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-over=$menu-scroller-opacity-over]
+ * The opacity of hovered Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-pressed=$menu-scroller-opacity-pressed]
+ * The opacity of pressed Menu scroller buttons. Only applicable when
+ * {@link $menu-classic-scrollers} is `false`.
+ *
+ * @param {number} [$ui-scroller-opacity-disabled=$menu-scroller-opacity-disabled]
+ * The opacity of disabled Menu scroller buttons.
+ *
+ * @param {boolean} [$ui-classic-scrollers=$menu-classic-scrollers]
+ * `true` to use classic-style scroller buttons.  When `true` scroller buttons are given their
+ * hover state by changing their background-position,  When `false` scroller buttons are
+ * given their hover state by applying opacity.
+ *
+ * @member Ext.menu.Menu
+ */
+@mixin extjs-menu-ui(
+    $ui,
+    $ui-background-color: $menu-background-color,
+    $ui-border-color: $menu-border-color,
+    $ui-border-style: $menu-border-style,
+    $ui-border-width: $menu-border-width,
+    $ui-padding: $menu-padding,
+    $ui-text-color: $menu-text-color,
+    $ui-item-font-family: $menu-item-font-family,
+    $ui-item-font-size: $menu-item-font-size,
+    $ui-item-font-weight: $menu-item-font-weight,
+    $ui-item-height: $menu-item-height,
+    $ui-item-border-width: $menu-item-border-width,
+    $ui-item-cursor: $menu-item-cursor,
+    $ui-item-active-background-color: $menu-item-active-background-color,
+    $ui-item-active-border-color: $menu-item-active-border-color,
+    $ui-item-background-gradient: $menu-item-background-gradient,
+    $ui-item-active-border-radius: $menu-item-active-border-radius,
+    $ui-item-icon-size: $menu-item-icon-size,
+    $ui-glyph-color: $menu-glyph-color,
+    $ui-glyph-opacity: $menu-glyph-opacity,
+    $ui-item-checkbox-size: $menu-item-checkbox-size,
+    $ui-item-icon-background-position: $menu-item-icon-background-position,
+    $ui-item-icon-vertical-offset: $menu-item-icon-vertical-offset,
+    $ui-item-text-vertical-offset: $menu-item-text-vertical-offset,
+    $ui-item-text-horizontal-spacing: $menu-item-text-horizontal-spacing,
+    $ui-item-icon-horizontal-spacing: $menu-item-icon-horizontal-spacing,
+    $ui-item-arrow-horizontal-spacing: $menu-item-arrow-horizontal-spacing,
+    $ui-item-separator-margin: $menu-item-separator-margin,
+    $ui-item-arrow-height: $menu-item-arrow-height,
+    $ui-item-arrow-width: $menu-item-arrow-width,
+    $ui-item-disabled-opacity: $menu-item-disabled-opacity,
+    $ui-component-margin: $menu-component-margin,
+    $ui-separator-border-color: $menu-separator-border-color,
+    $ui-separator-background-color: $menu-separator-background-color,
+    $ui-separator-size: $menu-separator-size,
+    $ui-scroller-width: $menu-scroller-width,
+    $ui-scroller-height: $menu-scroller-height,
+    $ui-scroller-border-color: $menu-scroller-border-color,
+    $ui-scroller-border-width: $menu-scroller-border-width,
+    $ui-scroller-top-margin: $menu-scroller-top-margin,
+    $ui-scroller-bottom-margin: $menu-scroller-bottom-margin,
+    $ui-scroller-cursor: $menu-scroller-cursor,
+    $ui-scroller-cursor-disabled: $menu-scroller-cursor-disabled,
+    $ui-scroller-opacity: $menu-scroller-opacity,
+    $ui-scroller-opacity-over: $menu-scroller-opacity-over,
+    $ui-scroller-opacity-pressed: $menu-scroller-opacity-pressed,
+    $ui-scroller-opacity-disabled: $menu-scroller-opacity-disabled,
+    $ui-classic-scrollers: $menu-classic-scrollers
+) {
+
+    $ui-item-arrow-top: round(($ui-item-height - vertical($ui-item-border-width) - $ui-item-arrow-height) / 2) !default;
+    $ui-icon-separator-indent: before($ui-item-icon-horizontal-spacing) + $ui-item-icon-size + after($ui-item-icon-horizontal-spacing);
+    $ui-item-indent: $ui-icon-separator-indent + $ui-separator-size + before($ui-item-text-horizontal-spacing);
+    $ui-item-indent-no-separator: before($ui-item-icon-horizontal-spacing) + $ui-item-icon-size + max(after($ui-item-icon-horizontal-spacing), before($ui-item-text-horizontal-spacing));
+    $ui-item-indent-right-icon: $ui-icon-separator-indent + before($ui-item-text-horizontal-spacing);
+    $ui-item-indent-right-arrow: $ui-item-arrow-width + before($ui-item-arrow-horizontal-spacing) + after($ui-item-arrow-horizontal-spacing) + after($ui-item-text-horizontal-spacing);
+    $ui-item-icon-top: round(($ui-item-height - vertical($ui-item-border-width) - $ui-item-icon-size) / 2) + $ui-item-icon-vertical-offset !default;
+
+    @if not is-null($ui-border-width) and $ui-border-width != 0 {
+        .#{$prefix}menu-#{$ui} {
+            border-style: $ui-border-style;
+            border-width: $ui-border-width;
+            border-color: $ui-border-color;
+        }
+    }
+    .#{$prefix}menu-body-#{$ui} {
+        background: $ui-background-color;
+        padding: $ui-padding;
+    }
+
+    .#{$prefix}menu-icon-separator-#{$ui} {
+        left: $ui-icon-separator-indent;
+        border-left: solid 1px $ui-separator-border-color;
+        background-color: $ui-separator-background-color;
+        width: $ui-separator-size;
+
+        @if $include-rtl {
+            &.#{$prefix}rtl {
+                left: auto;
+                right: $ui-icon-separator-indent;
+            }
+        }
+    }
+
+    .#{$prefix}menu-item-#{$ui} {
+        border-width: $ui-item-border-width;
+        cursor: $ui-item-cursor;
+
+        &.#{$prefix}menu-item-active {
+            @include background-gradient($ui-item-active-background-color, $ui-item-background-gradient);
+            @if $ui-item-active-border-radius != 0 {
+                @include border-radius($ui-item-active-border-radius);
+            }
+
+            @if $ui-item-border-width != 0 {
+                border-color: $ui-item-active-border-color;
+            }
+
+            // Background linear gradient
+            @if $include-slicer-gradient {
+                .#{$prefix}nlg & {
+                    background: $ui-item-active-background-color repeat-x left top;
+                    background-image: slicer-background-image(menu-item-#{$ui}-active, 'menu/menu-item-#{$ui}-active-bg');
+                }
+            }
+        }
+
+        &.#{$prefix}menu-item-separator {
+            height: $ui-separator-size;
+            border-top: solid 1px $ui-separator-border-color;
+            background-color: $ui-separator-background-color;
+            margin: $ui-item-separator-margin;
+            padding: 0;
+        }
+
+        &.#{$prefix}menu-item-disabled {
+            @include opacity($ui-item-disabled-opacity);
+
+            @if $include-ie {
+                .#{$prefix}ie9m & {
+                    .#{$prefix}menu-item-icon-#{ui} {
+                        @include opacity($ui-item-disabled-opacity);
+                    }
+
+                    .#{$prefix}menu-item-text-#{$ui} {
+                        // IE opacity/cleartype bug workaround
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        @if $include-ext-form-labelable {
+            // When Fields are added to Menus...
+            .#{$prefix}form-item-label {
+                font-size: $ui-item-font-size;
+                color: $ui-text-color;
+            }
+        }
+    }
+
+    .#{$prefix}menu-item-text-#{$ui},
+    .#{$prefix}menu-item-cmp-#{$ui} {
+        margin: 0 after($ui-item-text-horizontal-spacing) 0 before($ui-item-text-horizontal-spacing);
+    }
+
+    .#{$prefix}menu-item-text-#{$ui} {
+        font: $ui-item-font-weight $ui-item-font-size $ui-item-font-family;
+        line-height: $ui-item-height - vertical($ui-item-border-width) - abs($ui-item-text-vertical-offset);
+        @if $ui-item-text-vertical-offset > 0 {
+            padding-top: $ui-item-text-vertical-offset;
+        } @else if $ui-item-text-vertical-offset < 0 {
+            padding-bottom: $ui-item-text-vertical-offset;
+        }
+        color: $ui-text-color;
+        cursor: $ui-item-cursor; // needed to override cursor:default set by x-unselectable
+
+        &.#{$prefix}menu-item-indent {
+            margin-left: $ui-item-indent;
+        }
+
+        &.#{$prefix}menu-item-indent-no-separator {
+            margin-left: $ui-item-indent-no-separator;
+        }
+
+        &.#{$prefix}menu-item-indent-right-icon {
+            margin-right: $ui-item-indent-right-icon;
+        }
+
+        &.#{$prefix}menu-item-indent-right-arrow {
+            margin-right: $ui-item-indent-right-arrow;
+        }
+    }
+
+    @if $include-rtl {
+        .#{$prefix}rtl {
+            &.#{$prefix}menu-item-text-#{$ui},
+            &.#{$prefix}menu-item-cmp-#{$ui} {
+                margin: 0 before($ui-item-text-horizontal-spacing) 0 after($ui-item-text-horizontal-spacing);
+            }
+
+            &.#{$prefix}menu-item-text-#{$ui} {
+                &.#{$prefix}menu-item-indent {
+                    margin-right: $ui-item-indent;
+                }
+
+                &.#{$prefix}menu-item-indent-no-separator {
+                    margin-right: $ui-item-indent-no-separator;
+                }
+
+                &.#{$prefix}menu-item-indent-right-icon {
+                    margin-left: $ui-item-indent-right-icon;
+                }
+
+                &.#{$prefix}menu-item-indent-right-arrow {
+                    margin-left: $ui-item-indent-right-arrow;
+                }
+            }
+        }
+    }
+
+   .#{$prefix}menu-item-indent-#{$ui} {
+        margin-left: $ui-item-indent;
+        @if $include-rtl {
+            &.#{$prefix}rtl {
+                margin-left: 0;
+                margin-right: $ui-item-indent;
+            }
+        }
+    }
+
+    .#{$prefix}menu-item-icon-#{$ui} {
+        width: $ui-item-icon-size;
+        height: $ui-item-icon-size;
+        top: $ui-item-icon-top;
+        left: before($ui-item-icon-horizontal-spacing);
+        background-position: $ui-item-icon-background-position;
+
+        @if $include-rtl {
+            &.#{$prefix}rtl {
+                left: auto;
+                right: before($ui-item-icon-horizontal-spacing);
+
+                .#{$prefix}menu-item-active & {
+                    right: before($ui-item-icon-horizontal-spacing) - left($ui-item-border-width);
+                }
+            }
+        }
+
+        &.#{$prefix}menu-item-glyph {
+            font-size: $ui-item-icon-size;
+            line-height: $ui-item-icon-size;
+            color: $ui-glyph-color;
+
+            @if $ui-glyph-opacity != 1 {
+                // do not use the opacity mixin because we do not want IE's filter version of
+                // opacity to be included.  We emulate the opacity setting in IE8m by mixing
+                // the icon color into the background color. (see below)
+                opacity: $ui-glyph-opacity;
+            }
+            @if $include-ie {
+                // In IE8 and below when a glyph contains partially transparent pixels, we
+                // can't apply an opacity filter to the glyph element, because IE8m will render
+                // the partially transparent pixels of the glyph as black. To work around this,
+                // we emulate the approximate color that the glyph would have if it had opacity
+                // applied by mixing the glyph color with the menus's background-color.
+                .#{$prefix}ie8 & {
+                    color: mix($ui-glyph-color, $ui-background-color, $ui-glyph-opacity * 100);
+                }
+            }
+        }
+
+        // For when an icon needs to be used in the right position where a submenu arrow usually goes.
+        // eg: When a CheckItem needs an icon. The left icon position is a checkbox, so the icon is moved to the right.
+        &.#{$prefix}menu-item-icon-right {
+            width: $ui-item-icon-size;
+            height: $ui-item-icon-size;
+            top: $ui-item-icon-top;
+            right: after($ui-item-icon-horizontal-spacing);
+            left: auto;
+            background-position: $ui-item-icon-background-position;
+
+            @if $include-rtl {
+                &.#{$prefix}rtl {
+                    right: auto;
+                    left: after($ui-item-icon-horizontal-spacing);
+
+                    .#{$prefix}menu-item-active & {
+                        left: after($ui-item-icon-horizontal-spacing) - right($ui-item-border-width);
+                    }
+                }
+            }
+        }
+
+        &.#{$prefix}menu-item-checkbox {
+            @if $ui-item-checkbox-size != $ui-item-icon-size {
+                height: $ui-item-checkbox-size;
+                width: $ui-item-checkbox-size;
+            }
+            .#{$prefix}menu-item-checked & {
+                background-image: theme-background-image('menu/#{$ui}-checked');
+            }
+
+            .#{$prefix}menu-item-unchecked & {
+                background-image: theme-background-image('menu/#{$ui}-unchecked');
+            }
+        }
+
+        &.#{$prefix}menu-group-icon {
+            .#{$prefix}menu-item-checked & {
+                background-image: theme-background-image('menu/#{$ui}-group-checked');
+            }
+
+            .#{$prefix}menu-item-unchecked & {
+                background-image: none;
+            }
+        }
+    }
+
+    .#{$prefix}menu-item-arrow-#{$ui} {
+        width: $ui-item-arrow-width;
+        height: $ui-item-arrow-height;
+        top: $ui-item-arrow-top;
+        right: after($ui-item-arrow-horizontal-spacing);
+        background-image: theme-background-image('menu/#{$ui}-menu-parent');
+
+        .#{$prefix}menu-item-active & {
+            top: $ui-item-arrow-top - top($ui-item-border-width);
+            right: after($ui-item-arrow-horizontal-spacing) - right($ui-item-border-width);
+        }
+
+        @if $include-rtl {
+            &.#{$prefix}rtl {
+                left: after($ui-item-arrow-horizontal-spacing);
+                right: auto;
+                background-image: theme-background-image('menu/#{$ui}-menu-parent-left');
+
+                .#{$prefix}menu-item-active & {
+                    left: after($ui-item-arrow-horizontal-spacing) - right($ui-item-border-width);
+                }
+            }
+        }
+    }
+
+    @if $include-ext-layout-container-boxoverflow-scroller {
+        @include extjs-box-scroller-ui(
+            $ui: $ui,
+            $type: 'menu',
+            $vertical-width: $ui-scroller-width,
+            $vertical-height: $ui-scroller-height,
+            $top-margin: $ui-scroller-top-margin,
+            $bottom-margin: $ui-scroller-bottom-margin,
+            $vertical-border-color: $ui-scroller-border-color,
+            $vertical-border-width: $ui-scroller-border-width,
+            $container-padding: $ui-padding,
+            $cursor: $ui-scroller-cursor,
+            $cursor-disabled: $ui-scroller-cursor-disabled,
+            $align: middle,
+            $opacity: $ui-scroller-opacity,
+            $opacity-over: $ui-scroller-opacity-over,
+            $opacity-pressed: $ui-scroller-opacity-pressed,
+            $opacity-disabled: $ui-scroller-opacity-disabled,
+            $classic: $ui-classic-scrollers,
+            $include-horizontal: false
+        );
+    }
+
+    // EXTJSIV-8846: partially transparent png images do not display correctly
+    // in winXP/IE8 when the image element has a transparent background.
+    // to fix this, we give the element the same background-color as the menu.
+    .#{$prefix}ie8 {
+        .#{$prefix}box-scroller-menu-#{$ui} {
+            background-color: $ui-background-color;
+        }
+    }
+
+    @if not is-null($ui-item-background-gradient) {
+        $stretch: slicer-background-stretch(menu-item-#{$ui}-active, bottom);
+        @include x-slicer(menu-item-#{$ui}-active);
+    }
+}
+
+@if $include-menu-default-ui {
+    @include extjs-menu-ui(
+        $ui: 'default'
+    );
+}
+
+
+;
+T;i;'T;@

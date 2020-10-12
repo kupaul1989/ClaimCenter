@@ -1,0 +1,8 @@
+/**
+ * Generic LoadMask style variable definitions for all Guidewire themes
+ */
+// PLWEB-275 Drop the padding down to 0 on these, because otherwise they pad out the wait spinner oddly
+$loadmask-msg-padding: 0;
+$loadmask-msg-text-padding: 0;
+$loadmask-cursor: wait !default;
+$loadmask-opacity: 0 !default;

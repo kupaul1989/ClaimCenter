@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" name="MessageType" desc="Respect to ClaimContact">
+  <typecode
+    code="Incoming"
+    name="Incoming"/>
+  <typecode
+    code="Outgoing"
+    name="Outgoing"/>
+</typelist>

@@ -1,0 +1,21 @@
+/**
+ * Generic simple form/field/Base Component styles for all Guidewire themes
+ */
+
+.g-input-prefix-suffix-field {
+  display: table-cell;
+  min-width: $form-text-field-body-width;
+}
+
+.#{$prefix}grid-cell-editor .g-clear-enabled .g-input-prefix-suffix-field {
+  min-width: $form-text-field-body-width * .9;
+}
+
+.g-input-prefix,
+.g-altVal-prefix,
+.g-input-suffix,
+.g-altVal-suffix {
+  line-height: $form-label-line-height + 1px;
+}
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    id="NewClaimDetailsDV">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <InputColumn>
+      <TextInput
+        id="ClaimNumber"
+        label="&quot;Claim Number&quot;"
+        required="false"
+        value="claim.ClaimNumber"/>
+      <DateInput
+        id="LossDate"
+        label="&quot;Loss Date&quot;"
+        required="false"
+        value="claim.LossDate"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

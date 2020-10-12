@@ -1,0 +1,82 @@
+/**
+ * Generic Tab Panel styles for all Guidewire themes
+ */
+
+/**
+ * Tab panel inside a list-details view
+ */
+.#{$prefix}list-details-tabpanel {
+  border-top: 3px solid #FFF;
+  > .#{$prefix}tab-bar {
+    border-top: 1px solid $panel-border-color !important;
+  }
+}
+
+.#{$prefix}tab-bar-top > .#{$prefix}tab-bar-strip-default {
+  border-width: 1px 0 0 0;
+  height: 2px;
+}
+
+.#{$prefix}tab-default-top {
+  border-radius: 0;
+  // @UpgradedSencha 5.1 - fix the active focus borders, remove the bottom border and the dotted outline
+  &.#{$prefix}tab-focus.#{$prefix}tab-active {
+    @include inner-border(top(1px) right(1px) 0 left(1px), $tab-inner-border-color-focus-active);
+    outline: 0 !important;
+  }
+}
+
+.#{$prefix}tab-default-top-over {
+  text-decoration: underline;
+  color: $base-color;
+}
+
+.#{$prefix}tab-default {
+  background-color: $gw-tabbar-background-color;
+  .#{$prefix}tab-inner {
+    color: $base-color;
+  }
+}
+
+.#{$prefix}tab-bar-default-top {
+//  padding: 0;
+  background-color: $gw-tabbar-background-color;
+}
+
+.#{$prefix}tab-active {
+  background-color: $gw-tabbar-active-background-color !important;
+  border-left: $gw-border !important;
+  border-top: $gw-border !important;
+  border-right: $gw-border !important;
+
+  .#{$prefix}tab-inner {
+    color: $base-color;
+  }
+}
+
+.#{$prefix}tab-default-top-over.#{$prefix}tab-default-active {
+  text-decoration: none;
+}
+
+.#{$prefix}tab-bar-body {
+  border-top: $gw-border;
+}
+
+// NOTE: grid/page-prev, grid/page-next do not exist in the base theme template resources
+.#{$prefix}tab-bar-default {
+  .#{$prefix}tabbar-scroll-left {
+    background-image: url(images/grid/page-prev.png);
+    background-position: 50%;
+    height: 28px;
+    border-right: $gw-border;
+  }
+  .#{$prefix}tabbar-scroll-right {
+    background-image: url(images/grid/page-next.png);
+    background-position: 50%;
+    height: 28px;
+    border-left: $gw-border;
+  }
+  .#{$prefix}box-scroller {
+    @include opacity(.9);
+  }
+}

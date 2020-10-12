@@ -1,0 +1,100 @@
+/**
+ * Generic simple Layout Component Dock styles for all Guidewire themes
+ */
+
+/**
+ *  left menu active clickable items
+ */
+.g-accordion-item {
+  cursor: pointer;
+}
+
+/**************************
+ *  Link styles           *
+ **************************/
+/**
+ *  space between a link and the element to its left
+ */
+* + .g-link {
+  margin-left: 5px
+}
+
+/**
+ * Specifically target breadcrumb links to ensure they don't line-wrap
+ */
+.g-link {
+  white-space: nowrap;
+  img {
+    //icon inside g-link should be centered vertically, need a nudge of padding along with the vertical-align
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
+}
+
+.g-actionable {
+  img {
+    margin: 3px 0 0 3px;
+  }
+}
+
+span.bold, a.bold {
+  font-weight: bold;
+}
+
+.g-helper-cell-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: inherit;
+}
+
+.g-helper-cell-icon {
+  float: right;
+}
+
+/**************************
+ *  List View styles      *
+ **************************/
+@mixin color-font {
+  color: #232323;
+  font-weight: bold !important;
+}
+
+img.g-cell-menu {
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.lvhead TD,
+TD.lvhead {
+  background-color: #E2E2E2 !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+TD.g-cell-edit * {
+  cursor: pointer;
+}
+
+/**
+ *  altValue for footer
+ */
+.altVal {
+  white-space: nowrap;
+  font-size: 90%;
+}
+
+.archived *,
+.archived,
+.archived span,
+a.archived:visited,
+a.archived:active {
+  color: #A08060;
+}
+
+/*
+ * disable dirty indicator
+ */
+.g-no-bg-img {
+  background-image: none !important;
+}

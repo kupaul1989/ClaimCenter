@@ -1,0 +1,32 @@
+package rules.Preupdate.TransactionSetPreupdate_dir
+
+uses gw.api.locale.DisplayKey
+uses exv.twilio.common.MessageUtil
+
+@gw.rules.RuleName("Create Automated Notification For New Check")
+internal class CreateAutomatedNotificationForNewCheck {
+  static function doCondition(transactionSet : entity.TransactionSet) : boolean {
+/*start00rule*/
+return transactionSet.Subtype == TC_CHECKSET
+
+/*end00rule*/
+}
+
+  static function doAction(transactionSet : entity.TransactionSet, actions : gw.rules.Action) {
+/*start00rule*/
+    for (check in (transactionSet as CheckSet).Checks) {
+      if (check.isFieldChanged("Status") and check.Status == TransactionStatus.TC_REQUESTING) {
+        var msgUtil = new MessageUtil()
+        var claimContact =  transactionSet.Claim.Contacts.firstWhere(\cContact -> cContact.Roles.hasMatch(\role ->
+            role.Role == ContactRole.TC_INSURED))
+        var sms = msgUtil.createNotificationMessage(claimContact)
+        sms.MessageBody = "A new Payment Transaction of amount : "+check.GrossAmount+
+        " has been initiated for your Claim with claim no :  "+check.Claim
+
+        sms.addEvent("SendNotificationSMS")
+        actions.exit()
+      }
+    }
+/*end00rule*/
+  }
+}

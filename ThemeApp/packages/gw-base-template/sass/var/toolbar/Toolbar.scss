@@ -1,0 +1,22 @@
+/**
+ * Generic Toolbar style variable definitions for Guidewire base themes
+ */
+
+/***
+ *  @var { color } $toolbar-top-info-background-color
+ *  background color for top info bar
+ */
+$toolbar-top-info-background-color: #505050 !default;
+
+
+/***
+ *  @var { string } $toolbar-top-info-background-gradient
+ *  background gradient color-stop values for top info bar
+ */
+$toolbar-top-info-background-gradient: color-stops(#363636, #505050 20%) !default;
+
+/***
+ *  @var { color } $toolbar-top-info-disabled-color
+ *  disabled link color for top info bar
+ */
+$toolbar-top-info-disabled-color: #ffffff !default;

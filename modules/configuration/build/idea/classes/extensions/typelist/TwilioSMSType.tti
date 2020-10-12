@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" name="TwilioSMSType" desc="Kind of SMS">
+  <typecode
+    code="Conversation"
+    name="Conversation"/>
+  <typecode
+    code="Notification"
+    name="Notification"/>
+</typelist>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <LocationGroup
+    canVisit="true"
+    id="MyLocationGroup"
+    infoBar="ClaimInfoBar(claim)"
+    menuActions="DesktopMenuActions()"
+    title="&quot;MyLG&quot;">
+    <LocationEntryPoint
+      signature="MyLocationGroup(claim : Claim)"/>
+    <Variable
+      name="claim"
+      type="Claim"/>
+    <LocationRef
+      location="ClaimSummary(claim)"/>
+  </LocationGroup>
+</PCF>

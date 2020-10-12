@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    canVisit="true"
+    id="MyNewPage"
+    title="&quot;Calim Activies&quot;">
+    <LocationEntryPoint
+      signature="MyNewPage(claim:Claim)"/>
+    <Variable
+      name="claim"
+      type="Claim"/>
+    <Screen/>
+  </Page>
+</PCF>

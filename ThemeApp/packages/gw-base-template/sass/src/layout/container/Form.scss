@@ -1,0 +1,12 @@
+/**
+ * Generic Form container styles for all Guidewire themes
+ */
+
+/*
+* PLWEB-4757: Firefox requires two clicks to sort
+*/
+.#{$prefix}form-form-item.#{$prefix}form-item-no-label:before {
+  content: ' ';
+  display: table-cell;
+  pointer-events: none;
+}

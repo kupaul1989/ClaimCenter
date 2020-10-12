@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <CardViewPanel
+    id="ClaimContactCV">
+    <Require
+      name="contact"
+      type="ClaimContact"/>
+    <Card
+      id="Basic"
+      title="&quot;Basic&quot;"/>
+    <Card
+      id="Addresss"
+      title="&quot;Address&quot;"/>
+  </CardViewPanel>
+</PCF>

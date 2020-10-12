@@ -1,0 +1,37 @@
+/**
+ * Generic simple Panel styles for all Guidewire themes
+ */
+/**
+ * Wizard
+ */
+.g-accordion {
+  .g-required {
+    padding-right: 5px;
+  }
+}
+
+/**
+ * UnsavedWork styles
+ */
+.unsavedwork_g {
+  background-color: #d5e2e6;
+  a {
+    font-weight: bold;
+    color: #049;
+    cursor: pointer;
+  }
+}
+
+.text.unsavedwork {
+  padding: 2px 0 2px 12px;
+  font-size: 12px;
+  &:hover {
+    color: #049;
+    cursor: pointer;
+  }
+}
+
+.unsavedwork_g .icon {
+  color: #000;
+  font-weight: 400;
+}

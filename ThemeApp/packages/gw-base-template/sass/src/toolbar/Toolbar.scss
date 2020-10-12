@@ -1,0 +1,18 @@
+/**
+ * Generic Toolbar styles for Guidewire base themes
+ */
+
+#centerPanel .#{$prefix}toolbar-default {
+  border-width: 0;
+  background-image: none;
+}
+
+/**
+ * selector for infobar overflow
+ */
+#infoBar-menu-trigger{
+  margin-top: 10px;
+  .#{$prefix}toolbar-more-icon {  //infobar more icon
+    background-position: top right !important;
+  }
+}
